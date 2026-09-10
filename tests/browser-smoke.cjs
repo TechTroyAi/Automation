@@ -52,15 +52,19 @@ const root = path.resolve(__dirname, '..');
       await page.waitForFunction(() => !document.querySelector('.typing'));
       return page.locator('#chatBody .bot').last().innerText();
     };
-    const expected = ['Demo menu', 'Sample shop hours', 'Sample delivery fee', 'cannot cancel', 'Starter FAQ bot', 'no staff member has been notified'];
+    const expected = ['Here’s our menu', 'Our regular hours', 'Delivery is ₱50', 'Need to cancel', 'Starter FAQ bot', 'You’ll need to send the message there'];
     for (let i = 0; i < expected.length; i++) {
       await page.locator('#quickRow button').nth(i).click();
       await page.waitForFunction(() => !document.querySelector('.typing'));
       assert.ok((await page.locator('#chatBody .bot').last().innerText()).includes(expected[i]), expected[i]);
     }
-    assert.match(await send('Hi how much is delivery?'), /Sample delivery fee/);
-    assert.match(await send('hours and location'), /more than one topic/);
-    assert.match(await send('this is a spaceship'), /do not have a scripted answer/);
+    assert.match(await send('Hi how much is delivery?'), /Delivery is ₱50/);
+    assert.match(await send('hours and location'), /Which one would you like to start with/);
+    assert.match(await send('this is a spaceship'), /Could you rephrase that/);
+    assert.match(await send('Can I order?'), /Of course! 🧋 What would you like/);
+    assert.doesNotMatch(await page.locator('#chatBody .bot').last().innerText(), /This demo|Do not enter/);
+    assert.match(await page.locator('#demoPrivacy').innerText(), /no real orders, payments, or staff handoffs/);
+    assert.match(await page.locator('#demoPrivacy').innerText(), /never personal or payment information/);
     const requestCount = requests.length;
     const payload = '<img src=x onerror="window.__xss=1">';
     await send(payload);
@@ -84,7 +88,7 @@ const root = path.resolve(__dirname, '..');
     await page.locator('#navLinks a[href="#work"]').click();
     assert.equal(await page.locator('#navToggle').getAttribute('aria-expanded'), 'false');
     assert.ok(await page.locator('#work').isVisible());
-    assert.match(await send('Please cancel this order'), /cannot cancel/);
+    assert.match(await send('Please cancel this order'), /They’ll need to confirm/);
     if (process.env.SMOKE_SCREENSHOT) await page.screenshot({ path: process.env.SMOKE_SCREENSHOT, fullPage: true });
 
     const broken = await browser.newPage();

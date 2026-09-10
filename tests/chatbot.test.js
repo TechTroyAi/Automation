@@ -30,7 +30,7 @@ test('normalizes apostrophes, Unicode width, punctuation and whitespace', () => 
 
 const cases = [
   ['Tagpila? 💰', 'menu'], ['Open mo? 🕐', 'hours'],
-  ['Location? 📍', 'location'], ['Order ko! 🧋', 'order'],
+  ['Location? 📍', 'location'], ['Order ko! 🧋', 'order'], ['Can I order?', 'order'],
   ['Hi, how much is delivery?', 'delivery_fee'],
   ['How much is chatbot pricing?', 'chatbot_pricing'],
   ['Hello, chatbot pricing please', 'chatbot_pricing'],
@@ -80,12 +80,27 @@ test('rejects normalized duplicates and duplicate topic IDs at authoring time', 
   assert.throws(() => createBot([topics[0], topics[0]]), /duplicate topic/);
 });
 
-test('sensitive actions have honest demo limitations', () => {
-  assert.match(bot.answer('order'), /does not calculate a checkout, save an order/);
-  assert.match(bot.answer('human'), /no staff member has been notified/);
-  assert.match(bot.answer('gcash'), /No payments are accepted/);
-  assert.match(bot.answer('allergens'), /cannot verify allergens/);
-  assert.match(bot.answer('location'), /no real shop address/);
+test('order invitation is natural, exact, and does not repeat the demo notice', () => {
+  assert.equal(bot.match('Can I order?').method, 'exact');
+  assert.equal(bot.answer('Can I order?'), 'Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit Tea, and tell me how many drinks. You can also pick your sugar and ice levels.');
+  for (const input of ['menu', 'classic', 'okinawa', 'wintermelon', 'fruit tea', 'ice', 'hours', 'order', 'thanks']) {
+    assert.doesNotMatch(bot.answer(input), /this demo|fictional|sample|scripted|no real order|do not enter/i, input);
+  }
+});
+
+test('shop scripts never invent completed actions or request personal checkout details', () => {
+  const shopTopics = topics.slice(0, topics.findIndex(topic => topic.id === 'services'));
+  for (const topic of shopTopics) {
+    assert.doesNotMatch(topic.reply, /order (?:is |has been )?(?:confirmed|saved|placed|cancelled|canceled)|payment (?:is |has been )?(?:received|processed)|staff (?:has|have) been notified|transferring you|refund (?:is |has been )?processed/i, topic.id);
+  }
+  assert.doesNotMatch(bot.answer('order'), /send.*(?:name|address|phone|payment)/i);
+  assert.match(bot.answer('cancel'), /They’ll need to confirm/);
+  assert.match(bot.answer('order status'), /don’t have an order status/);
+  assert.match(bot.answer('human'), /You’ll need to send the message there/);
+  assert.match(bot.answer('gcash'), /Never share your PIN or OTP/);
+  assert.match(bot.answer('allergens'), /can’t guarantee/);
+  assert.match(bot.answer('location'), /don’t have a verified address/);
   assert.match(bot.answer('testimonials'), /No client testimonials/);
   assert.match(bot.answer('privacy'), /does not send or save/);
+  assert.match(bot.answer('help'), /scripted roleplay, not live AI/);
 });

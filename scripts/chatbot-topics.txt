@@ -1,133 +1,133 @@
 # Source format: id | label, keyword phrases, reply, then semicolon-separated scripted inputs.
 # Blank lines separate topics. Each input is authored; no runtime AI or generated filler.
-menu | Demo shop menu
+menu | Shop menu
 menu; prices; price; tagpila; pila; presyo; how much; cost
-Demo menu 🧋 Classic Milk Tea ₱75 · Okinawa ₱85 · Wintermelon ₱85 · Fruit Tea ₱70 · Extra pearls ₱15. These are sample prices, not a real shop offer.
+Here’s our menu! 🧋 Classic Milk Tea ₱75 · Okinawa ₱85 · Wintermelon ₱85 · Fruit Tea ₱70 · Extra pearls ₱15. What sounds good to you?
 menu please; show me the menu; can I see your menu; what drinks do you sell; what is on the menu; send your price list; how much are your drinks; what are your prices; magkano ang drinks; patingin ng menu; may menu ba kayo; ano ang mga tinda ninyo; magkano po; tagpila inyong drinks; pila ang milk tea; unsay inyong menu; naa moy menu; presyo sa drinks; price list please; menu
 
 classic | Classic milk tea
 classic; classic milk tea
-Classic Milk Tea is ₱75 in this fictional demo. Extra pearls are ₱15. No real order is placed here.
+Our Classic Milk Tea is ₱75! 🧋 You can add extra pearls for ₱15. How do you like your sugar and ice?
 how much is classic milk tea; classic milk tea price; classic price; do you have classic milk tea; tell me about classic milk tea; can I get classic milk tea; magkano ang classic; may classic milk tea ba; classic milk tea magkano po; gusto ko ng classic; presyo ng classic milk tea; available ba ang classic; tagpila ang classic; naa moy classic; pila ang classic milk tea; classic milk tea tagpila; unsay presyo sa classic; classic please; classic milk tea; classic
 
 okinawa | Okinawa milk tea
 okinawa
-Okinawa Milk Tea is ₱85 on the sample menu. This is a scripted example, not live stock or an order confirmation.
+Okinawa Milk Tea is ₱85! 🧋 Would you like to see the sugar and ice options?
 how much is okinawa; okinawa price; do you sell okinawa; is okinawa available; tell me about okinawa; can I get okinawa; okinawa milk tea price; magkano ang okinawa; may okinawa ba kayo; available po ang okinawa; gusto ko ng okinawa; presyo ng okinawa; tagpila ang okinawa; naa moy okinawa; pila inyong okinawa; okinawa tagpila; unsay presyo sa okinawa; okinawa please; okinawa milk tea; okinawa
 
 wintermelon | Wintermelon milk tea
 wintermelon; winter melon
-Wintermelon Milk Tea is ₱85 on the fictional menu. Ask about sugar or ice to see sample customization replies.
+Wintermelon Milk Tea is ₱85! 🧋 You can choose your sugar and ice levels, or add extra pearls for ₱15.
 how much is wintermelon; wintermelon price; do you have wintermelon; is wintermelon available; tell me about wintermelon; winter melon price; can I get wintermelon; magkano ang wintermelon; may wintermelon ba kayo; available ba ang wintermelon; gusto ko ng wintermelon; presyo ng wintermelon; tagpila ang wintermelon; naa moy wintermelon; pila inyong wintermelon; wintermelon tagpila; unsay presyo sa wintermelon; wintermelon please; wintermelon milk tea; wintermelon
 
 fruit | Fruit tea
 fruit tea; fruit teas
-Fruit Tea is ₱70 on the demo menu. Specific fruit flavors and ingredients would need confirmation from a real shop.
+Fruit Tea is ₱70! 🍹 Please check with the shop for the current fruit flavors and ingredients.
 how much is fruit tea; fruit tea price; do you sell fruit tea; what fruit teas do you have; is fruit tea available; can I get fruit tea; tell me about fruit tea; magkano ang fruit tea; may fruit tea ba kayo; anong fruit tea meron; gusto ko ng fruit tea; presyo ng fruit tea; tagpila ang fruit tea; naa moy fruit tea; pila inyong fruit tea; unsay fruit tea ninyo; fruit tea tagpila; fruit tea please; fruit teas; fruit tea
 
 pearls | Extra pearls
 pearls; pearl; boba; toppings; add ons
-Extra pearls cost ₱15 in this demo. Other toppings are not listed; a real shop would confirm availability before accepting an order.
+Extra pearls are ₱15! 🧋 For other toppings, please check availability with the shop.
 how much are extra pearls; can I add pearls; extra pearls price; do you have boba; what toppings are available; can I get extra boba; add pearls please; magkano ang pearls; may pearls ba; dagdag pearls po; anong toppings meron; pwede extra pearls; tagpila ang pearls; naa moy pearls; dugang pearls palihog; pila ang extra pearls; unsay toppings ninyo; toppings; boba; pearls
 
 sugar | Sugar options
 sugar; sweetness; sweet; tam is; tamis
-A sample bot can offer 0%, 25%, 50%, 75%, or 100% added sugar. This does not guarantee a sugar-free drink: bases and toppings may contain sugar. Confirm ingredients with the real shop.
+You can choose 0%, 25%, 50%, 75%, or 100% added sugar. How sweet do you like it? 🧋 Just a heads-up: bases and toppings may already contain sugar, so 0% added sugar isn’t a sugar-free guarantee.
 can I choose the sugar level; what sugar levels do you have; less sugar please; no added sugar please; can I get fifty percent sugar; is it very sweet; can you make it less sweet; may sugar options ba; pwede less sugar; ayoko ng sobrang tamis; walang dagdag na sugar; gaano katamis; pwede bawasan ang tamis; pwede less sugar sa drink; gamay ra nga sugar; ayaw kaayo tam isa; unsay sugar levels; sugar level; sweetness; sugar
 
 ice | Ice options
 ice; iced; yelo
-Demo ice choices: regular ice, less ice, or no ice. A real shop would confirm whether changing ice affects the serving size or price.
+Regular ice, less ice, or no ice—which do you prefer? 🧊
 can I choose the ice level; less ice please; no ice please; extra ice please; what ice options do you have; can I get it without ice; do you serve iced drinks; pwede less ice; walang yelo please; dagdag yelo po; may ice options ba; gaano karami ang yelo; bawasan ang yelo; gamay ra nga ice; walay ice palihog; naa moy no ice; unsay ice options; ice level; yelo; ice
 
 sizes | Cup sizes
 size; sizes; cup size; large; medium; small
-Cup sizes are not specified in this sample menu. In a real build, the owner supplies sizes and any upgrade prices so the bot does not guess.
+I don’t have the cup sizes or upgrade prices listed yet. Please check with the shop so you get the right size and price.
 what sizes do you have; do you have large cups; how big is the cup; is there a small size; can I get a medium; how many ounces; what is the cup size; may large ba kayo; anong sizes meron; ilang ounces ang cup; may small ba; pwede medium; gaano kalaki ang cup; unsay sizes ninyo; naa moy large; pila ka ounces; unsa kadako ang cup; cup sizes; sizes; size
 
 allergens | Allergens and ingredients
 allergy; allergies; allergen; allergens; dairy; lactose; nuts; ingredients; vegan
-Please check ingredients and cross-contact risks directly with the real shop before ordering. This demo cannot verify allergens, dairy-free or vegan claims, or whether a drink is safe for you.
+Thanks for checking. Please confirm ingredients and cross-contact risks with the shop before ordering. I can’t guarantee that a drink is allergen-free, dairy-free, vegan, or safe for your allergy.
 what are the ingredients; does it contain dairy; I have a milk allergy; are there nuts in this; is this lactose free; do you have vegan drinks; is this safe for allergies; may gatas ba ito; may nuts ba ito; allergic ako sa milk; ano ang ingredients; lactose free ba; vegan ba ang drinks; naa ni gatas; naa ni nuts; allergic ko sa milk; unsay ingredients ani; allergens; dairy; ingredients
 
 nutrition | Nutrition information
 calories; nutrition; caffeine; pregnant; pregnancy; diabetic; diabetes
-I do not have verified nutrition or caffeine information for this fictional shop. Ask the real shop for ingredient details; for pregnancy, diabetes, or medical concerns, check with a qualified health professional.
+I don’t have verified calorie or caffeine details to share. Please ask the shop for ingredient information. For pregnancy, diabetes, or other medical concerns, check with a qualified health professional before choosing a drink.
 how many calories; how much caffeine is there; is this caffeine free; do you have nutrition facts; is this suitable for diabetics; can I drink this while pregnant; is this healthy; ilang calories ito; may caffeine ba; pwede ba sa buntis; pwede ba sa diabetic; may nutrition facts ba; healthy ba ito; pila ka calories; naa ni caffeine; pwede ni sa buntis; pwede ni sa diabetic; nutrition; calories; caffeine
 
 hours | Shop hours
 hours; hour; open; close; closing; oras; bukas; sarado; what time
-Sample shop hours: Monday–Sunday, 10 AM–10 PM. These are fictional hours, not a live open/closed status.
+Our regular hours are Monday–Sunday, 10 AM–10 PM. 🕐 Please check the shop’s latest announcement for holiday changes.
 what are your opening hours; what time do you open; what time do you close; are you open now; are you open today; do you open on sundays; are you open on holidays; open mo; bukas ba kayo; anong oras kayo nagbubukas; anong oras kayo nagsasara; bukas ba kayo ngayon; hanggang anong oras; unsang orasa mo mag open; unsang orasa mo mag close; abli mo karon; open mo ugma; shop hours; hours; open
 
 location | Shop location
 location; address; directions; map; mapa; asa; where
-This is a fictional shop demo, so there is no real shop address or map pin. A client bot would use the business's verified public address, not a personal home address.
+I don’t have a verified address or map pin to share yet. Please check the shop’s official page for directions and landmarks.
 where is your shop; what is your address; send me your location; do you have a map pin; how do I get there; what is the landmark; are you near me; saan kayo located; ano ang address ninyo; paki send ng location; saan ang shop; may landmark ba; may google maps ba; asa inyong shop; asa mo dapit; unsay inyong address; asa ang location; location; address; directions
 
 delivery_fee | Delivery fee
  delivery fee; delivery cost; delivery charge; shipping fee; shipping cost; bayad sa delivery; bayad sa hatod; free delivery
-Sample delivery fee: ₱50 within the demo service area, waived for sample orders of ₱500 or more. No delivery is actually booked, and a real shop must confirm its area and fees.
+Delivery is ₱50 within our service area, or FREE for orders of ₱500 or more! 🛵 Please check with the shop that your area is covered.
 how much is delivery; what is the delivery fee; is delivery free; how much is shipping; what is the delivery charge; is there a minimum for free delivery; delivery fee please; magkano delivery; magkano ang delivery fee; libre ba delivery; magkano ang shipping; may free delivery ba; bayad sa delivery; pila ang delivery; tagpila ang delivery fee; pila bayad sa hatod; libre ba ang delivery; delivery fee; shipping fee; free delivery
 
 delivery_time | Delivery time
  delivery time; delivery eta; delivery take; arrive; arrival; rider; late delivery
-This demo cannot estimate arrival times or track riders. A real shop would confirm preparation time, rider availability, and the delivery estimate before accepting your order.
+Delivery timing depends on preparation and rider availability. I don’t have a live arrival estimate or rider location to show; please check directly with the shop for an update.
 how long does delivery take; when will my drink arrive; what is the delivery time; where is my rider; is my delivery late; can you deliver in thirty minutes; what is the delivery eta; gaano katagal delivery; kailan darating order ko; nasaan ang rider; ilang minutes ang delivery; late na ang delivery; may delivery estimate ba; dugay pa ang delivery; kanus a maabot akong order; asa na ang rider; pila ka minutes ang delivery; delivery time; delivery eta; late delivery
 
 delivery | Delivery availability
  delivery; deliver; shipping; ship; hatod; padala; foodpanda; grab
-This demo shows how delivery FAQs could work. No courier or delivery app is connected. Ask about delivery fees or delivery time for examples; a real shop must verify coverage and app availability.
+Delivery depends on your area and rider availability. 🛵 Please check with the shop for coverage and delivery-app options. Ask me “delivery fee” if you’d like to see the rate.
 do you deliver; is delivery available; what areas do you deliver to; can you deliver to my house; do you use foodpanda; are you on grab; do you ship outside the city; may delivery ba kayo; nagdedeliver ba kayo; saan kayo nagdedeliver; pwede padeliver; nasa foodpanda ba kayo; may grab ba kayo; ga deliver mo; naa moy delivery; pwede pa hatod; asa mo ga deliver; delivery; shipping; hatod
 
 pickup | Pickup and dine-in
 pickup; pick up; dine in; takeaway; takeout; take out; curbside
-A client bot can explain pickup, takeaway, or dine-in options. This demo does not reserve drinks, tables, or pickup slots; confirm those directly with the real shop.
+For pickup, takeaway, or dine-in, please check the shop’s available options and collection times. They’ll need to confirm any pickup slot or table reservation.
 can I pick up my order; do you offer pickup; can I order for takeaway; can we dine in; do you have seating; is curbside pickup available; can I collect it later; pwede pickup; may dine in ba; pwede takeout; may upuan ba kayo; saan kukunin ang order; pwede kunin mamaya; pwede pick up; naa moy dine in; pwede take out; asa kuhaon ang order; pickup; dine in; takeaway
 
-order | Sample order flow
+order | Ordering drinks
 order; buy; palit; pa order; order ko
-Try a fictional order like “2 Classic, less ice.” This demo only replies with scripts: it does not calculate a checkout, save an order, or contact a shop. Do not enter your real name, address, phone number, or payment details.
-how do I order; I want to order; can I place an order; can I buy a drink; start an order; order ko; order ko please; paano umorder; gusto ko umorder; pwede mag order; bili ako milk tea; paano bumili; pa order po; unsaon pag order; gusto ko mopalit; pwede mo order; palit ko; order; buy; pa order
+Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit Tea, and tell me how many drinks. You can also pick your sugar and ice levels.
+how do I order; I want to order; can I place an order; can I buy a drink; start an order; order ko; order ko please; paano umorder; gusto ko umorder; pwede mag order; bili ako milk tea; paano bumili; pa order po; unsaon pag order; gusto ko mopalit; pwede mo order; palit ko; order; can I order; pa order
 
 order_status | Order status
 order status; track order; track my order; order number; order confirmation; confirmed; order ready
-No real orders are stored here, so I cannot look up, confirm, or track an order. In a real connected bot, order status would come from the shop's order system.
+I don’t have an order status or confirmation to show here. Please contact the shop directly for a confirmed update on your order.
 what is my order status; can you track my order; is my order ready; did you receive my order; is my order confirmed; where is my order confirmation; what is my order number; nasaan na order ko; confirmed na ba order ko; ready na ba order ko; natanggap ba ninyo order ko; paano i track ang order; may confirmation na ba; asa na akong order; ready na akong order; na confirm na akong order; nadawat ninyo akong order; order status; track order; order confirmation
 
 cancel | Cancel an order
 cancel; cancellation; cancel order; cancel my order; ayaw nalang; huwag na
-This demo cannot cancel orders or charge you. For a real order, contact the shop with your order reference and ask whether cancellation is still possible. Do not post private order details in this demo.
+Need to cancel? Please contact the shop as soon as possible, ideally before preparation starts. They’ll need to confirm whether cancellation is still possible.
 can I cancel my order; cancel order; cancel my order please; I want to cancel; how do I cancel an order; what is your cancellation policy; please stop my order; pwede cancel order; paano mag cancel; ayoko na ng order; huwag na ang order; cancel ko na po; pwede pa bang i cancel; pwede i cancel akong order; ayaw nalang akong order; dili na ko mudayon; unsaon pag cancel; cancellation; cancel; ayaw nalang
 
 change_order | Change an order
 change order; change my order; edit order; edit my order; wrong order; wrong drink; missing item; missing drink
-This demo cannot edit orders or resolve missing items. Contact the real shop with your order reference and explain what needs changing or what arrived incorrectly; they must confirm the next step.
+Need to change a drink, or received something wrong or missing? Please contact the shop with what needs fixing. They’ll need to confirm any order changes or replacement.
 can I change my order; I want to edit my order; I ordered the wrong drink; can I change the flavor; can I change the quantity; I received the wrong order; a drink is missing; pwede baguhin order ko; mali ang order ko; kulang ang order; pwede palitan ang flavor; paano mag edit ng order; maling drink ang dumating; pwede usbon akong order; sayop akong order; kulang akong drinks; pwede ilisan ang flavor; change order; wrong order; missing item
 
 payment | Shop payment methods
 payment; pay; gcash; maya; cash; bayad; card; cod
-Sample payment methods: GCash, Maya, or cash. No payments are accepted here, no payment account is connected, and this demo will never ask for an OTP, PIN, or transfer.
+Payment options are GCash, Maya, or cash. 💰 For payment instructions, use the shop’s verified contact channel. Never share your PIN or OTP.
 how can I pay; what payment methods do you accept; do you accept gcash; can I pay with maya; is cash accepted; do you accept cards; can I pay cash on delivery; paano magbayad; pwede gcash; may maya ba kayo; pwede cash; tumatanggap ba ng card; anong mode of payment; unsaon pagbayad; pwede gcash ang bayad; modawat mog cash; unsay payment methods; payment; gcash; bayad
 
 refund | Refunds and failed payments
 refund; refunds; charged twice; failed payment; payment failed; payment problem; double payment
-This demo has no payment system and cannot issue refunds. For a real payment problem, contact the shop or payment provider through a verified channel. Never share an OTP, PIN, or full account details here.
+Sorry you’re having trouble with a payment. Please contact the shop or payment provider through a verified channel to review a refund or failed charge. Don’t retry a payment until its status is clear, and never share your PIN or OTP.
 can I get a refund; how do refunds work; I was charged twice; my payment failed; I paid but got no confirmation; where is my refund; I sent the wrong amount; pwede refund; paano mag refund; doble ang bayad ko; nag fail ang payment; hindi pumasok ang bayad; kailan ang refund; pwede i refund; nadoble akong bayad; wala nisulod akong bayad; asa na akong refund; refund; charged twice; payment failed
 
 promos | Shop discounts
 promo; promos; discount; discounts; voucher; coupon; sale; student discount
-No live shop promotions or vouchers are offered by this demo. A real bot should only quote owner-approved promotions with their conditions and expiry dates.
+I don’t have an active promo or voucher listed right now. You can check the shop’s latest announcements for offers and their terms. Want to see the regular menu?
 do you have any promos; is there a discount; do you offer student discounts; can I use a voucher; are there any coupons; is there a sale today; do you have a loyalty card; may promo ba kayo; may discount ba; may student discount ba; pwede voucher; may coupon ba kayo; may loyalty card ba; naa moy promo; naa moy discount; pwede student discount; naa moy voucher; promos; discount; coupon
 
 bulk | Bulk and event orders
 bulk; wholesale; party; catering; event order; reseller; minimum order
-Bulk and event orders need a real shop's approval for quantity, lead time, and pricing. This demo does not promise wholesale discounts or reserve event capacity.
+Planning drinks for a party or event? 🧋 Bulk orders need the shop’s approval for quantity, lead time, and pricing. Please check with them before making event plans.
 do you accept bulk orders; can I order for a party; do you offer catering; what is the minimum order; do you have wholesale prices; can I become a reseller; how early should I order for an event; pwede bulk order; may wholesale ba; pwede pang party; may minimum order ba; pwede reseller; tumatanggap ba kayo ng catering; naa moy bulk orders; pwede pang event; pila minimum order; naa moy wholesale; bulk orders; catering; wholesale
 
 human | Human assistance
 human; staff; agent; admin; owner; tawo; real person; support
-This is an offline scripted demo: no staff member has been notified and no live chat handoff occurs. For portfolio services, use the Messenger link in the Contact section. For a real shop order, contact that shop directly.
+Prefer to speak with a person? Please contact the shop directly for help with a shop order. For Troy’s chatbot services, tap Messenger in the Contact section below. You’ll need to send the message there to reach someone.
 can I talk to a human; I need a real person; connect me to staff; can I speak to the owner; I need customer support; stop the bot replies; talk to an agent; gusto ko ng kausap na tao; may admin ba; paki connect sa staff; gusto ko kausapin ang owner; may customer service ba; tao po sana; naa moy tawo; pwede makigstorya sa owner; tawga ang admin; naa moy staff; human; admin; tawo
 
 privacy | Demo privacy and security
@@ -137,17 +137,17 @@ is this chat private; do you save my messages; where is my data stored; can you 
 
 greeting | Greeting
 hi; hello; hey; kumusta; kamusta; maayong buntag; maayong gabii
-Hi! 👋 This is a fictional milk tea shop bot by Troy. Ask about the menu, delivery fee, or canceling an order. You can also ask about Troy's chatbot services or say “help.”
+Hi! Welcome to Milk Tea Demo! 🧋 What can I help you with today—our menu, hours, or delivery options?
 hi; hello; hey; good morning; good afternoon; good evening; hello there; hi bot; hello po; kumusta; kamusta; magandang umaga; magandang gabi; maayong buntag; maayong hapon; maayong gabii; kumusta ka; hey there; hi there; greetings
 
 thanks | Thanks and goodbye
 thanks; thank you; salamat; goodbye; bye; thank
-You're welcome! 💛 Try another question, or use the Contact section if you want a bot built for your business. No real shop order has been placed here.
+You’re welcome! 💛 Happy to help. If you need anything else, just ask!
 thanks; thank you; thank you so much; thanks for the help; that helps thanks; appreciate it; goodbye; bye; salamat; maraming salamat; salamat po; thank you po; salamat sa tulong; sige salamat; daghang salamat; salamat kaayo; salamat sa tabang; amping; see you; bye for now
 
 help | Bot help and limits
 help; demo; bot; chatbot demo; what can you do; real shop; real ai; scripted
-I match scripted questions and whole-word phrases; I am not a live AI or a real shop. Try “delivery fee,” “cancel my order,” “allergens,” or “chatbot pricing.” I cannot place orders, process payments, browse the web, or notify staff.
+I can help with the menu, hours, delivery fees, drink options, and common order questions. 🧋 You can also ask about Troy’s chatbot services. This is a scripted roleplay, not live AI; real orders, payments, and staff contact happen outside this chat.
 help; what can you do; how does this demo work; are you a real shop; is this a real ai; are these scripted replies; what can I ask; paano gamitin ang demo; totoong shop ba ito; ai ba talaga ito; ano ang pwede itanong; scripted ba ang sagot; pwede patulong; unsa imong mahimo; tinuod ni nga shop; unsaon paggamit ani; scripted ni; demo; bot help; chatbot demo
 
 services | Portfolio services

@@ -6,7 +6,7 @@
       .replace(/[’'`]/g, '')
       .replace(/[^\p{L}\p{N}]+/gu, ' ').trim().replace(/\s+/g, ' ');
   }
-  const DEFAULT = 'I do not have a scripted answer for that yet. Try “menu,” “delivery fee,” “cancel my order,” or “chatbot pricing.” Please ask one topic at a time and do not share personal details.';
+  const DEFAULT = 'Sorry, I’m not sure what you mean yet. Could you rephrase that? You can ask about the menu, delivery fee, canceling an order, or Troy’s chatbot pricing.';
   function createBot(topics) {
     const exact = new Map();
     const ids = new Set();
@@ -48,7 +48,7 @@
       const best = candidates.filter(candidate => candidate.strength === strength);
       if (best.length > 1) {
         const labels = best.map(candidate => candidate.topic.label).join(' / ');
-        return { id: null, reply: `I found more than one topic: ${labels}. Please ask about one at a time so I can give the right scripted answer.`, method: 'clarify' };
+        return { id: null, reply: `I can help with a few things there: ${labels}. Which one would you like to start with?`, method: 'clarify' };
       }
       return { id: best[0].topic.id, reply: best[0].topic.reply, method: 'phrase' };
     }

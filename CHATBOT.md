@@ -7,6 +7,26 @@ different answers. Related questions intentionally share one approved answer.
 English, Tagalog, and Bisaya examples are included. Have a fluent speaker review
 phrasing and have the business owner approve facts before using it for a client.
 
+## Customer-service tone
+
+Shop replies now speak in character, rather than repeating “this is a demo” in
+every bubble. For example, **“Can I order?”** has this exact scripted reply:
+
+> Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit
+> Tea, and tell me how many drinks. You can also pick your sugar and ice levels.
+
+The persistent notice below the input labels the roleplay, states that no real
+orders/payments/staff handoffs occur, and asks visitors to use made-up details.
+The input references it with `aria-describedby`. `help` and `privacy` still explain
+the actual limits when asked. Allergy, payment-security, and unavailable-data
+answers keep relevant cautions without a repetitive demo disclaimer.
+
+**This is a copy change, not a checkout implementation.** There is no order state,
+cart, total calculation, or multi-turn slot filling. Asking about a drink gets its
+approved FAQ reply; it does not reserve or save it. Cancellation, status, refunds,
+and human assistance direct people to the appropriate contact instead of claiming
+an action succeeded. Review these limits before connecting a real client system.
+
 ## Where are the actual scripted lines?
 
 [`scripts/chatbot-topics.txt`](scripts/chatbot-topics.txt) contains **all 1,040 inputs**,
@@ -83,7 +103,7 @@ adding huge ambiguous keyword lists.
 - No network requests, local/session storage, orders, payments, or staff alerts
   are made by the demo code. Messages live in the current page's DOM/memory and
   clear on refresh. Hosting and external links have their own data practices.
-- Fictional prices/hours are labeled; no real home address, payment number,
+- The interface labels the fictional shop and its sample facts; no real home address, payment number,
   allergen guarantee, live stock, or delivery estimate is fabricated.
 - The UI explains missing-script failures and has a no-JavaScript message.
 - The Pages workflow checks the generated file, runs tests, and deploys `assets/`

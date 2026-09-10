@@ -10,6 +10,8 @@ pricing, a pilot-client invitation, and a Messenger contact flow.
 
 - **1,040 authored scripted questions across 52 topics**, with English, Tagalog,
   and Bisaya examples: shop FAQs plus questions about portfolio services.
+- Natural shop-assistant replies, with one persistent demo/privacy notice instead
+  of a disclaimer in every bubble. No fake order confirmations or staff transfers.
 - Deterministic replies: exact questions first, whole-word phrases next,
   clarification for equally strong matches, and an honest unknown-question fallback.
 - Working demo as proof—no unfinished video placeholders, invented testimonials,

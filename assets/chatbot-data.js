@@ -4,7 +4,7 @@
   const topics = [
   {
     "id": "menu",
-    "label": "Demo shop menu",
+    "label": "Shop menu",
     "keys": [
       "menu",
       "prices",
@@ -15,7 +15,7 @@
       "how much",
       "cost"
     ],
-    "reply": "Demo menu 🧋 Classic Milk Tea ₱75 · Okinawa ₱85 · Wintermelon ₱85 · Fruit Tea ₱70 · Extra pearls ₱15. These are sample prices, not a real shop offer.",
+    "reply": "Here’s our menu! 🧋 Classic Milk Tea ₱75 · Okinawa ₱85 · Wintermelon ₱85 · Fruit Tea ₱70 · Extra pearls ₱15. What sounds good to you?",
     "questions": [
       "menu please",
       "show me the menu",
@@ -46,7 +46,7 @@
       "classic",
       "classic milk tea"
     ],
-    "reply": "Classic Milk Tea is ₱75 in this fictional demo. Extra pearls are ₱15. No real order is placed here.",
+    "reply": "Our Classic Milk Tea is ₱75! 🧋 You can add extra pearls for ₱15. How do you like your sugar and ice?",
     "questions": [
       "how much is classic milk tea",
       "classic milk tea price",
@@ -76,7 +76,7 @@
     "keys": [
       "okinawa"
     ],
-    "reply": "Okinawa Milk Tea is ₱85 on the sample menu. This is a scripted example, not live stock or an order confirmation.",
+    "reply": "Okinawa Milk Tea is ₱85! 🧋 Would you like to see the sugar and ice options?",
     "questions": [
       "how much is okinawa",
       "okinawa price",
@@ -107,7 +107,7 @@
       "wintermelon",
       "winter melon"
     ],
-    "reply": "Wintermelon Milk Tea is ₱85 on the fictional menu. Ask about sugar or ice to see sample customization replies.",
+    "reply": "Wintermelon Milk Tea is ₱85! 🧋 You can choose your sugar and ice levels, or add extra pearls for ₱15.",
     "questions": [
       "how much is wintermelon",
       "wintermelon price",
@@ -138,7 +138,7 @@
       "fruit tea",
       "fruit teas"
     ],
-    "reply": "Fruit Tea is ₱70 on the demo menu. Specific fruit flavors and ingredients would need confirmation from a real shop.",
+    "reply": "Fruit Tea is ₱70! 🍹 Please check with the shop for the current fruit flavors and ingredients.",
     "questions": [
       "how much is fruit tea",
       "fruit tea price",
@@ -172,7 +172,7 @@
       "toppings",
       "add ons"
     ],
-    "reply": "Extra pearls cost ₱15 in this demo. Other toppings are not listed; a real shop would confirm availability before accepting an order.",
+    "reply": "Extra pearls are ₱15! 🧋 For other toppings, please check availability with the shop.",
     "questions": [
       "how much are extra pearls",
       "can I add pearls",
@@ -206,7 +206,7 @@
       "tam is",
       "tamis"
     ],
-    "reply": "A sample bot can offer 0%, 25%, 50%, 75%, or 100% added sugar. This does not guarantee a sugar-free drink: bases and toppings may contain sugar. Confirm ingredients with the real shop.",
+    "reply": "You can choose 0%, 25%, 50%, 75%, or 100% added sugar. How sweet do you like it? 🧋 Just a heads-up: bases and toppings may already contain sugar, so 0% added sugar isn’t a sugar-free guarantee.",
     "questions": [
       "can I choose the sugar level",
       "what sugar levels do you have",
@@ -238,7 +238,7 @@
       "iced",
       "yelo"
     ],
-    "reply": "Demo ice choices: regular ice, less ice, or no ice. A real shop would confirm whether changing ice affects the serving size or price.",
+    "reply": "Regular ice, less ice, or no ice—which do you prefer? 🧊",
     "questions": [
       "can I choose the ice level",
       "less ice please",
@@ -273,7 +273,7 @@
       "medium",
       "small"
     ],
-    "reply": "Cup sizes are not specified in this sample menu. In a real build, the owner supplies sizes and any upgrade prices so the bot does not guess.",
+    "reply": "I don’t have the cup sizes or upgrade prices listed yet. Please check with the shop so you get the right size and price.",
     "questions": [
       "what sizes do you have",
       "do you have large cups",
@@ -311,7 +311,7 @@
       "ingredients",
       "vegan"
     ],
-    "reply": "Please check ingredients and cross-contact risks directly with the real shop before ordering. This demo cannot verify allergens, dairy-free or vegan claims, or whether a drink is safe for you.",
+    "reply": "Thanks for checking. Please confirm ingredients and cross-contact risks with the shop before ordering. I can’t guarantee that a drink is allergen-free, dairy-free, vegan, or safe for your allergy.",
     "questions": [
       "what are the ingredients",
       "does it contain dairy",
@@ -347,7 +347,7 @@
       "diabetic",
       "diabetes"
     ],
-    "reply": "I do not have verified nutrition or caffeine information for this fictional shop. Ask the real shop for ingredient details; for pregnancy, diabetes, or medical concerns, check with a qualified health professional.",
+    "reply": "I don’t have verified calorie or caffeine details to share. Please ask the shop for ingredient information. For pregnancy, diabetes, or other medical concerns, check with a qualified health professional before choosing a drink.",
     "questions": [
       "how many calories",
       "how much caffeine is there",
@@ -385,7 +385,7 @@
       "sarado",
       "what time"
     ],
-    "reply": "Sample shop hours: Monday–Sunday, 10 AM–10 PM. These are fictional hours, not a live open/closed status.",
+    "reply": "Our regular hours are Monday–Sunday, 10 AM–10 PM. 🕐 Please check the shop’s latest announcement for holiday changes.",
     "questions": [
       "what are your opening hours",
       "what time do you open",
@@ -421,7 +421,7 @@
       "asa",
       "where"
     ],
-    "reply": "This is a fictional shop demo, so there is no real shop address or map pin. A client bot would use the business's verified public address, not a personal home address.",
+    "reply": "I don’t have a verified address or map pin to share yet. Please check the shop’s official page for directions and landmarks.",
     "questions": [
       "where is your shop",
       "what is your address",
@@ -458,7 +458,7 @@
       "bayad sa hatod",
       "free delivery"
     ],
-    "reply": "Sample delivery fee: ₱50 within the demo service area, waived for sample orders of ₱500 or more. No delivery is actually booked, and a real shop must confirm its area and fees.",
+    "reply": "Delivery is ₱50 within our service area, or FREE for orders of ₱500 or more! 🛵 Please check with the shop that your area is covered.",
     "questions": [
       "how much is delivery",
       "what is the delivery fee",
@@ -494,7 +494,7 @@
       "rider",
       "late delivery"
     ],
-    "reply": "This demo cannot estimate arrival times or track riders. A real shop would confirm preparation time, rider availability, and the delivery estimate before accepting your order.",
+    "reply": "Delivery timing depends on preparation and rider availability. I don’t have a live arrival estimate or rider location to show; please check directly with the shop for an update.",
     "questions": [
       "how long does delivery take",
       "when will my drink arrive",
@@ -531,7 +531,7 @@
       "foodpanda",
       "grab"
     ],
-    "reply": "This demo shows how delivery FAQs could work. No courier or delivery app is connected. Ask about delivery fees or delivery time for examples; a real shop must verify coverage and app availability.",
+    "reply": "Delivery depends on your area and rider availability. 🛵 Please check with the shop for coverage and delivery-app options. Ask me “delivery fee” if you’d like to see the rate.",
     "questions": [
       "do you deliver",
       "is delivery available",
@@ -567,7 +567,7 @@
       "take out",
       "curbside"
     ],
-    "reply": "A client bot can explain pickup, takeaway, or dine-in options. This demo does not reserve drinks, tables, or pickup slots; confirm those directly with the real shop.",
+    "reply": "For pickup, takeaway, or dine-in, please check the shop’s available options and collection times. They’ll need to confirm any pickup slot or table reservation.",
     "questions": [
       "can I pick up my order",
       "do you offer pickup",
@@ -593,7 +593,7 @@
   },
   {
     "id": "order",
-    "label": "Sample order flow",
+    "label": "Ordering drinks",
     "keys": [
       "order",
       "buy",
@@ -601,7 +601,7 @@
       "pa order",
       "order ko"
     ],
-    "reply": "Try a fictional order like “2 Classic, less ice.” This demo only replies with scripts: it does not calculate a checkout, save an order, or contact a shop. Do not enter your real name, address, phone number, or payment details.",
+    "reply": "Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit Tea, and tell me how many drinks. You can also pick your sugar and ice levels.",
     "questions": [
       "how do I order",
       "I want to order",
@@ -621,7 +621,7 @@
       "pwede mo order",
       "palit ko",
       "order",
-      "buy",
+      "can I order",
       "pa order"
     ]
   },
@@ -637,7 +637,7 @@
       "confirmed",
       "order ready"
     ],
-    "reply": "No real orders are stored here, so I cannot look up, confirm, or track an order. In a real connected bot, order status would come from the shop's order system.",
+    "reply": "I don’t have an order status or confirmation to show here. Please contact the shop directly for a confirmed update on your order.",
     "questions": [
       "what is my order status",
       "can you track my order",
@@ -672,7 +672,7 @@
       "ayaw nalang",
       "huwag na"
     ],
-    "reply": "This demo cannot cancel orders or charge you. For a real order, contact the shop with your order reference and ask whether cancellation is still possible. Do not post private order details in this demo.",
+    "reply": "Need to cancel? Please contact the shop as soon as possible, ideally before preparation starts. They’ll need to confirm whether cancellation is still possible.",
     "questions": [
       "can I cancel my order",
       "cancel order",
@@ -709,7 +709,7 @@
       "missing item",
       "missing drink"
     ],
-    "reply": "This demo cannot edit orders or resolve missing items. Contact the real shop with your order reference and explain what needs changing or what arrived incorrectly; they must confirm the next step.",
+    "reply": "Need to change a drink, or received something wrong or missing? Please contact the shop with what needs fixing. They’ll need to confirm any order changes or replacement.",
     "questions": [
       "can I change my order",
       "I want to edit my order",
@@ -746,7 +746,7 @@
       "card",
       "cod"
     ],
-    "reply": "Sample payment methods: GCash, Maya, or cash. No payments are accepted here, no payment account is connected, and this demo will never ask for an OTP, PIN, or transfer.",
+    "reply": "Payment options are GCash, Maya, or cash. 💰 For payment instructions, use the shop’s verified contact channel. Never share your PIN or OTP.",
     "questions": [
       "how can I pay",
       "what payment methods do you accept",
@@ -782,7 +782,7 @@
       "payment problem",
       "double payment"
     ],
-    "reply": "This demo has no payment system and cannot issue refunds. For a real payment problem, contact the shop or payment provider through a verified channel. Never share an OTP, PIN, or full account details here.",
+    "reply": "Sorry you’re having trouble with a payment. Please contact the shop or payment provider through a verified channel to review a refund or failed charge. Don’t retry a payment until its status is clear, and never share your PIN or OTP.",
     "questions": [
       "can I get a refund",
       "how do refunds work",
@@ -819,7 +819,7 @@
       "sale",
       "student discount"
     ],
-    "reply": "No live shop promotions or vouchers are offered by this demo. A real bot should only quote owner-approved promotions with their conditions and expiry dates.",
+    "reply": "I don’t have an active promo or voucher listed right now. You can check the shop’s latest announcements for offers and their terms. Want to see the regular menu?",
     "questions": [
       "do you have any promos",
       "is there a discount",
@@ -855,7 +855,7 @@
       "reseller",
       "minimum order"
     ],
-    "reply": "Bulk and event orders need a real shop's approval for quantity, lead time, and pricing. This demo does not promise wholesale discounts or reserve event capacity.",
+    "reply": "Planning drinks for a party or event? 🧋 Bulk orders need the shop’s approval for quantity, lead time, and pricing. Please check with them before making event plans.",
     "questions": [
       "do you accept bulk orders",
       "can I order for a party",
@@ -892,7 +892,7 @@
       "real person",
       "support"
     ],
-    "reply": "This is an offline scripted demo: no staff member has been notified and no live chat handoff occurs. For portfolio services, use the Messenger link in the Contact section. For a real shop order, contact that shop directly.",
+    "reply": "Prefer to speak with a person? Please contact the shop directly for help with a shop order. For Troy’s chatbot services, tap Messenger in the Contact section below. You’ll need to send the message there to reach someone.",
     "questions": [
       "can I talk to a human",
       "I need a real person",
@@ -967,7 +967,7 @@
       "maayong buntag",
       "maayong gabii"
     ],
-    "reply": "Hi! 👋 This is a fictional milk tea shop bot by Troy. Ask about the menu, delivery fee, or canceling an order. You can also ask about Troy's chatbot services or say “help.”",
+    "reply": "Hi! Welcome to Milk Tea Demo! 🧋 What can I help you with today—our menu, hours, or delivery options?",
     "questions": [
       "hi",
       "hello",
@@ -1002,7 +1002,7 @@
       "bye",
       "thank"
     ],
-    "reply": "You're welcome! 💛 Try another question, or use the Contact section if you want a bot built for your business. No real shop order has been placed here.",
+    "reply": "You’re welcome! 💛 Happy to help. If you need anything else, just ask!",
     "questions": [
       "thanks",
       "thank you",
@@ -1039,7 +1039,7 @@
       "real ai",
       "scripted"
     ],
-    "reply": "I match scripted questions and whole-word phrases; I am not a live AI or a real shop. Try “delivery fee,” “cancel my order,” “allergens,” or “chatbot pricing.” I cannot place orders, process payments, browse the web, or notify staff.",
+    "reply": "I can help with the menu, hours, delivery fees, drink options, and common order questions. 🧋 You can also ask about Troy’s chatbot services. This is a scripted roleplay, not live AI; real orders, payments, and staff contact happen outside this chat.",
     "questions": [
       "help",
       "what can you do",
