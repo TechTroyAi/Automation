@@ -1,19 +1,27 @@
 <!DOCTYPE html>
+<!-- 404 page — GitHub Pages serves this automatically when a link is broken.
+     Keep the same theme as index.html so a wrong link still looks intentional. -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Page not found — troy.builds</title>
-  <meta name="theme-color" content="#0a0a0b" />
+  <meta name="theme-color" content="#08080a" />
   <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="noindex" />
+  <title>Page not found — troy.builds</title>
   <link rel="icon" type="image/png" href="favicon.png" />
+  <link rel="apple-touch-icon" href="favicon.png" />
   <style>
     :root {
-      --bg: #0a0a0b;
+      --bg: #08080a;
+      --card: #131316;
       --accent: #d4af37;
       --accent2: #f1d97b;
-      --text: #f5f2e9;
-      --muted: #a1a1aa;
+      --ink: #0a0a0b;
+      --text: #f6f3ea;
+      --muted: #9c9ca8;
+      --border: #232328;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
     }
     * { margin: 0; padding: 0; box-sizing: border-box; }
     body {
@@ -26,37 +34,65 @@
       color: var(--text);
       text-align: center;
       padding: 24px;
+      -webkit-font-smoothing: antialiased;
     }
-    .wrap { max-width: 480px; }
+    /* soft gold glow behind the card, same vibe as the homepage hero */
+    body::before {
+      content: "";
+      position: fixed;
+      inset: -20% 0 auto 0;
+      height: 60vh;
+      pointer-events: none;
+      background: radial-gradient(520px 280px at 50% 0%, rgba(212, 175, 55, 0.15), transparent 70%);
+    }
+    .wrap { position: relative; max-width: 500px; }
     .code {
-      font-size: clamp(4rem, 16vw, 7rem);
+      font-size: clamp(4.5rem, 18vw, 7.5rem);
       font-weight: 800;
       line-height: 1;
+      letter-spacing: -0.04em;
       background: linear-gradient(90deg, var(--accent), var(--accent2));
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
     }
-    h1 { margin: 12px 0 10px; font-size: 1.6rem; }
-    p { color: var(--muted); margin-bottom: 28px; }
+    h1 { margin: 14px 0 10px; font-size: 1.55rem; letter-spacing: -0.02em; }
+    p { color: var(--muted); margin-bottom: 30px; }
+    .row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     a {
-      display: inline-block;
-      background: var(--accent);
-      color: #0a0a0b;
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
       font-weight: 700;
       text-decoration: none;
-      padding: 13px 28px;
+      padding: 14px 26px;
       border-radius: 12px;
+      border: 1px solid transparent;
+      transition: transform 0.15s var(--ease), border-color 0.2s var(--ease);
     }
     a:hover { transform: translateY(-2px); }
+    .primary {
+      background: linear-gradient(180deg, var(--accent2), var(--accent));
+      color: var(--ink);
+      box-shadow: 0 14px 34px -18px rgba(212, 175, 55, 0.85);
+    }
+    .ghost { background: var(--card); border-color: var(--border); color: var(--text); }
+    .ghost:hover { border-color: var(--accent); }
+    @media (prefers-reduced-motion: reduce) {
+      a { transition: none; }
+      a:hover { transform: none; }
+    }
   </style>
 </head>
 <body>
   <div class="wrap">
     <div class="code">404</div>
     <h1>This page doesn't exist</h1>
-    <p>The link might be old — the portfolio still lives at the home page.</p>
-    <a href="./">← Back to troy.builds</a>
+    <p>The link might be old or mistyped — the portfolio still lives at the home page.</p>
+    <div class="row">
+      <a class="primary" href="./">← Back to troy.builds</a>
+      <a class="ghost" href="./#services">See services</a>
+    </div>
   </div>
 </body>
 </html>
