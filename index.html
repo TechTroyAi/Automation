@@ -1,0 +1,478 @@
+<!DOCTYPE html>
+<!-- ═══════════════════════════════════════════════════════════════════
+  YOUR PORTFOLIO — STARTER KIT
+  ─────────────────────────────────────────────────────────────────────
+  TEACH: This whole website is ONE file. That's on purpose so you can:
+    1. Double-click it on your phone/PC and it just works (no internet needed)
+    2. Host it free on GitHub Pages / Netlify in 5 minutes
+    3. Learn by reading top → bottom: HTML = structure, CSS = design, JS = brain
+
+  HOW TO CUSTOMIZE (search for "✏️ EDIT ME"):
+    - Your name, photo, contact links → Hero + Contact sections
+    - Your real projects/videos → Projects section
+    - Your prices → Pricing section
+    - Colors → look for ":root" in the <style> block
+
+  Full step-by-step tutorial is in TUTORIAL.md in this repo. Read it after! 📖
+════════════════════════════════════════════════════════════════════ -->
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- TEACH: <title> + meta description = what people see on Google/FB shares -->
+  <!-- ✏️ EDIT ME: put your name here -->
+  <title>Troy — AI Automation & Video Editing | Cagayan de Oro</title>
+  <meta name="description" content="I build AI chatbots, business automations, and edit videos for local PH businesses. Based in Cagayan de Oro. GCash accepted." />
+
+  <style>
+    /* ══════════════════════════════════════════════════════════════
+       TEACH: CSS = the "clothes" of your website. This <style> block
+       holds ALL the design so the file stays standalone (1 file = easy host).
+       ──
+       CSS in 10 seconds:
+         selector { property: value; }
+         Example:  h1 { color: red; }  →  all h1 text becomes red
+    ══════════════════════════════════════════════════════════════ */
+
+    /* ── 🎨 THEME: change these 3 colors to re-skin the whole site ── */
+    /* ✏️ EDIT ME: try your own colors! (google "color picker" to get codes) */
+    :root {
+      --bg: #0b0f19;          /* page background (dark navy) */
+      --card: #141b2e;        /* card background */
+      --accent: #22c55e;      /* main green (buttons, highlights) */
+      --accent2: #38bdf8;     /* secondary blue (gradients) */
+      --text: #e8edf7;        /* main text */
+      --muted: #9aa6c0;       /* gray text */
+      --border: #24304d;      /* thin lines */
+      --radius: 16px;
+    }
+
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    html { scroll-behavior: smooth; } /* smooth scrolling when clicking nav links */
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      line-height: 1.6;
+    }
+
+    /* TEACH: .container centers content + limits width so it looks good on PC,
+       while padding keeps it readable on phones */
+    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
+    section { padding: 72px 0; }
+    a { color: inherit; }
+
+    /* ── NAVBAR ── */
+    nav {
+      position: sticky; top: 0; z-index: 100;
+      background: rgba(11, 15, 25, 0.9);
+      backdrop-filter: blur(10px); /* frosted glass effect */
+      border-bottom: 1px solid var(--border);
+    }
+    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; max-width: 1080px; margin: 0 auto; }
+    .logo { font-weight: 800; font-size: 1.2rem; text-decoration: none; }
+    .logo span { color: var(--accent); }
+    .nav-links { display: flex; gap: 22px; list-style: none; }
+    .nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: 0.95rem; }
+    .nav-links a:hover { color: var(--text); }
+    .nav-cta {
+      background: var(--accent); color: #06120b !important; font-weight: 700 !important;
+      padding: 8px 18px; border-radius: 999px;
+    }
+    /* TEACH: @media = "responsive design" — different rules for small screens */
+    @media (max-width: 640px) { .nav-links li:not(:last-child) { display: none; } }
+
+    /* ── HERO ── */
+    .hero { padding: 90px 0 60px; text-align: center; }
+    .badge {
+      display: inline-block; font-size: 0.85rem; font-weight: 600;
+      border: 1px solid var(--border); background: var(--card);
+      padding: 6px 16px; border-radius: 999px; color: var(--muted); margin-bottom: 20px;
+    }
+    .badge .dot { color: var(--accent); } /* green dot = "available" */
+    .hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.15; font-weight: 800; }
+    /* TEACH: gradient text trick = background clipped to text */
+    .gradient {
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text; background-clip: text; color: transparent;
+    }
+    .hero p { color: var(--muted); max-width: 620px; margin: 18px auto 28px; font-size: 1.05rem; }
+    .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
+    .btn {
+      display: inline-block; padding: 13px 28px; border-radius: 12px;
+      font-weight: 700; text-decoration: none; font-size: 1rem;
+      transition: transform 0.15s ease, box-shadow 0.15s ease;
+    }
+    .btn:hover { transform: translateY(-2px); }
+    .btn-green { background: var(--accent); color: #06120b; }
+    .btn-ghost { border: 1px solid var(--border); background: var(--card); color: var(--text); }
+
+    /* stat strip: quick trust signals */
+    .stats { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
+    .stat { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 26px; min-width: 140px; }
+    .stat b { display: block; font-size: 1.4rem; color: var(--accent); }
+    .stat small { color: var(--muted); }
+
+    /* ── SECTION HEADINGS ── */
+    .kicker { color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; }
+    h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); margin: 8px 0 10px; }
+    .sub { color: var(--muted); max-width: 640px; margin-bottom: 32px; }
+
+    /* ── CARDS (services, projects, pricing) ── */
+    .grid { display: grid; gap: 18px; }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .card {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 26px;
+      transition: transform 0.15s ease, border-color 0.15s ease;
+    }
+    .card:hover { transform: translateY(-3px); border-color: var(--accent); }
+    .card .icon { font-size: 2rem; }
+    .card h3 { margin: 12px 0 8px; font-size: 1.15rem; }
+    .card p { color: var(--muted); font-size: 0.95rem; }
+    .price-tag {
+      display: inline-block; margin-top: 14px; font-weight: 700; color: var(--accent);
+      background: rgba(34, 197, 94, 0.1); padding: 5px 14px; border-radius: 999px; font-size: 0.9rem;
+    }
+    .card ul { margin: 12px 0 0 18px; color: var(--muted); font-size: 0.93rem; }
+    .card li { margin-bottom: 6px; }
+
+    /* project demo box: where your screen-recording goes */
+    .demo-box {
+      margin-top: 14px; border: 1px dashed var(--border); border-radius: 12px;
+      padding: 22px; text-align: center; color: var(--muted); font-size: 0.9rem;
+      background: rgba(56, 189, 248, 0.04);
+    }
+    .demo-box a { color: var(--accent2); font-weight: 600; }
+
+    /* ── VIDEO EMBED (responsive 16:9) ── */
+    /* TEACH: this wrapper keeps any YouTube/FB video at correct size on all screens */
+    .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-top: 14px; border: 1px solid var(--border); }
+    .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
+
+    /* ── PROCESS STEPS ── */
+    .step { display: flex; gap: 16px; align-items: flex-start; }
+    .step-num {
+      flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
+      background: var(--accent); color: #06120b; font-weight: 800;
+      display: flex; align-items: center; justify-content: center;
+    }
+
+    /* ── FAQ ── */
+    details { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; }
+    details summary { font-weight: 700; cursor: pointer; }
+    details p { color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
+
+    /* ── CONTACT ── */
+    .contact-card { text-align: center; background: linear-gradient(135deg, rgba(34,197,94,0.12), rgba(56,189,248,0.12)); border: 1px solid var(--border); border-radius: 20px; padding: 44px 24px; }
+    .contact-card h2 { margin-bottom: 8px; }
+
+    footer { border-top: 1px solid var(--border); padding: 26px 0; text-align: center; color: var(--muted); font-size: 0.9rem; }
+
+    /* TEACH: reveal-on-scroll animation — JS adds .visible when you scroll to it */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    .reveal.visible { opacity: 1; transform: none; }
+  </style>
+</head>
+
+<body>
+
+  <!-- ═══════════ NAVBAR ═══════════ -->
+  <!-- TEACH: <nav> = the top menu. Each link jumps to a section via its id (#services, etc.) -->
+  <nav>
+    <div class="nav-inner">
+      <!-- ✏️ EDIT ME: your name / brand -->
+      <a class="logo" href="#top">troy<span>.builds</span></a>
+      <ul class="nav-links">
+        <li><a href="#services">Services</a></li>
+        <li><a href="#work">My Work</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="#contact" class="nav-cta">Hire Me</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- ═══════════ HERO ═══════════ -->
+  <header class="hero container" id="top">
+    <div class="badge"><span class="dot">●</span> Available for new projects</div>
+    <!-- ✏️ EDIT ME: your headline — say WHAT you do + WHO it's for -->
+    <h1>I build <span class="gradient">AI chatbots & automations</span> for PH businesses 🤖</h1>
+    <p>
+      Hi, I'm <b>Troy</b> — a 17-year-old builder from Cagayan de Oro.
+      I help shops & online sellers save hours every week with auto-reply chatbots,
+      workflow automations, and scroll-stopping video edits. GCash accepted. 🇵🇭
+    </p>
+    <div class="btn-row">
+      <!-- ✏️ EDIT ME: paste your FB page / Messenger link below -->
+      <a class="btn btn-green" href="https://m.me/YOUR_FB_PAGE" target="_blank">💬 Message Me on Facebook</a>
+      <a class="btn btn-ghost" href="#work">See my work ↓</a>
+    </div>
+    <div class="stats">
+      <div class="stat"><b>🤖 AI</b><small>Chatbots & agents</small></div>
+      <div class="stat"><b>⚡ Auto</b><small>n8n / Make workflows</small></div>
+      <div class="stat"><b>🎬 Edits</b><small>Reels & TikTok</small></div>
+      <div class="stat"><b>📍 CDO</b><small>Cagayan de Oro, PH</small></div>
+    </div>
+  </header>
+
+  <!-- ═══════════ SERVICES ═══════════ -->
+  <section id="services">
+    <div class="container">
+      <div class="kicker">Services</div>
+      <h2>What I can do for your business</h2>
+      <p class="sub">Simple offers, fixed prices, no tech jargon. Pick one and message me — I'll handle the rest.</p>
+      <div class="grid grid-2">
+        <div class="card reveal">
+          <div class="icon">💬</div>
+          <h3>Facebook Page Auto-Reply Chatbot</h3>
+          <p>Never lose a customer because you were busy. I set up an AI that replies instantly, answers FAQs (price, location, hours), and collects orders while you sleep.</p>
+          <ul>
+            <li>Works on your existing FB Page</li>
+            <li>Knows your menu / price list</li>
+            <li>Hands over to you when needed</li>
+          </ul>
+          <span class="price-tag">from ₱1,500 one-time</span>
+        </div>
+        <div class="card reveal">
+          <div class="icon">⚡</div>
+          <h3>Business Automations (n8n / Make)</h3>
+          <p>Connect your apps so work happens by itself: new order → auto-invoice → auto-post → auto-record in Google Sheets. I build it, you just watch it run.</p>
+          <ul>
+            <li>Auto-post to FB / TikTok</li>
+            <li>Lead capture + follow-up</li>
+            <li>Invoice & record keeping</li>
+          </ul>
+          <span class="price-tag">from ₱2,000 per workflow</span>
+        </div>
+        <div class="card reveal">
+          <div class="icon">🛠️</div>
+          <h3>Custom AI Tools</h3>
+          <p>Need something specific? Product description writer, resume screener, content idea generator — small AI-powered tools built around YOUR workflow.</p>
+          <ul>
+            <li>Built with modern AI (GPT-class models)</li>
+            <li>Simple to use, no training needed</li>
+            <li>You own it after delivery</li>
+          </ul>
+          <span class="price-tag">from ₱2,500 per tool</span>
+        </div>
+        <div class="card reveal">
+          <div class="icon">🎬</div>
+          <h3>Video Editing (Reels / TikTok / Ads)</h3>
+          <p>Fast, punchy edits with AI captions, trending sounds, and clean cuts — perfect for shops, food stalls, and online sellers promoting on social.</p>
+          <ul>
+            <li>Captions + hooks included</li>
+            <li>24–48 hr turnaround available</li>
+            <li>Bulk packages for resellers</li>
+          </ul>
+          <span class="price-tag">from ₱300 per video</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ WORK / DEMOS ═══════════ -->
+  <section id="work" style="background: rgba(20,27,46,0.4);">
+    <div class="container">
+      <div class="kicker">Proof of work</div>
+      <h2>Things I've built 🛠️</h2>
+      <!--
+        TEACH: This section is your #1 sales tool. Clients don't buy words — they buy
+        PROOF. A 60-second screen recording of your AI agent working is worth more
+        than 10 paragraphs. How to add yours (free, phone-friendly):
+          1. Screen-record your project in action (phone screen recorder is fine)
+          2. Upload it to YouTube as "Unlisted"
+          3. Copy the video ID (the part after v= in the link)
+          4. Replace VIDEO_ID below with it, and delete the demo-box placeholder
+        Full walkthrough in TUTORIAL.md → "Part 4".
+      -->
+      <p class="sub">Real demos, not promises. Watch them work 👇</p>
+      <div class="grid grid-2">
+
+        <!-- ✏️ EDIT ME: PROJECT 1 — your AI agent project -->
+        <div class="card reveal">
+          <div class="icon">🤖</div>
+          <h3>My AI Agent Project</h3>
+          <p>An AI assistant that can [describe what yours does — e.g. "answer customer questions, take orders, and save them to a sheet"]. Built with [your tools — e.g. Python / n8n / OpenAI].</p>
+          <!-- OPTION A (placeholder until you have a video): keep this box -->
+          <div class="demo-box">
+            🎥 <b>Demo video coming here.</b><br />
+            Screen-record your project → upload to YouTube (Unlisted) →<br />
+            paste the embed below. See <b>TUTORIAL.md Part 4</b> for steps.<br /><br />
+            Meanwhile, see the code on <a href="https://github.com/YOUR_USERNAME" target="_blank">my GitHub →</a>
+          </div>
+          <!-- OPTION B (once you have a video): delete the demo-box above and
+               uncomment this block, replacing VIDEO_ID with your YouTube ID:
+          <div class="video-wrap">
+            <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen
+              title="AI agent demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
+          </div>
+          -->
+        </div>
+
+        <!-- ✏️ EDIT ME: PROJECT 2 — an automation or 2nd project -->
+        <div class="card reveal">
+          <div class="icon">⚡</div>
+          <h3>Auto-Reply + Order Tracker Workflow</h3>
+          <p>An n8n/Make workflow: new FB message → AI draft reply → order details auto-saved to Google Sheets → daily summary sent to the owner. Zero manual copying.</p>
+          <div class="demo-box">
+            🎥 <b>Demo video coming here.</b><br />
+            Same steps as Project 1 — record the workflow running,<br />
+            upload Unlisted, embed it.<br /><br />
+            Workflow template available on request →
+          </div>
+        </div>
+
+        <!-- ✏️ EDIT ME (optional): PROJECT 3 — video editing sample -->
+        <div class="card reveal">
+          <div class="icon">🎬</div>
+          <h3>Sample Video Edits</h3>
+          <p>Before/after reels and TikToks: captions, hooks, transitions, trending audio. Fast turnaround for sellers who post daily.</p>
+          <div class="demo-box">
+            🎥 <b>Post your edits on TikTok/FB</b>, then link them here:<br /><br />
+            <a href="https://tiktok.com/@YOUR_HANDLE" target="_blank">My TikTok →</a>
+            &nbsp;·&nbsp;
+            <a href="https://facebook.com/YOUR_PAGE" target="_blank">My FB Page →</a>
+          </div>
+        </div>
+
+        <!-- HOW CLIENTS READ THIS: process card -->
+        <div class="card reveal">
+          <div class="icon">📋</div>
+          <h3>How working with me goes</h3>
+          <p style="margin-top:10px;">① You message me what you need<br />② I reply with a fixed price + timeline (usually within a day)<br />③ 50% downpayment via GCash to start<br />④ I build + send you a demo video<br />⑤ You approve → pay balance → I hand everything over + teach you to use it</p>
+          <span class="price-tag">✅ No payment = no risk: you approve the demo first</span>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ═══════════ PRICING ═══════════ -->
+  <section id="pricing">
+    <div class="container">
+      <div class="kicker">Pricing</div>
+      <h2>Simple packages, GCash-friendly 🇵🇭</h2>
+      <p class="sub">Fixed prices. 50% to start, 50% when you're happy with the demo. No hidden fees.</p>
+      <div class="grid grid-3">
+        <div class="card reveal">
+          <div class="icon">🌱</div>
+          <h3>Starter — ₱1,500</h3>
+          <p>Perfect for trying automation for the first time.</p>
+          <ul>
+            <li>1 FB auto-reply bot (FAQs + hours + location)</li>
+            <li>Basic setup on your Page</li>
+            <li>Video guide on how to use it</li>
+            <li>3 days of chat support</li>
+          </ul>
+        </div>
+        <div class="card reveal" style="border-color: var(--accent);">
+          <div class="icon">🚀</div>
+          <h3>Business — ₱3,000 ⭐</h3>
+          <p>Most popular. Bot + automation working together.</p>
+          <ul>
+            <li>Everything in Starter</li>
+            <li>+ 1 automation (orders → Sheets, auto-post, etc.)</li>
+            <li>Custom replies in your tone (Bisaya/Tagalog OK!)</li>
+            <li>7 days of chat support</li>
+          </ul>
+        </div>
+        <div class="card reveal">
+          <div class="icon">🎬</div>
+          <h3>Content — ₱1,000 / 5 vids</h3>
+          <p>For sellers who post every day.</p>
+          <ul>
+            <li>5 vertical videos edited</li>
+            <li>Captions + hooks + trending sounds</li>
+            <li>48-hr turnaround</li>
+            <li>1 free revision each</li>
+          </ul>
+        </div>
+      </div>
+      <p class="sub" style="margin-top:20px;">Need something custom? <a href="#contact" style="color:var(--accent2);font-weight:600;">Message me</a> — I'll quote you a fixed price within a day.</p>
+    </div>
+  </section>
+
+  <!-- ═══════════ FAQ ═══════════ -->
+  <section id="faq" style="background: rgba(20,27,46,0.4);">
+    <div class="container">
+      <div class="kicker">FAQ</div>
+      <h2>Questions people ask me</h2>
+      <p class="sub"></p>
+      <!-- TEACH: <details>/<summary> = free accordion, no JavaScript needed! -->
+      <details class="reveal">
+        <summary>💸 How do I pay you?</summary>
+        <p>GCash, Maya, or bank transfer (via my dad's verified account — I'm 17, so payments go through a parent, 100% legit and traceable). 50% downpayment to start, balance after you approve the demo.</p>
+      </details>
+      <details class="reveal">
+        <summary>⏱️ How long does it take?</summary>
+        <p>Simple chatbot: 2–4 days. Automation workflow: 3–7 days. Video edits: 24–48 hours. I'll always give you a date upfront — and message you if anything changes.</p>
+      </details>
+      <details class="reveal">
+        <summary>🧠 I'm not techy. Is this hard to use?</summary>
+        <p>Nope. I set everything up on YOUR accounts, then send you a short video showing exactly what to click. If you can use Facebook, you can use what I build. Plus free chat support after delivery.</p>
+      </details>
+      <details class="reveal">
+        <summary>📍 Do I need to be in Cagayan de Oro?</summary>
+        <p>No! Everything is done online — chatbots, automations, and video edits all work remotely. CDO clients just get the bonus option of meeting up. I work with anyone in the Philippines.</p>
+      </details>
+      <details class="reveal">
+        <summary>🛡️ What if it doesn't work?</summary>
+        <p>You approve a working demo BEFORE paying the balance. If I can't deliver what we agreed, you don't pay the rest — and I'll refund the downpayment. Simple.</p>
+      </details>
+    </div>
+  </section>
+
+  <!-- ═══════════ CONTACT ═══════════ -->
+  <section id="contact">
+    <div class="container">
+      <div class="contact-card reveal">
+        <div class="kicker">Let's work together</div>
+        <h2>Message me — I reply fast ⚡</h2>
+        <p class="sub" style="margin-left:auto;margin-right:auto;">Tell me what business you have and what eats your time. I'll reply with a fixed price + timeline, free quote, no pressure.</p>
+        <div class="btn-row">
+          <!-- ✏️ EDIT ME: replace ALL the YOUR_... links with your real ones -->
+          <a class="btn btn-green" href="https://m.me/YOUR_FB_PAGE" target="_blank">💬 Messenger</a>
+          <a class="btn btn-ghost" href="https://facebook.com/YOUR_PAGE" target="_blank">📘 FB Page</a>
+          <a class="btn btn-ghost" href="mailto:youremail@gmail.com">📧 Email</a>
+        </div>
+        <p style="margin-top:22px;color:var(--muted);font-size:0.9rem;">
+          Prefer TikTok? <a href="https://tiktok.com/@YOUR_HANDLE" target="_blank" style="color:var(--accent2);font-weight:600;">@YOUR_HANDLE</a>
+          &nbsp;·&nbsp; Code? <a href="https://github.com/YOUR_USERNAME" target="_blank" style="color:var(--accent2);font-weight:600;">GitHub</a>
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <div class="container">
+      <!-- The year below auto-updates via the tiny script at the bottom 👇 -->
+      © <span id="year">2026</span> Troy · Built by hand in Cagayan de Oro 🇵🇭 · Powered by kape ☕
+    </div>
+  </footer>
+
+  <script>
+    // ══════════════════════════════════════════════════════════════
+    // TEACH: JavaScript = the "brain". This tiny script does 2 things:
+    //   1. Auto-updates the footer year (so you never edit it again)
+    //   2. Reveals sections with animation as you scroll (the .reveal class)
+    // That's it — a portfolio doesn't need heavy JS. Simple = fast = good.
+    // ══════════════════════════════════════════════════════════════
+
+    // 1. Footer year — always current, zero maintenance
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // 2. Reveal-on-scroll: watch every .reveal element, add .visible when seen
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) entry.target.classList.add('visible');
+      });
+    }, { threshold: 0.1 }); // trigger when 10% of the card is visible
+
+    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+  </script>
+
+</body>
+</html>
