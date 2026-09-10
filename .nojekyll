@@ -1,0 +1,2 @@
+# Tells GitHub Pages to skip Jekyll processing and serve files as-is.
+# Faster deploys for plain HTML sites like this one.

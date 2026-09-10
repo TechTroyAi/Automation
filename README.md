@@ -1,28 +1,97 @@
-# 🚀 Troy's Portfolio + Freelancing Starter Kit
+# Troy.Builds — AI Automation Portfolio 🖤💛
 
-> Built for a 17-year-old AI automation builder from Cagayan de Oro 🇵🇭
-> One repo = portfolio website + gig templates + outreach scripts + full tutorial.
+> Personal portfolio of **Troy Candia**, an AI automation builder & video editor from
+> Cagayan de Oro, Philippines. Features a **live interactive chatbot demo**, service
+> packages, transparent pricing, and a client-ready contact flow.
 
-## 📁 What's inside
+[![Live Site](https://img.shields.io/badge/🌐_Live-techtroyai.github.io/Automation-d4af37?style=for-the-badge)](https://techtroyai.github.io/Automation/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-d4af37?style=flat-square)](LICENSE)
+![HTML5](https://img.shields.io/badge/HTML5-standalone-orange?style=flat-square&logo=html5)
+![CSS3](https://img.shields.io/badge/CSS3-no_frameworks-blue?style=flat-square&logo=css3)
+![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-yellow?style=flat-square&logo=javascript)
 
-| File | What it is |
-|---|---|
-| **`index.html`** | Your portfolio website — ONE standalone file. Double-click to open, host free anywhere. Search `✏️ EDIT ME` to customize. |
-| **`TUTORIAL.md`** | 📖 Full tutorial: how the site works (HTML/CSS/JS), how to customize it, add demo videos, host it free, and get clients. **Read this first.** |
-| **`gig-descriptions.md`** | Copy-paste gig posts for Fiverr/Upwork/FB groups (chatbot, automation, video editing). |
-| **`outreach-scripts.md`** | DM scripts in English + Bisaya for local CDO shops, follow-ups, objection handling, price quotes. |
-
-## ⚡ Quickstart (5 mins)
-
-1. **Preview it:** open `index.html` in any browser (double-click the file — works offline).
-2. **Customize it:** open `index.html` in any text editor, search `✏️ EDIT ME`, replace with your info.
-3. **Put it online free:** see `TUTORIAL.md` Part 5 (GitHub Pages or Netlify Drop).
-4. **Get clients:** see `outreach-scripts.md` — message 10 local shops this week.
-
-## 🌐 Live site
-
-Once GitHub Pages is enabled: `https://YOUR_USERNAME.github.io/Automation/`
+**🔗 Live site:** [techtroyai.github.io/Automation](https://techtroyai.github.io/Automation/)
 
 ---
 
-*Built with ☕ in Cagayan de Oro. Kape + code + kugi = kwarta.* 💪
+## ✨ Features
+
+- 🤖 **Live chatbot demo** — visitors chat with a simulated shop auto-reply bot (keyword engine in vanilla JS, works offline)
+- 💬 **Service catalog** — FB chatbots, n8n/Make automations, custom AI tools, video editing
+- 💰 **Transparent pricing** — GCash-friendly packages in PHP (₱)
+- ❓ **FAQ accordion** — handles objections before the first message (pure HTML, zero JS)
+- 📱 **Fully responsive** — mobile-first, because clients browse on phones
+- ⚡ **Zero dependencies** — one HTML file, no build step, no frameworks, loads instantly
+
+## 📁 Project Structure
+
+```
+├── index.html            # The entire site — standalone, no build step
+├── TUTORIAL.md           # Full guide: how it works, customize, host, get clients
+├── gig-descriptions.md   # Copy-paste gigs for Fiverr / Upwork / FB groups
+├── outreach-scripts.md   # DM scripts (English + Bisaya) for local outreach
+├── LICENSE               # MIT License
+└── .gitignore
+```
+
+## 🛠️ Tech Stack
+
+| Layer | Choice | Why |
+|---|---|---|
+| Structure | HTML5 | Semantic, accessible, SEO-friendly |
+| Styling | Vanilla CSS (custom properties) | One `:root` theme block re-skins the whole site |
+| Behavior | Vanilla JavaScript | Scroll reveals + keyword chatbot — no libraries needed |
+| Hosting | GitHub Pages | Free, auto-deploys on every push |
+
+## ⚡ Quickstart
+
+```bash
+# 1. Clone
+git clone https://github.com/TechTroyAi/Automation.git
+
+# 2. Open — that's it. No install, no build.
+open index.html        # or just double-click the file
+```
+
+> The site works fully offline — open it in airplane mode and the demo bot still replies. ✈️
+
+## 🎨 Customization
+
+Every editable spot in `index.html` is marked with `✏️ EDIT ME`. The essentials:
+
+| Change | Where |
+|---|---|
+| Name, headline, bio | Hero section |
+| Contact links (Messenger, FB, email, TikTok, GitHub) | Hero buttons + Contact section |
+| Projects & demo videos | `#work` section (YouTube embed supported) |
+| Prices & packages | `#pricing` section |
+| Theme colors | `:root` block in `<style>` (currently black + gold `🖤💛`) |
+| Chatbot replies & demo shop | `BOT_RULES` in `<script>` |
+
+📖 **New to code?** Read [`TUTORIAL.md`](TUTORIAL.md) — a beginner-friendly walkthrough of how every part works, how to add demo videos, and how to host it free.
+
+## 🗺️ Roadmap
+
+- [x] v1 — Portfolio + live chatbot demo + black/gold theme
+- [ ] Embed real AI-agent demo videos (screen recordings)
+- [ ] Client testimonials section
+- [ ] Custom domain (`troybuilds.com`)
+- [ ] Sellable n8n workflow templates
+
+## 👤 Author
+
+**Troy Candia** — Cagayan de Oro, Philippines 🇵🇭
+
+- 💬 Messenger: [m.me/TroyCandia](https://m.me/TroyCandia)
+- 📘 Facebook: [facebook.com/TroyCandia](https://facebook.com/TroyCandia)
+- 💻 GitHub: [@TechTroyAi](https://github.com/TechTroyAi)
+
+Open to freelance projects — chatbots, automations, and video edits for PH businesses. GCash accepted. 🙏
+
+## 📄 License
+
+This project is open source under the [MIT License](LICENSE) — feel free to fork it for your own portfolio, just leave a ⭐ if it helped you.
+
+---
+
+<p align="center">Built by hand in Cagayan de Oro · Powered by kape ☕</p>
