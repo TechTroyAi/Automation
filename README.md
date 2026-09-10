@@ -1,7 +1,7 @@
 # Troy.Builds — AI Automation Portfolio 🖤💛
 
 > Personal portfolio of **Troy Candia**, an AI automation builder & video editor from
-> Cagayan de Oro, Philippines. Features a **live interactive chatbot demo**, service
+> Tubod, Lanao del Norte (LDN), Philippines. Features a **live interactive chatbot demo**, service
 > packages, transparent pricing, and a client-ready contact flow.
 
 [![Live Site](https://img.shields.io/badge/🌐_Live-techtroyai.github.io/Automation-d4af37?style=for-the-badge)](https://techtroyai.github.io/Automation/)
@@ -27,9 +27,14 @@
 
 ```
 ├── index.html            # The entire site — standalone, no build step
+├── 404.html              # Themed GitHub Pages 404 → sends visitors home
+├── favicon.png           # Tab icon
+├── og.jpg                # Social share card (FB / Messenger / Twitter)
 ├── TUTORIAL.md           # Full guide: how it works, customize, host, get clients
 ├── gig-descriptions.md   # Copy-paste gigs for Fiverr / Upwork / FB groups
 ├── outreach-scripts.md   # DM scripts (English + Bisaya) for local outreach
+├── .nojekyll             # Tells GitHub Pages to skip Jekyll
+├── .github/workflows/pages.yml  # Auto-deploys to GitHub Pages on push
 ├── LICENSE               # MIT License
 └── .gitignore
 ```
@@ -48,12 +53,31 @@
 ```bash
 # 1. Clone
 git clone https://github.com/TechTroyAi/Automation.git
+cd Automation
 
 # 2. Open — that's it. No install, no build.
 open index.html        # or just double-click the file
+
+# Or serve it locally (needed if you want a real http:// URL)
+python3 -m http.server 8080 --bind 0.0.0.0
+# then open http://localhost:8080
 ```
 
 > The site works fully offline — open it in airplane mode and the demo bot still replies. ✈️
+
+## 🌐 GitHub Pages
+
+This repo is set up as a **project site**. After the Actions workflow runs, the live URL is:
+
+**https://techtroyai.github.io/Automation/**
+
+How it deploys:
+
+1. Merge to `main` (GitHub Pages is locked to that branch)
+2. The [Pages workflow](.github/workflows/pages.yml) uploads `index.html` + assets
+3. GitHub serves them at the URL above — usually within 1–2 minutes
+
+First time on a fork? Repo → **Settings → Pages → Source: GitHub Actions**.
 
 ## 🎨 Customization
 
@@ -80,7 +104,7 @@ Every editable spot in `index.html` is marked with `✏️ EDIT ME`. The essenti
 
 ## 👤 Author
 
-**Troy Candia** — Cagayan de Oro, Philippines 🇵🇭
+**Troy Candia** — Tubod, Lanao del Norte (LDN), Philippines 🇵🇭
 
 - 💬 Messenger: [m.me/TroyCandia](https://m.me/TroyCandia)
 - 📘 Facebook: [facebook.com/TroyCandia](https://facebook.com/TroyCandia)
@@ -94,4 +118,4 @@ This project is open source under the [MIT License](LICENSE) — feel free to fo
 
 ---
 
-<p align="center">Built by hand in Cagayan de Oro · Powered by kape ☕</p>
+<p align="center">Built by hand in Tubod, LDN · Powered by kape ☕</p>

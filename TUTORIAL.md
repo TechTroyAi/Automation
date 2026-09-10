@@ -118,7 +118,7 @@ Here's the checklist in order:
 
 ### 1. Your name & brand (2 mins)
 - `<title>` in `<head>` → your name
-- The `.logo` in `<nav>` → your brand (e.g. `troy.builds`, `cdobotguy`)
+- The `.logo` in `<nav>` → your brand (e.g. `troy.builds`, `tubodbotguy`)
 - Hero headline + intro paragraph → your real story
 
 ### 2. Your contact links (5 mins) — MOST IMPORTANT ⚠️
@@ -143,7 +143,7 @@ In the `#work` section, rewrite the 3 project cards:
 Honesty rule: only claim what you can demo. One real demo > five fake claims.
 
 ### 4. Your prices (2 mins)
-The defaults (₱1,500 / ₱3,000 / ₱1,000-per-5-vids) are beginner-friendly CDO prices.
+The defaults (₱1,500 / ₱3,000 / ₱1,000-per-5-vids) are beginner-friendly LDN prices.
 Keep them until you have 3+ paying clients, then raise 30–50%.
 
 ### 5. (Optional) Your photo
@@ -196,17 +196,19 @@ Repeat for Project 2. Two embedded demos = you look more legit than 90% of begin
 Right now your site only exists on your device. Let's give it a real link you can
 send to clients. Two free options — pick one:
 
-### Option A — GitHub Pages (recommended, you already have GitHub)
-1. Push this repo to GitHub (if you haven't):
+### Option A — GitHub Pages (already wired up in this repo)
+This repo ships with `.github/workflows/pages.yml`. GitHub Pages is set to **GitHub Actions**, so every push auto-deploys the site.
+
+1. Push your changes:
    ```
    git add -A
    git commit -m "My portfolio v1"
-   git push origin arena/01a08d2a-automation
+   git push origin main
    ```
-2. On GitHub.com → your repo → **Settings → Pages**
-3. Source: **Deploy from a branch** → Branch: your branch (or `main` after you merge) → `/ (root)` → Save
-4. Wait ~1 minute → you get a link like `https://yourname.github.io/Automation/`
-5. Send that link to clients. Put it in your FB Page bio, TikTok bio, everywhere.
+2. Wait 1–2 minutes → live at [https://techtroyai.github.io/Automation/](https://techtroyai.github.io/Automation/)
+3. Send that link to clients. Put it in your FB Page bio, TikTok bio, everywhere.
+
+On a fork: GitHub.com → repo → **Settings → Pages → Source: GitHub Actions**.
 
 ### Option B — Netlify Drop (easiest, no git needed)
 1. Go to **app.netlify.com/drop** (free account)
@@ -230,8 +232,8 @@ Your portfolio is the *ammunition*. Now you need *targets*. Full scripts are in
 `outreach-scripts.md` — here's the summary:
 
 1. **Today:** portfolio live + FB Page created + join 3 FB groups
-   (`Online Jobs PH`, `CDO Buy and Sell`, `AI Automation Philippines`)
-2. **Day 2–3:** message 10 local CDO shops (food stalls, boutiques, resellers).
+   (`Online Jobs PH`, `LDN Buy and Sell`, `AI Automation Philippines`)
+2. **Day 2–3:** message 10 local Tubod / LDN shops (food stalls, boutiques, resellers).
    Script + Bisaya version in `outreach-scripts.md`. Attach your portfolio link.
 3. **Day 4–5:** post your service in the FB groups (template included).
 4. **First reply:** quote fixed price, ask 50% GCash downpayment, build, send demo
@@ -289,7 +291,7 @@ Ctrl+F 😄 — but visitors can't tell, because the replies are well-written.
 - `keys` = words that trigger this reply (lowercase, no need for exact sentences)
 - `reply` = what the bot says. HTML allowed (`<b>`, `<br>`) for bold + line breaks.
 
-**Change the demo shop** — right now it's "MilkTea CDO" because every CDO owner
+**Change the demo shop** — right now it's "MilkTea Tubod" because every LDN owner
 understands a milk tea shop. But you can reskin it: boutique? salon? burger stall?
 Just rewrite: the chat header name, the greeting bubbles, the 4 quick-reply buttons
 (`#quickRow`), and the `BOT_RULES` replies. 15 minutes, totally different demo.
@@ -331,4 +333,4 @@ a paying reason. 💰
 
 ---
 
-*Built for Troy · Cagayan de Oro 🇵🇭 · Questions? Re-read the section above — the answer is almost always there. You've got this, bro.* 💪
+*Built for Troy · Tubod, LDN 🇵🇭 · Questions? Re-read the section above — the answer is almost always there. You've got this, bro.* 💪

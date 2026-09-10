@@ -8,10 +8,10 @@
 
 ## Script 1: Cold DM to Local Shops (English — FB Page message)
 
-Send to: restaurants, milk tea shops, boutiques, resellers, salons in CDO.
-Find them: search "Cagayan de Oro [shop type]" on Facebook → open their Page → Message.
+Send to: restaurants, milk tea shops, boutiques, resellers, salons in Tubod / LDN.
+Find them: search "Tubod LDN [shop type]" on Facebook → open their Page → Message.
 
-> Hi [Shop Name]! 👋 I'm Troy, a 17-year-old from CDO who builds AI auto-reply
+> Hi [Shop Name]! 👋 I'm Troy, a 17-year-old from Tubod, LDN who builds AI auto-reply
 > chatbots for Facebook Pages.
 >
 > I noticed your page — when customers message asking for prices/hours/location
@@ -32,12 +32,12 @@ Find them: search "Cagayan de Oro [shop type]" on Facebook → open their Page �
 
 ---
 
-## Script 2: Cold DM (Bisaya version — use for CDO locals 🇵🇭)
+## Script 2: Cold DM (Bisaya version — use for LDN locals 🇵🇭)
 
 Bisaya messages get WAY more replies from local owners than English. Use this when
 the Page posts in Bisaya.
 
-> Hi [Shop Name]! 👋 Ako si Troy, taga-CDO. Ga-himo ko ug AI auto-reply chatbot
+> Hi [Shop Name]! 👋 Ako si Troy, taga-Tubod, LDN. Ga-himo ko ug AI auto-reply chatbot
 > para sa mga FB Page sa mga negosyo.
 >
 > Nakita nako inyong page — kung naay mo-message mangutana ug price/hours/location
@@ -128,7 +128,7 @@ Never double-message angrily. Your reputation > one client.
 
 Send to: TikTok/FB sellers who post RAW unedited videos (shaky, no captions).
 
-> Hi [Shop Name]! 👋 I'm Troy from CDO — I edit Reels/TikTok videos for sellers.
+> Hi [Shop Name]! 👋 I'm Troy from Tubod, LDN — I edit Reels/TikTok videos for sellers.
 >
 > I saw your videos — your products are nice, pero mas mopalit ang tao kung naay
 > captions + hook sa first 2 seconds. Most people scroll with sound OFF, so no

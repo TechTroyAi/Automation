@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Page not found — troy.builds</title>
+  <meta name="theme-color" content="#0a0a0b" />
+  <meta name="color-scheme" content="dark" />
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <style>
+    :root {
+      --bg: #0a0a0b;
+      --accent: #d4af37;
+      --accent2: #f1d97b;
+      --text: #f5f2e9;
+      --muted: #a1a1aa;
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      background: var(--bg);
+      color: var(--text);
+      text-align: center;
+      padding: 24px;
+    }
+    .wrap { max-width: 480px; }
+    .code {
+      font-size: clamp(4rem, 16vw, 7rem);
+      font-weight: 800;
+      line-height: 1;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+    }
+    h1 { margin: 12px 0 10px; font-size: 1.6rem; }
+    p { color: var(--muted); margin-bottom: 28px; }
+    a {
+      display: inline-block;
+      background: var(--accent);
+      color: #0a0a0b;
+      font-weight: 700;
+      text-decoration: none;
+      padding: 13px 28px;
+      border-radius: 12px;
+    }
+    a:hover { transform: translateY(-2px); }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <div class="code">404</div>
+    <h1>This page doesn't exist</h1>
+    <p>The link might be old — the portfolio still lives at the home page.</p>
+    <a href="./">← Back to troy.builds</a>
+  </div>
+</body>
+</html>
