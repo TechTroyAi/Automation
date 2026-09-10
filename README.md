@@ -73,7 +73,7 @@ This repo is set up as a **project site**. After the Actions workflow runs, the 
 
 How it deploys:
 
-1. Push to `main` (or this working branch)
+1. Merge to `main` (GitHub Pages is locked to that branch)
 2. The [Pages workflow](.github/workflows/pages.yml) uploads `index.html` + assets
 3. GitHub serves them at the URL above — usually within 1–2 minutes
 
