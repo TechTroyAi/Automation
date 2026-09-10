@@ -91,7 +91,8 @@ Every editable spot in `index.html` is marked with `✏️ EDIT ME`. The essenti
 |---|---|
 | Name, headline, bio | Hero section |
 | Brand name (`troy.builds`) | Navbar `.logo` + 404 page |
-| Contact links (Messenger, FB, email, TikTok, GitHub) | Hero buttons + Contact section |
+| Contact links (Messenger, FB, email, GitHub) | Hero buttons + Contact section |
+| AI agent card copy | `#work` → Project 1 |
 | Projects & demo videos | `#work` section (YouTube embed supported) |
 | Prices & packages | `#pricing` section |
 | Theme colors | `:root` block in `<style>` (currently black + gold `🖤💛`) |
@@ -113,6 +114,7 @@ Every editable spot in `index.html` is marked with `✏️ EDIT ME`. The essenti
 
 - 💬 Messenger: [m.me/TroyCandia](https://m.me/TroyCandia)
 - 📘 Facebook: [facebook.com/TroyCandia](https://facebook.com/TroyCandia)
+- 📧 Email: [josiahcandia@gmail.com](mailto:josiahcandia@gmail.com)
 - 💻 GitHub: [@TechTroyAi](https://github.com/TechTroyAi)
 
 Open to freelance projects — chatbots, automations, and video edits for PH businesses. GCash accepted. 🙏
