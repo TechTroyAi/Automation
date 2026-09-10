@@ -196,17 +196,19 @@ Repeat for Project 2. Two embedded demos = you look more legit than 90% of begin
 Right now your site only exists on your device. Let's give it a real link you can
 send to clients. Two free options — pick one:
 
-### Option A — GitHub Pages (recommended, you already have GitHub)
-1. Push this repo to GitHub (if you haven't):
+### Option A — GitHub Pages (already wired up in this repo)
+This repo ships with `.github/workflows/pages.yml`. GitHub Pages is set to **GitHub Actions**, so every push auto-deploys the site.
+
+1. Push your changes:
    ```
    git add -A
    git commit -m "My portfolio v1"
-   git push origin arena/01a08d2a-automation
+   git push origin main
    ```
-2. On GitHub.com → your repo → **Settings → Pages**
-3. Source: **Deploy from a branch** → Branch: your branch (or `main` after you merge) → `/ (root)` → Save
-4. Wait ~1 minute → you get a link like `https://yourname.github.io/Automation/`
-5. Send that link to clients. Put it in your FB Page bio, TikTok bio, everywhere.
+2. Wait 1–2 minutes → live at [https://techtroyai.github.io/Automation/](https://techtroyai.github.io/Automation/)
+3. Send that link to clients. Put it in your FB Page bio, TikTok bio, everywhere.
+
+On a fork: GitHub.com → repo → **Settings → Pages → Source: GitHub Actions**.
 
 ### Option B — Netlify Drop (easiest, no git needed)
 1. Go to **app.netlify.com/drop** (free account)

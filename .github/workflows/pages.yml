@@ -1,0 +1,50 @@
+# Deploy the static portfolio to GitHub Pages on every push.
+# Repo Pages is already set to "GitHub Actions" as the source —
+# this workflow was the missing piece (the live URL 404'd without it).
+name: Deploy GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+      - arena/01a08d3f-automation
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: pages
+  cancel-in-progress: false
+
+jobs:
+  deploy:
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Prepare site
+        run: |
+          mkdir -p _site
+          cp index.html 404.html _site/
+          cp favicon.png og.jpg _site/
+          # Skip Jekyll so GitHub Pages serves files as-is
+          touch _site/.nojekyll
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: _site
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v5

@@ -27,9 +27,14 @@
 
 ```
 ├── index.html            # The entire site — standalone, no build step
+├── 404.html              # Themed GitHub Pages 404 → sends visitors home
+├── favicon.png           # Tab icon
+├── og.jpg                # Social share card (FB / Messenger / Twitter)
 ├── TUTORIAL.md           # Full guide: how it works, customize, host, get clients
 ├── gig-descriptions.md   # Copy-paste gigs for Fiverr / Upwork / FB groups
 ├── outreach-scripts.md   # DM scripts (English + Bisaya) for local outreach
+├── .nojekyll             # Tells GitHub Pages to skip Jekyll
+├── .github/workflows/pages.yml  # Auto-deploys to GitHub Pages on push
 ├── LICENSE               # MIT License
 └── .gitignore
 ```
@@ -48,12 +53,31 @@
 ```bash
 # 1. Clone
 git clone https://github.com/TechTroyAi/Automation.git
+cd Automation
 
 # 2. Open — that's it. No install, no build.
 open index.html        # or just double-click the file
+
+# Or serve it locally (needed if you want a real http:// URL)
+python3 -m http.server 8080 --bind 0.0.0.0
+# then open http://localhost:8080
 ```
 
 > The site works fully offline — open it in airplane mode and the demo bot still replies. ✈️
+
+## 🌐 GitHub Pages
+
+This repo is set up as a **project site**. After the Actions workflow runs, the live URL is:
+
+**https://techtroyai.github.io/Automation/**
+
+How it deploys:
+
+1. Push to `main` (or this working branch)
+2. The [Pages workflow](.github/workflows/pages.yml) uploads `index.html` + assets
+3. GitHub serves them at the URL above — usually within 1–2 minutes
+
+First time on a fork? Repo → **Settings → Pages → Source: GitHub Actions**.
 
 ## 🎨 Customization
 
