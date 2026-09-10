@@ -1,7 +1,7 @@
 # Troy.Builds — AI Automation Portfolio 🖤💛
 
 > Personal portfolio of **Troy Candia**, an AI automation builder & video editor from
-> Cagayan de Oro, Philippines. Features a **live interactive chatbot demo**, service
+> Tubod, Lanao del Norte (LDN), Philippines. Features a **live interactive chatbot demo**, service
 > packages, transparent pricing, and a client-ready contact flow.
 
 [![Live Site](https://img.shields.io/badge/🌐_Live-techtroyai.github.io/Automation-d4af37?style=for-the-badge)](https://techtroyai.github.io/Automation/)
@@ -104,7 +104,7 @@ Every editable spot in `index.html` is marked with `✏️ EDIT ME`. The essenti
 
 ## 👤 Author
 
-**Troy Candia** — Cagayan de Oro, Philippines 🇵🇭
+**Troy Candia** — Tubod, Lanao del Norte (LDN), Philippines 🇵🇭
 
 - 💬 Messenger: [m.me/TroyCandia](https://m.me/TroyCandia)
 - 📘 Facebook: [facebook.com/TroyCandia](https://facebook.com/TroyCandia)
@@ -118,4 +118,4 @@ This project is open source under the [MIT License](LICENSE) — feel free to fo
 
 ---
 
-<p align="center">Built by hand in Cagayan de Oro · Powered by kape ☕</p>
+<p align="center">Built by hand in Tubod, LDN · Powered by kape ☕</p>
