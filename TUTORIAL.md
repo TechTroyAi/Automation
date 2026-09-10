@@ -96,9 +96,10 @@ Example from your site:
 }
 ```
 
-Every color on the site references these. Change `--accent` from green (`#22c55e`)
-to orange (`#f97316`) and the ENTIRE site re-skins. Try it — this is the fastest
-way to make the site feel like *yours*.
+Every color on the site references these. Your site is currently themed
+**minimalistic black + gold** (`--accent: #d4af37`). Change `--accent` to any color
+you like — google "color picker", grab the hex code (looks like `#...`), paste it
+in, save, refresh — and the ENTIRE site re-skins. Boom, custom theme.
 
 **🎯 Exercise 2:** Change `--accent` to your favorite color. Google "color picker",
 grab the hex code (looks like `#...`), paste it in, save, refresh. Boom — custom theme.
@@ -261,6 +262,59 @@ you're paid. Don't tutorial-hell for 3 months with zero income. Build → sell �
 
 ---
 
+## Part 8: Your Live Demo Chatbot 🤖 (the auto-reply "bit")
+
+That phone-style chat widget in the `#demo` section is your SECRET WEAPON.
+Here's why: clients don't understand "AI automation" — but when they TAP a button
+and a bot replies instantly, they GET it in 10 seconds. Always put the demo link
+first in your outreach messages.
+
+### How it works (the 30-second version)
+
+1. Visitor types a message (or taps a quick-reply pill) → `sendChat()` runs
+2. Their message appears as a gold bubble, plus a fake "typing..." bubble
+3. `botAnswer()` lowercases their text and loops through `BOT_RULES`,
+   checking if the message contains any keyword → **first match wins**
+4. The matching reply appears as a bot bubble. No match → `BOT_DEFAULT` fallback.
+
+No server. No AI API. No internet needed. It's keyword matching — glorified
+Ctrl+F 😄 — but visitors can't tell, because the replies are well-written.
+
+### How to customize it (do this!)
+
+**Change the replies** — search `BOT_RULES` in `index.html`. Each rule is:
+```js
+{ keys: ["pila", "price", "menu", ...], reply: "Here's our menu 🧋..." }
+```
+- `keys` = words that trigger this reply (lowercase, no need for exact sentences)
+- `reply` = what the bot says. HTML allowed (`<b>`, `<br>`) for bold + line breaks.
+
+**Change the demo shop** — right now it's "MilkTea CDO" because every CDO owner
+understands a milk tea shop. But you can reskin it: boutique? salon? burger stall?
+Just rewrite: the chat header name, the greeting bubbles, the 4 quick-reply buttons
+(`#quickRow`), and the `BOT_RULES` replies. 15 minutes, totally different demo.
+
+**🎯 Exercise 3:** add ONE new rule — e.g. keys `["discount", "sale", "promo"]`
+with a reply about a promo. Save, refresh, type "naay discount?" and watch it work.
+You just "programmed" a chatbot. 🧠
+
+### Demo bot vs. REAL client bots (important!)
+
+| | Portfolio demo bot | Real client bot |
+|---|---|---|
+| Runs on | This page (JavaScript) | Client's FB Page (ManyChat / n8n) |
+| Brain | Keyword matching | Real AI (understands any phrasing) |
+| Cost to run | Free forever | Free–cheap (ManyChat free tier / n8n) |
+| Purpose | SELL the service | DELIVER the service |
+
+The demo's job is to make the client say "gusto ko ana!" — then you build the real
+thing with **ManyChat** (fastest for FB auto-reply, free plan) or **n8n + AI**
+(for fancier workflows). Learn those AFTER you land client #1 (Part 7 has links).
+Don't learn first, earn first — the tools take a weekend to pick up when you have
+a paying reason. 💰
+
+---
+
 ## Quick Reference Card 🃏
 
 | I want to... | Do this |
@@ -270,6 +324,7 @@ you're paid. Don't tutorial-hell for 3 months with zero income. Build → sell �
 | Add a new section | Copy a `<section>...</section>` block, change content + `id` |
 | Add a nav link | Add `<li><a href="#new-id">Label</a></li>` in `<nav>` |
 | Add demo video | Part 4 ↑ (YouTube Unlisted + `video-wrap`) |
+| Change chatbot replies | Edit `BOT_RULES` in `<script>` (Part 8 ↑) |
 | Preview changes | Save file → refresh browser (Ctrl+R / pull-to-refresh) |
 | Put it online | Part 5 ↑ (GitHub Pages or Netlify) |
 | Something broke? | Undo (Ctrl+Z), save, refresh. HTML never "breaks permanently" — worst case, re-download this file from git |

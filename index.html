@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <!-- ═══════════════════════════════════════════════════════════════════
-  YOUR PORTFOLIO — STARTER KIT
+  YOUR PORTFOLIO — STARTER KIT (Black & Gold Edition 🖤💛)
   ─────────────────────────────────────────────────────────────────────
   TEACH: This whole website is ONE file. That's on purpose so you can:
     1. Double-click it on your phone/PC and it just works (no internet needed)
@@ -12,6 +12,7 @@
     - Your real projects/videos → Projects section
     - Your prices → Pricing section
     - Colors → look for ":root" in the <style> block
+    - Demo chatbot replies → search "BOT_RULES" in the <script> block
 
   Full step-by-step tutorial is in TUTORIAL.md in this repo. Read it after! 📖
 ════════════════════════════════════════════════════════════════════ -->
@@ -34,16 +35,16 @@
          Example:  h1 { color: red; }  →  all h1 text becomes red
     ══════════════════════════════════════════════════════════════ */
 
-    /* ── 🎨 THEME: change these 3 colors to re-skin the whole site ── */
+    /* ── 🎨 THEME: minimalistic BLACK + GOLD. Change these to re-skin ── */
     /* ✏️ EDIT ME: try your own colors! (google "color picker" to get codes) */
     :root {
-      --bg: #0b0f19;          /* page background (dark navy) */
-      --card: #141b2e;        /* card background */
-      --accent: #22c55e;      /* main green (buttons, highlights) */
-      --accent2: #38bdf8;     /* secondary blue (gradients) */
-      --text: #e8edf7;        /* main text */
-      --muted: #9aa6c0;       /* gray text */
-      --border: #24304d;      /* thin lines */
+      --bg: #0a0a0b;          /* page background (near black) */
+      --card: #141417;        /* card background */
+      --accent: #d4af37;      /* main gold (buttons, highlights) */
+      --accent2: #f1d97b;     /* light champagne gold (gradients) */
+      --text: #f5f2e9;        /* main text (warm white) */
+      --muted: #a1a1aa;       /* gray text */
+      --border: #26262b;      /* thin lines */
       --radius: 16px;
     }
 
@@ -62,11 +63,12 @@
     .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
     section { padding: 72px 0; }
     a { color: inherit; }
+    ::selection { background: var(--accent); color: #0a0a0b; } /* gold text highlight */
 
     /* ── NAVBAR ── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(11, 15, 25, 0.9);
+      background: rgba(10, 10, 11, 0.9);
       backdrop-filter: blur(10px); /* frosted glass effect */
       border-bottom: 1px solid var(--border);
     }
@@ -77,7 +79,7 @@
     .nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: 0.95rem; }
     .nav-links a:hover { color: var(--text); }
     .nav-cta {
-      background: var(--accent); color: #06120b !important; font-weight: 700 !important;
+      background: var(--accent); color: #0a0a0b !important; font-weight: 700 !important;
       padding: 8px 18px; border-radius: 999px;
     }
     /* TEACH: @media = "responsive design" — different rules for small screens */
@@ -90,7 +92,7 @@
       border: 1px solid var(--border); background: var(--card);
       padding: 6px 16px; border-radius: 999px; color: var(--muted); margin-bottom: 20px;
     }
-    .badge .dot { color: var(--accent); } /* green dot = "available" */
+    .badge .dot { color: var(--accent); } /* gold dot = "available" */
     .hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.15; font-weight: 800; }
     /* TEACH: gradient text trick = background clipped to text */
     .gradient {
@@ -105,7 +107,7 @@
       transition: transform 0.15s ease, box-shadow 0.15s ease;
     }
     .btn:hover { transform: translateY(-2px); }
-    .btn-green { background: var(--accent); color: #06120b; }
+    .btn-green { background: var(--accent); color: #0a0a0b; }
     .btn-ghost { border: 1px solid var(--border); background: var(--card); color: var(--text); }
 
     /* stat strip: quick trust signals */
@@ -134,7 +136,7 @@
     .card p { color: var(--muted); font-size: 0.95rem; }
     .price-tag {
       display: inline-block; margin-top: 14px; font-weight: 700; color: var(--accent);
-      background: rgba(34, 197, 94, 0.1); padding: 5px 14px; border-radius: 999px; font-size: 0.9rem;
+      background: rgba(212, 175, 55, 0.12); padding: 5px 14px; border-radius: 999px; font-size: 0.9rem;
     }
     .card ul { margin: 12px 0 0 18px; color: var(--muted); font-size: 0.93rem; }
     .card li { margin-bottom: 6px; }
@@ -143,7 +145,7 @@
     .demo-box {
       margin-top: 14px; border: 1px dashed var(--border); border-radius: 12px;
       padding: 22px; text-align: center; color: var(--muted); font-size: 0.9rem;
-      background: rgba(56, 189, 248, 0.04);
+      background: rgba(212, 175, 55, 0.05);
     }
     .demo-box a { color: var(--accent2); font-weight: 600; }
 
@@ -152,11 +154,52 @@
     .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-top: 14px; border: 1px solid var(--border); }
     .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
+    /* ── LIVE DEMO CHAT (phone-style auto-reply preview) ── */
+    /* TEACH: this is just styled boxes — .phone is the frame, .msg.bot/.msg.user
+       are the chat bubbles. The "intelligence" lives in the <script> at the bottom
+       (search BOT_RULES). HTML = layout, CSS = look, JS = brain. Same pattern again! */
+    .phone {
+      max-width: 430px; margin: 0 auto; background: #101013;
+      border: 1px solid var(--border); border-radius: 22px; overflow: hidden;
+      box-shadow: 0 0 60px rgba(212, 175, 55, 0.08); /* subtle gold glow */
+    }
+    .chat-head { display: flex; gap: 12px; align-items: center; padding: 16px 18px; border-bottom: 1px solid var(--border); background: #161619; }
+    .avatar {
+      width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
+      background: rgba(212, 175, 55, 0.12);
+      display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+    }
+    .chat-head small { display: block; color: var(--muted); font-size: 0.8rem; }
+    .chat-head .online { color: var(--accent); }
+    .chat-body { height: 300px; overflow-y: auto; padding: 18px 14px; display: flex; flex-direction: column; gap: 10px; }
+    .msg { max-width: 82%; padding: 10px 14px; border-radius: 16px; font-size: 0.92rem; line-height: 1.5; }
+    .msg.bot { background: #1d1d22; border: 1px solid var(--border); align-self: flex-start; border-bottom-left-radius: 4px; }
+    .msg.user { background: var(--accent); color: #0a0a0b; font-weight: 500; align-self: flex-end; border-bottom-right-radius: 4px; }
+    .msg.typing { letter-spacing: 3px; color: var(--muted); }
+    .quick { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 14px 12px; }
+    .quick button {
+      background: transparent; border: 1px solid var(--accent); color: var(--accent);
+      font-size: 0.82rem; font-weight: 600; padding: 7px 14px; border-radius: 999px; cursor: pointer;
+    }
+    .quick button:hover { background: rgba(212, 175, 55, 0.12); }
+    .chat-input { display: flex; gap: 8px; padding: 0 14px 12px; }
+    .chat-input input {
+      flex: 1; background: #1d1d22; border: 1px solid var(--border); border-radius: 999px;
+      padding: 11px 16px; color: var(--text); font-size: 0.9rem; outline: none;
+    }
+    .chat-input input:focus { border-color: var(--accent); }
+    .chat-input button {
+      width: 44px; height: 44px; border-radius: 50%; border: none; flex-shrink: 0;
+      background: var(--accent); color: #0a0a0b; font-size: 1.1rem; cursor: pointer;
+    }
+    .chat-foot { text-align: center; font-size: 0.8rem; color: var(--muted); padding: 0 14px 16px; }
+    .chat-foot a { color: var(--accent); font-weight: 700; }
+
     /* ── PROCESS STEPS ── */
     .step { display: flex; gap: 16px; align-items: flex-start; }
     .step-num {
       flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
-      background: var(--accent); color: #06120b; font-weight: 800;
+      background: var(--accent); color: #0a0a0b; font-weight: 800;
       display: flex; align-items: center; justify-content: center;
     }
 
@@ -166,7 +209,7 @@
     details p { color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
 
     /* ── CONTACT ── */
-    .contact-card { text-align: center; background: linear-gradient(135deg, rgba(34,197,94,0.12), rgba(56,189,248,0.12)); border: 1px solid var(--border); border-radius: 20px; padding: 44px 24px; }
+    .contact-card { text-align: center; background: linear-gradient(135deg, rgba(212, 175, 55, 0.10), rgba(212, 175, 55, 0.03)); border: 1px solid var(--border); border-radius: 20px; padding: 44px 24px; }
     .contact-card h2 { margin-bottom: 8px; }
 
     footer { border-top: 1px solid var(--border); padding: 26px 0; text-align: center; color: var(--muted); font-size: 0.9rem; }
@@ -186,6 +229,7 @@
       <!-- ✏️ EDIT ME: your name / brand -->
       <a class="logo" href="#top">troy<span>.builds</span></a>
       <ul class="nav-links">
+        <li><a href="#demo">Live Demo</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#work">My Work</a></li>
         <li><a href="#pricing">Pricing</a></li>
@@ -206,9 +250,8 @@
       workflow automations, and scroll-stopping video edits. GCash accepted. 🇵🇭
     </p>
     <div class="btn-row">
-      <!-- ✏️ EDIT ME: paste your FB page / Messenger link below -->
-      <a class="btn btn-green" href="https://m.me/YOUR_FB_PAGE" target="_blank">💬 Message Me on Facebook</a>
-      <a class="btn btn-ghost" href="#work">See my work ↓</a>
+      <a class="btn btn-green" href="https://m.me/TroyCandia" target="_blank">💬 Message Me on Facebook</a>
+      <a class="btn btn-ghost" href="#demo">Try my bot live ↓</a>
     </div>
     <div class="stats">
       <div class="stat"><b>🤖 AI</b><small>Chatbots & agents</small></div>
@@ -217,6 +260,45 @@
       <div class="stat"><b>📍 CDO</b><small>Cagayan de Oro, PH</small></div>
     </div>
   </header>
+
+  <!-- ═══════════ LIVE DEMO — interactive auto-reply chatbot ═══════════ -->
+  <!-- TEACH: This is a "fake client" demo — a mini chatbot running 100% in JavaScript
+       (no server, no internet needed). Visitors tap buttons or type, and the bot replies
+       using KEYWORD MATCHING (see BOT_RULES in the <script> below). Its job: PROVE your
+       service works within 10 seconds of landing on your page. Best sales tool you have. -->
+  <section id="demo" style="background: rgba(212, 175, 55, 0.03);">
+    <div class="container">
+      <div class="kicker">Live demo — try it 👇</div>
+      <h2>This is what I build for shops</h2>
+      <p class="sub">Pretend you're a customer messaging a milk tea shop at midnight. The bot replies instantly — <b>tap a button or type below</b> (Bisaya ok! 🇵🇭). Now imagine this running on YOUR page 24/7.</p>
+
+      <div class="phone reveal">
+        <div class="chat-head">
+          <div class="avatar">🧋</div>
+          <div>
+            <b>MilkTea CDO</b>
+            <small><span class="online">●</span> Online — replies instantly</small>
+          </div>
+        </div>
+        <div class="chat-body" id="chatBody">
+          <div class="msg bot">Hi! Welcome to <b>MilkTea CDO</b> 🧋 We're open 'til 10 PM today!</div>
+          <div class="msg bot">Ask me anything — prices, location, or want to order? 👇</div>
+        </div>
+        <!-- ✏️ EDIT ME: quick-reply buttons — change these to fit your demo shop -->
+        <div class="quick" id="quickRow">
+          <button>Tagpila? 💰</button>
+          <button>Open mo? 🕐</button>
+          <button>Location? 📍</button>
+          <button>Order ko! 🧋</button>
+        </div>
+        <form class="chat-input" id="chatForm">
+          <input id="chatText" type="text" placeholder="Type a message..." autocomplete="off" maxlength="200" />
+          <button type="submit" aria-label="Send">➤</button>
+        </form>
+        <div class="chat-foot">✨ Demo bot by Troy — <a href="#contact">I can build this for YOUR page</a></div>
+      </div>
+    </div>
+  </section>
 
   <!-- ═══════════ SERVICES ═══════════ -->
   <section id="services">
@@ -274,7 +356,7 @@
   </section>
 
   <!-- ═══════════ WORK / DEMOS ═══════════ -->
-  <section id="work" style="background: rgba(20,27,46,0.4);">
+  <section id="work" style="background: rgba(212, 175, 55, 0.03);">
     <div class="container">
       <div class="kicker">Proof of work</div>
       <h2>Things I've built 🛠️</h2>
@@ -334,7 +416,7 @@
             🎥 <b>Post your edits on TikTok/FB</b>, then link them here:<br /><br />
             <a href="https://tiktok.com/@YOUR_HANDLE" target="_blank">My TikTok →</a>
             &nbsp;·&nbsp;
-            <a href="https://facebook.com/YOUR_PAGE" target="_blank">My FB Page →</a>
+            <a href="https://facebook.com/TroyCandia" target="_blank">My FB Page →</a>
           </div>
         </div>
 
@@ -396,7 +478,7 @@
   </section>
 
   <!-- ═══════════ FAQ ═══════════ -->
-  <section id="faq" style="background: rgba(20,27,46,0.4);">
+  <section id="faq" style="background: rgba(212, 175, 55, 0.03);">
     <div class="container">
       <div class="kicker">FAQ</div>
       <h2>Questions people ask me</h2>
@@ -433,9 +515,9 @@
         <h2>Message me — I reply fast ⚡</h2>
         <p class="sub" style="margin-left:auto;margin-right:auto;">Tell me what business you have and what eats your time. I'll reply with a fixed price + timeline, free quote, no pressure.</p>
         <div class="btn-row">
-          <!-- ✏️ EDIT ME: replace ALL the YOUR_... links with your real ones -->
-          <a class="btn btn-green" href="https://m.me/YOUR_FB_PAGE" target="_blank">💬 Messenger</a>
-          <a class="btn btn-ghost" href="https://facebook.com/YOUR_PAGE" target="_blank">📘 FB Page</a>
+          <a class="btn btn-green" href="https://m.me/TroyCandia" target="_blank">💬 Messenger</a>
+          <a class="btn btn-ghost" href="https://facebook.com/TroyCandia" target="_blank">📘 FB Page</a>
+          <!-- ✏️ EDIT ME: your email + TikTok below -->
           <a class="btn btn-ghost" href="mailto:youremail@gmail.com">📧 Email</a>
         </div>
         <p style="margin-top:22px;color:var(--muted);font-size:0.9rem;">
@@ -455,10 +537,10 @@
 
   <script>
     // ══════════════════════════════════════════════════════════════
-    // TEACH: JavaScript = the "brain". This tiny script does 2 things:
+    // TEACH: JavaScript = the "brain". This script does 3 things:
     //   1. Auto-updates the footer year (so you never edit it again)
     //   2. Reveals sections with animation as you scroll (the .reveal class)
-    // That's it — a portfolio doesn't need heavy JS. Simple = fast = good.
+    //   3. Powers the demo chatbot (BOT_RULES below — your auto-reply "bit"!)
     // ══════════════════════════════════════════════════════════════
 
     // 1. Footer year — always current, zero maintenance
@@ -472,6 +554,81 @@
     }, { threshold: 0.1 }); // trigger when 10% of the card is visible
 
     document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+
+    // ══════════════════════════════════════════════════════════════
+    // 3. THE DEMO BOT 🤖 — your auto-reply "bit", in ~40 lines.
+    // HOW IT WORKS: when a visitor sends a message, we lowercase it and check
+    // if it CONTAINS any keyword from BOT_RULES. First match wins, bot replies.
+    // No server, no AI API, works offline — it's a SALES DEMO, not the real
+    // product. Real client bots run on ManyChat/n8n + real AI (TUTORIAL Part 8).
+    //
+    // ✏️ EDIT ME: rewrite these replies to fit YOUR demo scenario!
+    // Example: swap the milk tea shop for a boutique, salon, or burger stall.
+    // ══════════════════════════════════════════════════════════════
+    const BOT_RULES = [
+      { keys: ["pila", "price", "menu", "cost", "how much", "tagpila", "presyo"], reply: "Here's our menu 🧋<br><br>• Classic Milk Tea — <b>₱75</b><br>• Okinawa / Wintermelon — <b>₱85</b><br>• Fruit Tea — <b>₱70</b><br>• +Pearls — <b>₱15</b><br><br>Want to order? Just say <b>order ko!</b> 😊" },
+      { keys: ["open", "hour", "oras", "bukas", "close", "sarado", "what time"], reply: "We're open <b>MON–SUN, 10 AM – 10 PM</b> 🕐<br>Yes, open mi karon! What can I get you? 😊" },
+      { keys: ["location", "asa", "address", "where", "mapa", "direksyon"], reply: "Find us here 📍<br><b>Corrales Ave, Cagayan de Oro</b> (near Centrio Mall)<br><br>Landmark: beside Jollibee 😉 Open 'til 10 PM!" },
+      { keys: ["deliver", "hatod", "ship", "grab", "foodpanda", "padala"], reply: "Yes, ga-deliver mi! 🛵<br>• Within CDO city — <b>₱50</b> fee<br>• FREE delivery for orders <b>₱500+</b><br><br>Type <b>order ko</b> to start your order!" },
+      { keys: ["order", "palit", "buy", "kuha", "pa-order"], reply: "Yay, order time! 🧋<br>Just send:<br><b>1.</b> Your order (e.g. 2x Okinawa)<br><b>2.</b> Name + address<br><br>I'll confirm your total + GCash number after! 💛" },
+      { keys: ["gcash", "bayad", "pay", "payment"], reply: "We accept <b>GCash, Maya & Cash</b> 💰<br>GCash number is sent automatically with your order confirmation. Easy ra kaayo!" },
+      { keys: ["salamat", "thank"], reply: "Walay sapayan! 💛 Anything else — menu, location, or ready to order?" },
+      { keys: ["hi", "hello", "hey", "kumusta", "maayong"], reply: "Hellooo! 👋 Welcome to <b>MilkTea CDO</b> 🧋<br>Ask me about <b>prices</b>, <b>hours</b>, <b>location</b> — or say <b>order ko!</b>" },
+      { keys: ["tawo", "human", "staff", "owner", "admin"], reply: "Noted! A human will jump in soon 🙋<br>(This is how the bot hands over to the shop owner when needed — tricky customers never get lost!)" },
+    ];
+    const BOT_DEFAULT = "Hmm, I'm just a demo bot so I only know a few things 😅<br>Try asking about <b>prices</b>, <b>hours</b>, <b>location</b>, <b>delivery</b> — or say <b>order ko!</b> 🧋";
+
+    const chatBody = document.getElementById('chatBody');
+    const chatForm = document.getElementById('chatForm');
+    const chatText = document.getElementById('chatText');
+
+    // TEACH: short keywords ("hi", "asa") must match WHOLE words only,
+    // otherwise "hi" would match inside "this" 😅. Longer keywords can match anywhere.
+    function matches(msg, key) {
+      if (key.length <= 3) return new RegExp("\\b" + key + "\\b").test(msg);
+      return msg.includes(key);
+    }
+
+    function addMsg(html, who) {
+      const div = document.createElement('div');
+      div.className = 'msg ' + who;
+      div.innerHTML = html;
+      chatBody.appendChild(div);
+      chatBody.scrollTop = chatBody.scrollHeight; // auto-scroll to newest message
+      return div;
+    }
+
+    function botAnswer(text) {
+      const msg = text.toLowerCase();
+      for (const rule of BOT_RULES) {
+        if (rule.keys.some(k => matches(msg, k))) return rule.reply; // first match wins
+      }
+      return BOT_DEFAULT;
+    }
+
+    function sendChat(text) {
+      text = text.trim();
+      if (!text) return;
+      addMsg(text, 'user');
+      const typing = addMsg('•••', 'bot typing'); // "typing..." bubble for realism
+      setTimeout(() => {
+        typing.remove();
+        addMsg(botAnswer(text), 'bot');
+      }, 700); // 0.7 second "thinking" pause
+    }
+
+    // Send button / Enter key
+    chatForm.addEventListener('submit', e => {
+      e.preventDefault();
+      sendChat(chatText.value);
+      chatText.value = '';
+      chatText.focus();
+    });
+
+    // Quick-reply pill buttons act like typed messages
+    document.querySelectorAll('#quickRow button').forEach(b =>
+      b.addEventListener('click', () => sendChat(b.textContent))
+    );
   </script>
 
 </body>
