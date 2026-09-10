@@ -119,7 +119,7 @@
 
 > 🤖 **AI CHATBOT + AUTOMATION SERVICES for your business!**
 >
-> Hi everyone! I'm Troy from Tubod, LDN. I help online sellers & local shops:
+> Hi everyone! I'm Troy, and I work remotely with PH businesses. I help online sellers & local shops:
 >
 > 💬 FB Page chatbots that auto-reply to customers 24/7 (never lose a sale while busy!)
 > ⚡ Automations (orders → Sheets, auto-posting, auto-invoices)
