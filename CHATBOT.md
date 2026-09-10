@@ -13,7 +13,8 @@ Shop replies now speak in character, rather than repeating “this is a demo” 
 every bubble. For example, **“Can I order?”** has this exact scripted reply:
 
 > Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit
-> Tea, and tell me how many drinks. You can also pick your sugar and ice levels.
+> Tea. For a total, try “2 Classic with extra pearls, delivery”, or build a quote
+> using the calculator.
 
 The persistent notice below the input labels the roleplay, states that no real
 orders/payments/staff handoffs occur, and asks visitors to use made-up details.
@@ -21,11 +22,56 @@ The input references it with `aria-describedby`. `help` and `privacy` still expl
 the actual limits when asked. Allergy, payment-security, and unavailable-data
 answers keep relevant cautions without a repetitive demo disclaimer.
 
-**This is a copy change, not a checkout implementation.** There is no order state,
-cart, total calculation, or multi-turn slot filling. Asking about a drink gets its
-approved FAQ reply; it does not reserve or save it. Cancellation, status, refunds,
-and human assistance direct people to the appropriate contact instead of claiming
-an action succeeded. Review these limits before connecting a real client system.
+**This is not a checkout implementation.** The calculator now totals sample drinks
+and add-ons, but it does not reserve stock, save a real order, or process payment.
+Cancellation, status, refunds, and human assistance still direct visitors to the
+appropriate contact instead of claiming a real-world action succeeded.
+
+## Price calculator
+
+`assets/order-calculator.js` is a pure module shared by chat and the form. Prices
+are integer **centavos**: Classic 7500, Okinawa/Wintermelon 8500, Fruit Tea 7000;
+an extra pearl serving is 1500. Edit `MENU`, `PEARLS`, `DELIVERY`, and
+`FREE_DELIVERY` there, and update the corresponding FAQ replies and visible copy
+when changing prices. Regenerate `assets/chatbot-data.js` after FAQ edits.
+
+- Form: add/remove up to **10 lines**, with **1–20 cups per line**, **50 cups total**.
+- Enter how many cups on each line have extra pearls (0 through that line's cup
+  count, one extra serving per cup). No double toppings, discounts, or taxes are
+  included in this sample pricing model.
+- Pickup is ₱0. Delivery is ₱50 unless **drinks + add-ons before delivery ≥ ₱500**.
+- Every calculation replaces the form's prior quote. Editing any field or removing
+  a line invalidates its total and payment preview until recalculated. Reset and
+  refresh clear the quote. No local/session storage or server is involved.
+- Chat quotes are independent, stateless estimates; they do **not** add items to
+  the form or remember a previous order. Use the form for mixed topping counts.
+
+Supported chat examples (digits required; always specify pickup or delivery):
+
+| Input | Total |
+|---|---|
+| `2 Classic with extra pearls on each, plus delivery?` | ₱230.00 |
+| `2 Classic with extra pearls, delivery` | ₱230.00 |
+| `1 Okinawa and 2 Fruit Tea, pickup` | ₱225.00 |
+| `5 Okinawa and 1 Classic, delivery` | ₱500.00 (free delivery) |
+
+Separate items with commas, `and`, `plus`, or `+`. `with extra pearls` applies to
+every cup on its own line; a final `extra pearls on each` applies to all drinks.
+Don't combine both styles in one quote. `2x Classic` and full-width digits also
+work. Optional prefixes include `calculate`, `quote`, `total for`, and `how much
+for`. This is **not free-form AI parsing**: unknown products, unspecified
+fulfillment, decimals, negatives, excessive quantities, or unsupported modifiers
+(such as `less ice`) produce guidance, never a guessed partial total. Sugar/ice
+FAQs remain available, but those choices are not stored in a quote.
+
+### Sample payment, not a payment account
+
+“Show sample payment” appears after a valid form calculation and displays the
+current amount, **TechTroyAi — DEMO ONLY**, and **GCASH-TEST-000**. This is an
+obviously non-payable placeholder: no invented phone number, account, payment
+link, QR code, transfer request, or paid/confirmed state. Do not substitute a
+random plausible number; it could belong to someone. A real checkout requires
+a separately scoped, authorized payment integration and server-side verification.
 
 ## Where are the actual scripted lines?
 
@@ -58,12 +104,15 @@ Node 22 is used only for authoring/testing; visitors do not need it.
 
 1. Normalize Unicode width, case, apostrophes, punctuation, emoji, and whitespace.
 2. **Exact normalized input:** return its assigned topic immediately.
-3. **Whole-word phrase match:** match authored inputs and keyword phrases inside
+3. **Sample quote syntax (UI):** for non-exact FAQ inputs, try the calculator.
+   A complete quote returns a total; a recognized but invalid quote returns
+   guidance. Other text falls through to the FAQ matcher.
+4. **Whole-word phrase match:** match authored inputs and keyword phrases inside
    the message. Longer phrases win over their generic components. Broad words
    like `price`, `order`, and `delivery` have reduced weight; greetings, thanks,
    and help have the lowest weight.
-4. Equal-strength topics → ask the visitor to choose one, not an arbitrary reply.
-5. No match → explain the limit and suggest known questions.
+5. Equal-strength topics → ask the visitor to choose one, not an arbitrary reply.
+6. No match → explain the limit and suggest known questions.
 
 There is no fuzzy spelling correction or semantic understanding. Ask one topic
 at a time. An exact question can intentionally override a broad word: `what is
@@ -121,7 +170,9 @@ node tests/browser-smoke.cjs
 
 This checks desktop/mobile layout, all quick replies, form submission, exact and
 fallback responses, safe HTML display, missing scripts, local-file/offline usage,
-and project-path asset loading. Do not commit `node_modules` or browser downloads.
+and project-path asset loading. Calculator tests cover mixed drinks, free delivery,
+invalid inputs, stale-payment clearing, reset/removal, and the fictional payment
+preview. Do not commit `node_modules` or browser downloads.
 
 On a Linux sandbox where the browser CDN is blocked, the same smoke test also
 supports an npm-packaged browser (used for this PR's local browser verification):

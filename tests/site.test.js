@@ -23,7 +23,7 @@ test('browser scripts load in dependency order with no CommonJS environment', ()
 
 test('local script assets exist and Pages copies them to the project site', () => {
   const sources = [...html.matchAll(/<script src="([^"]+)"/g)].map(match => match[1]);
-  assert.deepEqual(sources, ['assets/chatbot-data.js', 'assets/chatbot.js']);
+  assert.deepEqual(sources, ['assets/chatbot-data.js', 'assets/chatbot.js', 'assets/order-calculator.js', 'assets/order-ui.js']);
   for (const src of sources) assert.ok(fs.existsSync(path.join(root, src)));
   assert.match(read('.github/workflows/pages.yml'), /cp -R assets _site\/assets/);
   assert.match(read('.github/workflows/pages.yml'), /node --test tests\/\*\.test\.js/);
@@ -62,6 +62,6 @@ test('UI uses textContent, limits input, and documents failure/privacy behavior'
   assert.match(html, /Messages stay in page memory/);
   assert.match(html, /id="demoPrivacy">Demo only—no real orders, payments, or staff handoffs/);
   assert.match(html, /Use made-up details, never personal or payment information/);
-  assert.doesNotMatch(ui + read('assets/chatbot.js'), /fetch\(|XMLHttpRequest|localStorage|sessionStorage|sendBeacon/);
+  assert.doesNotMatch(ui + read('assets/chatbot.js') + read('assets/order-calculator.js') + read('assets/order-ui.js'), /fetch\(|XMLHttpRequest|localStorage|sessionStorage|sendBeacon/);
   new vm.Script(ui.replace('<script>', '').split('</script>')[0]);
 });

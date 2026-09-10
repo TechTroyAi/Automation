@@ -601,7 +601,7 @@
       "pa order",
       "order ko"
     ],
-    "reply": "Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit Tea, and tell me how many drinks. You can also pick your sugar and ice levels.",
+    "reply": "Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit Tea. For a total, try “2 Classic with extra pearls, delivery”, or build a quote using the calculator.",
     "questions": [
       "how do I order",
       "I want to order",
@@ -746,7 +746,7 @@
       "card",
       "cod"
     ],
-    "reply": "Payment options are GCash, Maya, or cash. 💰 For payment instructions, use the shop’s verified contact channel. Never share your PIN or OTP.",
+    "reply": "Payment options are GCash, Maya, or cash. 💰 To preview a sample GCash summary, calculate a quote and tap “Show sample payment”. It uses a test ID, not a payable account. Never share your PIN or OTP.",
     "questions": [
       "how can I pay",
       "what payment methods do you accept",
@@ -1039,7 +1039,7 @@
       "real ai",
       "scripted"
     ],
-    "reply": "I can help with the menu, hours, delivery fees, drink options, and common order questions. 🧋 You can also ask about Troy’s chatbot services. This is a scripted roleplay, not live AI; real orders, payments, and staff contact happen outside this chat.",
+    "reply": "I can help with the menu, hours, delivery fees, drink options, and common order questions. For a total, try “2 Classic with extra pearls, delivery” or use the calculator. 🧋 You can also ask about Troy’s chatbot services. This is a scripted roleplay, not live AI; real orders, payments, and staff contact happen outside this chat.",
     "questions": [
       "help",
       "what can you do",

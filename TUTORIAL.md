@@ -9,7 +9,7 @@
 
 A website is just **a file your browser reads and displays**. That's literally it.
 
-Your portfolio starts at **`index.html`**, with two local chatbot scripts in
+Your portfolio starts at **`index.html`**, with local chatbot and calculator scripts in
 `assets/`. Together they use three languages:
 
 | Language | Job | Analogy |
@@ -302,6 +302,10 @@ Read [CHATBOT.md](CHATBOT.md), then edit `scripts/chatbot-topics.txt`. Each topi
 has an ID/label, keywords, a plain-text reply, and semicolon-separated questions.
 After editing, run `node scripts/build-chatbot.js` and `node --test tests/*.test.js`.
 Commit the source plus generated `assets/chatbot-data.js` together.
+
+The demo also calculates local sample quotes via `assets/order-calculator.js` and
+the quote form. See [CHATBOT.md](CHATBOT.md#price-calculator) for supported chat
+syntax, pricing rules, and the non-payable sample payment preview.
 
 Change the fictional shop's header, greeting, quick replies, and source responses
 as a set. Use only verified business facts for a real client. No invented stock,

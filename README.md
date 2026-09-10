@@ -14,6 +14,9 @@ pricing, a pilot-client invitation, and a Messenger contact flow.
   of a disclaimer in every bubble. No fake order confirmations or staff transfers.
 - Deterministic replies: exact questions first, whole-word phrases next,
   clarification for equally strong matches, and an honest unknown-question fallback.
+- **Local price calculator** for quantities, per-cup extra pearls, pickup/delivery,
+  and the ₱500 free-delivery threshold. Includes a form, constrained chat quotes,
+  and a visibly fictional payment preview (no real account or money transfer).
 - Working demo as proof—no unfinished video placeholders, invented testimonials,
   fake client results, or implied live integrations.
 - Pilot invitation for the first 1–2 small free/discounted builds, subject to fit,
@@ -30,6 +33,8 @@ pricing, a pilot-client invitation, and a Messenger contact flow.
 index.html                    # Layout, styles, navigation, and chat UI
 assets/chatbot.js             # Pure deterministic matcher (browser + Node)
 assets/chatbot-data.js        # Generated, checked-in question/reply library
+assets/order-calculator.js    # Pricing, strict quote parser, fake payment preview
+assets/order-ui.js            # Accessible form; quotes live only in page memory
 scripts/chatbot-topics.txt    # Editable source: 52 topics × 20 scripted inputs
 scripts/build-chatbot.js      # Generates/checks the browser data file
 tests/                       # Node regression tests + optional browser smoke test
@@ -53,7 +58,9 @@ python3 -m http.server 8080 --bind 0.0.0.0
 
 The chatbot works offline; external Messenger/GitHub links need internet access.
 This is a scripted demonstration, not a real shop or live AI. It cannot place
-orders, take payments, access Google Sheets, or notify a human.
+orders, take payments, access Google Sheets, or notify a human. It can calculate
+local sample quotes. See [CHATBOT.md](CHATBOT.md#price-calculator) for supported
+chat wording, limits, payment placeholders, and how to change prices.
 
 ## Edit and test
 
