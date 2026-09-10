@@ -1,128 +1,113 @@
 # Troy.Builds — AI Automation Portfolio 🖤💛
 
-> Personal portfolio of **Troy Candia**, an AI automation builder & video editor from
-> Tubod, Lanao del Norte (LDN), Philippines. Features a **live interactive chatbot demo**, service
-> packages, transparent pricing, and a client-ready contact flow.
+Portfolio for Troy's chatbot, automation, and video-editing services for PH
+businesses. Includes a **working, fictional shop chatbot**, transparent service
+pricing, a pilot-client invitation, and a Messenger contact flow.
 
-[![Live Site](https://img.shields.io/badge/🌐_Live-techtroyai.github.io/Automation-d4af37?style=for-the-badge)](https://techtroyai.github.io/Automation/)
-[![License: MIT](https://img.shields.io/badge/License-MIT-d4af37?style=flat-square)](LICENSE)
-![HTML5](https://img.shields.io/badge/HTML5-standalone-orange?style=flat-square&logo=html5)
-![CSS3](https://img.shields.io/badge/CSS3-no_frameworks-blue?style=flat-square&logo=css3)
-![JavaScript](https://img.shields.io/badge/JavaScript-vanilla-yellow?style=flat-square&logo=javascript)
+**Live site:** https://techtroyai.github.io/Automation/
 
-**🔗 Live site:** [techtroyai.github.io/Automation](https://techtroyai.github.io/Automation/)
+## Features
 
----
+- **1,040 authored scripted questions across 52 topics**, with English, Tagalog,
+  and Bisaya examples: shop FAQs plus questions about portfolio services.
+- Deterministic replies: exact questions first, whole-word phrases next,
+  clarification for equally strong matches, and an honest unknown-question fallback.
+- Working demo as proof—no unfinished video placeholders, invented testimonials,
+  fake client results, or implied live integrations.
+- Pilot invitation for the first 1–2 small free/discounted builds, subject to fit,
+  with honest feedback and separate permission before public use.
+- Reduced public personal information; existing social links remain until the
+  owner and guardian choose a suitable contact channel.
+- Responsive black/gold layout, mobile menu, FAQ accordion, keyboard focus,
+  reduced-motion support, metadata, and a branded social share image.
+- No runtime dependencies, backend, API key, or visitor-message storage.
 
-## ✨ Features
+## Project structure
 
-- 🤖 **Live chatbot demo** — visitors chat with a simulated shop auto-reply bot (keyword engine in vanilla JS, works offline)
-- 💬 **Service catalog** — FB chatbots, n8n/Make automations, custom AI tools, video editing
-- 💰 **Transparent pricing** — GCash-friendly packages in PHP (₱), with a highlighted "most popular" tier
-- ✅ **Process section** — the 5-step client journey, so buyers know exactly what happens next
-- ❓ **FAQ accordion** — handles objections before the first message (pure HTML, zero JS)
-- 📱 **Fully responsive** — mobile-first, with a real hamburger menu (not just hidden links)
-- ♿ **Accessible** — skip link, visible keyboard focus rings, `prefers-reduced-motion` support
-- 🔍 **SEO + share ready** — canonical URL, Open Graph/Twitter cards, `Person`/`Offer` structured data
-- ✨ **Polished details** — scroll progress bar, reveal-on-scroll, back-to-top, themed 404 page
-- ⚡ **Zero dependencies** — one HTML file, no build step, no frameworks, loads instantly
-
-## 📁 Project Structure
-
-```
-├── index.html            # The entire site — standalone, no build step
-├── 404.html              # Themed GitHub Pages 404 → sends visitors home
-├── favicon.png           # Tab icon
-├── og.jpg                # Social share card (FB / Messenger / Twitter)
-├── TUTORIAL.md           # Full guide: how it works, customize, host, get clients
-├── gig-descriptions.md   # Copy-paste gigs for Fiverr / Upwork / FB groups
-├── outreach-scripts.md   # DM scripts (English + Bisaya) for local outreach
-├── .nojekyll             # Tells GitHub Pages to skip Jekyll
-├── .github/workflows/pages.yml  # Auto-deploys to GitHub Pages on push
-├── LICENSE               # MIT License
-└── .gitignore
+```text
+index.html                    # Layout, styles, navigation, and chat UI
+assets/chatbot.js             # Pure deterministic matcher (browser + Node)
+assets/chatbot-data.js        # Generated, checked-in question/reply library
+scripts/chatbot-topics.txt    # Editable source: 52 topics × 20 scripted inputs
+scripts/build-chatbot.js      # Generates/checks the browser data file
+tests/                       # Node regression tests + optional browser smoke test
+404.html                     # GitHub Pages error page
+favicon.png / og.jpg          # Brand assets
+CHATBOT.md                   # Matching rules, all-topic index, customization
+LAUNCH-CHECKLIST.md           # Real recordings, consent, guardian review, outreach
+TUTORIAL.md                   # Beginner guide
+outreach-scripts.md           # English + Bisaya outreach and pilot scripts
+gig-descriptions.md           # Service listing templates to review before use
+.github/workflows/pages.yml  # PR verification, deployment only from main
 ```
 
-## 🛠️ Tech Stack
+## Run locally
 
-| Layer | Choice | Why |
-|---|---|---|
-| Structure | HTML5 | Semantic, accessible, SEO-friendly |
-| Styling | Vanilla CSS (custom properties) | One `:root` theme block re-skins the whole site |
-| Behavior | Vanilla JavaScript | Scroll reveals + keyword chatbot — no libraries needed |
-| Hosting | GitHub Pages | Free, auto-deploys on every push |
+Open `index.html` directly, **keeping `assets/` alongside it**, or serve the folder:
 
-## ⚡ Quickstart
-
-```bash
-# 1. Clone
-git clone https://github.com/TechTroyAi/Automation.git
-cd Automation
-
-# 2. Open — that's it. No install, no build.
-open index.html        # or just double-click the file
-
-# Or serve it locally (needed if you want a real http:// URL)
+```sh
 python3 -m http.server 8080 --bind 0.0.0.0
-# then open http://localhost:8080
 ```
 
-> The site works fully offline — open it in airplane mode and the demo bot still replies. ✈️
+The chatbot works offline; external Messenger/GitHub links need internet access.
+This is a scripted demonstration, not a real shop or live AI. It cannot place
+orders, take payments, access Google Sheets, or notify a human.
 
-## 🌐 GitHub Pages
+## Edit and test
 
-This repo is set up as a **project site**. After the Actions workflow runs, the live URL is:
+Node 22 is used for authoring and tests, not for hosting or visiting the page.
 
-**https://techtroyai.github.io/Automation/**
+```sh
+# Edit scripts/chatbot-topics.txt, then:
+node scripts/build-chatbot.js
+node scripts/build-chatbot.js --check
+node --testtests/*.test.js
+```
 
-How it deploys:
+Every one of the 1,040 inputs is tested against its intended response. Regression
+checks cover normalization, phrase priority, false substring matches, ambiguous
+questions, input rendering, demo limitations, and deployed assets.
+See [CHATBOT.md](CHATBOT.md) for the format and optional Chromium smoke tests.
 
-1. Merge to `main` (GitHub Pages is locked to that branch)
-2. The [Pages workflow](.github/workflows/pages.yml) uploads `index.html` + assets
-3. GitHub serves them at the URL above — usually within 1–2 minutes
-
-First time on a fork? Repo → **Settings → Pages → Source: GitHub Actions**.
-
-## 🎨 Customization
-
-Every editable spot in `index.html` is marked with `✏️ EDIT ME`. The essentials:
-
-| Change | Where |
+| Customize | Where |
 |---|---|
-| Name, headline, bio | Hero section |
-| Brand name (`troy.builds`) | Navbar `.logo` + 404 page |
-| Contact links (Messenger, FB, email, GitHub) | Hero buttons + Contact section |
-| AI agent card copy | `#work` → Project 1 |
-| Projects & demo videos | `#work` section (YouTube embed supported) |
-| Prices & packages | `#pricing` section |
-| Theme colors | `:root` block in `<style>` (currently black + gold `🖤💛`) |
-| Chatbot replies & demo shop | `BOT_RULES` in `<script>` |
+| Brand, pitch, services, prices | `index.html` |
+| Contact destination | Hero, pilot CTA, Contact, JSON-LD, and README social links |
+| Questions, keywords, answers | `scripts/chatbot-topics.txt`, then regenerate |
+| Matching behavior | `assets/chatbot.js` |
+| Real recorded demos | `#work`, following `LAUNCH-CHECKLIST.md` |
+| Colors | CSS `:root` variables |
 
-📖 **New to code?** Read [`TUTORIAL.md`](TUTORIAL.md) — a beginner-friendly walkthrough of how every part works, how to add demo videos, and how to host it free.
+Keep service replies synchronized with visible prices and terms. Changing prices
+in the HTML does not automatically update the scripted answers. Update the
+visible question/topic count if the library size changes; tests detect drift.
 
-## 🗺️ Roadmap
+## Deployment
 
-- [x] v1 — Portfolio + live chatbot demo + black/gold theme
-- [ ] Embed real AI-agent demo videos (screen recordings)
-- [ ] Client testimonials section
-- [ ] Custom domain (`troybuilds.com`)
-- [ ] Sellable n8n workflow templates
+1. Open a PR and review the checks. PRs do **not** deploy the live page.
+2. After owner approval and merge to `main`, Actions checks and uploads the HTML,
+   images, and `assets/` folder to GitHub Pages.
+3. Verify https://techtroyai.github.io/Automation/ and its chatbot on mobile.
 
-## 👤 Author
+On a fork: Settings → Pages → Source → GitHub Actions.
+No bundler or install step is required for the deployed site.
 
-**Troy Candia** — Tubod, Lanao del Norte (LDN), Philippines 🇵🇭
+## Before sending this to prospects
 
-- 💬 Messenger: [m.me/TroyCandia](https://m.me/TroyCandia)
-- 📘 Facebook: [facebook.com/TroyCandia](https://facebook.com/TroyCandia)
-- 📧 Email: [josiahcandia@gmail.com](mailto:josiahcandia@gmail.com)
-- 💻 GitHub: [@TechTroyAi](https://github.com/TechTroyAi)
+Follow [LAUNCH-CHECKLIST.md](LAUNCH-CHECKLIST.md): record actual work, review the
+public contact channel with a guardian, get explicit testimonial/demo permission,
+and send relevant, respectful outreach. A site alone does not guarantee traffic.
 
-Open to freelance projects — chatbots, automations, and video edits for PH businesses. GCash accepted. 🙏
+Real videos and client feedback still require real-world work. Current privacy
+changes do not remove identifying social profiles, license attribution, old Git
+history, or cached copies. Messenger is retained, **not claimed to be monitored**.
 
-## 📄 License
+## Contact
 
-This project is open source under the [MIT License](LICENSE) — feel free to fork it for your own portfolio, just leave a ⭐ if it helped you.
+- Messenger: https://m.me/TroyCandia
+- Facebook: https://facebook.com/TroyCandia
+- GitHub: https://github.com/TechTroyAi
 
----
+## License
 
-<p align="center">Built by hand in Tubod, LDN · Powered by kape ☕</p>
+[MIT](LICENSE). Original attribution is preserved.

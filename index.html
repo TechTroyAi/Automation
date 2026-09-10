@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <!-- ═══════════════════════════════════════════════════════════════════
-  TROY CANDIA — PORTFOLIO (Black & Gold Edition 🖤💛)
+  TROY.BUILDS — PORTFOLIO (Black & Gold Edition 🖤💛)
   ─────────────────────────────────────────────────────────────────────
-  This whole website is ONE file. That's on purpose so you can:
+  This static website uses HTML plus two local chatbot scripts, so you can:
     1. Double-click it on your phone/PC and it just works (no internet needed)
     2. Host it free on GitHub Pages / Netlify in 5 minutes
     3. Learn by reading top → bottom: HTML = structure, CSS = design, JS = brain
@@ -12,7 +12,7 @@
     - Your real projects/videos → #work section
     - Your prices → #pricing section
     - Colors → look for ":root" in the <style> block
-    - Demo chatbot replies → search "BOT_RULES" in the <script> block
+    - Demo chatbot replies → scripts/chatbot-topics.txt (see CHATBOT.md)
 
   Full step-by-step tutorial is in TUTORIAL.md in this repo. 📖
 ════════════════════════════════════════════════════════════════════ -->
@@ -23,10 +23,11 @@
   <meta name="theme-color" content="#08080a" />
   <meta name="color-scheme" content="dark" />
   <meta name="robots" content="index, follow" />
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; } .chat-input, .quick { display: none; }</style></noscript>
 
   <!-- ✏️ EDIT ME: your name + one-line pitch (this shows on Google & FB shares) -->
-  <title>Troy Candia — AI Chatbots &amp; Automations | Tubod, LDN</title>
-  <meta name="description" content="I build AI chatbots, business automations, and edit scroll-stopping videos for local PH businesses. Based in Tubod, Lanao del Norte. Fixed prices, GCash accepted." />
+  <title>Troy.Builds — AI Chatbots &amp; Automations for PH Businesses</title>
+  <meta name="description" content="I build AI chatbots, business automations, and edit scroll-stopping videos for local PH businesses. Remote services across the Philippines. Fixed prices, GCash accepted." />
   <link rel="canonical" href="https://techtroyai.github.io/Automation/" />
 
   <link rel="icon" type="image/png" href="favicon.png" />
@@ -37,11 +38,11 @@
   <meta property="og:site_name" content="troy.builds" />
   <meta property="og:locale" content="en_PH" />
   <meta property="og:url" content="https://techtroyai.github.io/Automation/" />
-  <meta property="og:title" content="Troy Candia — AI Chatbots &amp; Automations | Tubod, LDN" />
+  <meta property="og:title" content="Troy.Builds — AI Chatbots &amp; Automations for PH Businesses" />
   <meta property="og:description" content="AI chatbots, business automations, and video edits for PH businesses. Fixed prices, GCash accepted. 🇵🇭" />
   <meta property="og:image" content="https://techtroyai.github.io/Automation/og.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Troy Candia — AI Chatbots &amp; Automations" />
+  <meta name="twitter:title" content="Troy.Builds — AI Chatbots &amp; Automations" />
   <meta name="twitter:description" content="AI chatbots, business automations, and video edits for PH businesses. Fixed prices, GCash accepted. 🇵🇭" />
   <meta name="twitter:image" content="https://techtroyai.github.io/Automation/og.jpg" />
 
@@ -50,7 +51,7 @@
   {
     "@context": "https://schema.org",
     "@type": "Person",
-    "name": "Troy Candia",
+    "name": "Troy",
     "jobTitle": "AI Automation Builder & Video Editor",
     "url": "https://techtroyai.github.io/Automation/",
     "image": "https://techtroyai.github.io/Automation/og.jpg",
@@ -60,8 +61,6 @@
     ],
     "address": {
       "@type": "PostalAddress",
-      "addressLocality": "Tubod",
-      "addressRegion": "Lanao del Norte",
       "addressCountry": "PH"
     },
     "knowsAbout": ["AI chatbots", "workflow automation", "n8n", "Make.com", "video editing"],
@@ -290,21 +289,11 @@
     /* Featured pricing card gets a gold outline + ribbon */
     .card--featured { position: relative; border-color: rgba(212, 175, 55, 0.5); }
     .card--featured::before {
-      content: "⭐ Most popular"; position: absolute; top: -13px; left: 24px;
+      content: "⭐ Bot + workflow"; position: absolute; top: -13px; left: 24px;
       background: linear-gradient(180deg, var(--accent2), var(--accent)); color: var(--ink);
       font-size: 0.72rem; font-weight: 800; letter-spacing: 0.4px;
       padding: 5px 13px; border-radius: 999px; white-space: nowrap;
     }
-
-    /* project demo box: where your screen-recording goes */
-    .demo-box {
-      margin-top: 18px; border: 1px dashed var(--border-strong); border-radius: var(--radius-sm);
-      padding: 18px; text-align: center; color: var(--muted); font-size: 0.88rem;
-      background: rgba(212, 175, 55, 0.04); line-height: 1.7;
-    }
-    .demo-box b { color: var(--text); }
-    .demo-box a { color: var(--accent2); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(241, 217, 123, 0.35); }
-    .demo-box a:hover { border-bottom-color: var(--accent2); }
 
     /* ── VIDEO EMBED (responsive 16:9) ── */
     /* TEACH: this wrapper keeps any YouTube/FB video at the right size on all screens */
@@ -314,7 +303,7 @@
     /* ── LIVE DEMO CHAT (phone-style auto-reply preview) ── */
     /* TEACH: this is just styled boxes — .phone is the frame, .msg.bot/.msg.user
        are the chat bubbles. The "intelligence" lives in the <script> at the bottom
-       (search BOT_RULES). HTML = layout, CSS = look, JS = brain. */
+       (see assets/chatbot.js). HTML = layout, CSS = look, JS = brain. */
     .phone {
       max-width: 430px; margin: 0 auto; background: #101013;
       border: 1px solid var(--border-strong); border-radius: 24px; overflow: hidden;
@@ -364,6 +353,7 @@
       font-size: 1.05rem; cursor: pointer; transition: filter 0.15s var(--ease);
     }
     .chat-input button:hover { filter: brightness(1.08); }
+    .msg { overflow-wrap: anywhere; }
     .chat-foot { text-align: center; font-size: 0.79rem; color: var(--muted); padding: 0 14px 18px; }
     .chat-foot a { color: var(--accent); font-weight: 700; text-decoration: none; }
     .chat-foot a:hover { text-decoration: underline; }
@@ -497,7 +487,7 @@
     <!-- ✏️ EDIT ME: your headline — say WHAT you do + WHO it's for -->
     <h1>I build <span class="gradient">AI chatbots &amp; automations</span> for PH businesses 🤖</h1>
     <p>
-      Hi, I'm <b>Troy</b> — a 17-year-old builder from Tubod, LDN.
+      Hi, I'm <b>Troy</b> — a builder helping businesses across the Philippines.
       I help shops &amp; online sellers save hours every week with auto-reply chatbots,
       workflow automations, and scroll-stopping video edits. GCash accepted. 🇵🇭
     </p>
@@ -509,45 +499,48 @@
       <div class="stat"><b>🤖 AI</b><small>Chatbots &amp; agents</small></div>
       <div class="stat"><b>⚡ Auto</b><small>n8n / Make workflows</small></div>
       <div class="stat"><b>🎬 Edits</b><small>Reels &amp; TikTok</small></div>
-      <div class="stat"><b>📍 LDN</b><small>Tubod, Lanao del Norte</small></div>
+      <div class="stat"><b>🇵🇭 PH</b><small>Remote, nationwide</small></div>
     </div>
   </header>
 
   <!-- ═══════════ LIVE DEMO — interactive auto-reply chatbot ═══════════ -->
   <!-- TEACH: This is a "fake client" demo — a mini chatbot running 100% in JavaScript
        (no server, no internet needed). Visitors tap buttons or type, and the bot replies
-       using KEYWORD MATCHING (see BOT_RULES in the <script> below). Its job: PROVE your
-       service works within 10 seconds of landing on your page. -->
+       using scripted questions (see CHATBOT.md). This is a local prototype, not a
+       connected client deployment. -->
   <section id="demo" class="section-alt">
     <div class="container">
       <div class="kicker">Live demo — try it 👇</div>
       <h2>This is what I build for shops</h2>
-      <p class="sub">Pretend you're a customer messaging a milk tea shop at midnight. The bot replies instantly — <b>tap a button or type below</b> (Bisaya ok! 🇵🇭). Now imagine this running on YOUR page 24/7.</p>
+      <p class="sub">Try a <b>fictional milk tea shop</b>: menu, delivery fees, cancellations, and more. Includes <b>1,040 scripted questions across 52 topics</b> in English, Tagalog, and Bisaya, plus FAQs about my services. Exact questions get their assigned answer; unclear matches ask you to clarify. This is a rule-based prototype, not live AI.</p>
 
       <div class="phone reveal">
         <div class="chat-head">
           <div class="avatar" aria-hidden="true">🧋</div>
           <div>
-            <b>MilkTea Tubod</b>
-            <small><span class="online">●</span> Online — replies instantly</small>
+            <b>Milk Tea Demo</b>
+            <small><span class="online">●</span> Local demo — no real orders</small>
           </div>
         </div>
         <div class="chat-body" id="chatBody" aria-live="polite" aria-label="Chat demo">
-          <div class="msg bot">Hi! Welcome to <b>MilkTea Tubod</b> 🧋 We're open 'til 10 PM today!</div>
-          <div class="msg bot">Ask me anything — prices, location, or want to order? 👇</div>
+          <div class="msg bot">Hi! Welcome to <b>Milk Tea Demo</b> 🧋 A fictional shop with scripted replies.</div>
+          <div class="msg bot">Try prices, delivery fees, or canceling an order. Please do not enter personal or payment details. 👇</div>
         </div>
         <!-- ✏️ EDIT ME: quick-reply buttons — change these to fit your demo shop -->
         <div class="quick" id="quickRow">
           <button type="button">Tagpila? 💰</button>
           <button type="button">Open mo? 🕐</button>
-          <button type="button">Location? 📍</button>
-          <button type="button">Order ko! 🧋</button>
+          <button type="button">Delivery fee? 🛵</button>
+          <button type="button">Cancel my order</button>
+          <button type="button">Chatbot pricing</button>
+          <button type="button">Human</button>
         </div>
         <form class="chat-input" id="chatForm">
-          <input id="chatText" type="text" placeholder="Type a message..." autocomplete="off" maxlength="200" aria-label="Your message" />
+          <input id="chatText" type="text" placeholder="Type a message..." autocomplete="off" maxlength="200" aria-label="Your message" aria-describedby="demoPrivacy" />
           <button type="submit" aria-label="Send message">➤</button>
         </form>
-        <div class="chat-foot">✨ Demo bot by Troy — <a href="#contact">I can build this for YOUR page</a></div>
+        <div class="chat-foot" id="demoPrivacy">No orders, payments, or staff handoffs. Messages stay in page memory; refresh to clear.<br />✨ Built by Troy — <a href="#contact">Ask about a bot for your page</a></div>
+        <noscript><p class="chat-foot">JavaScript is needed for this interactive demo. You can still read Services and Pricing or use Contact below.</p></noscript>
       </div>
     </div>
   </section>
@@ -611,70 +604,40 @@
   <section id="work" class="section-alt">
     <div class="container">
       <div class="kicker">Proof of work</div>
-      <h2>Things I've built 🛠️</h2>
-      <!--
-        TEACH: This section is your #1 sales tool. Clients don't buy words — they buy
-        PROOF. A 60-second screen recording of your AI agent working is worth more
-        than 10 paragraphs. How to add yours (free, phone-friendly):
-          1. Screen-record your project in action (phone screen recorder is fine)
-          2. Upload it to YouTube as "Unlisted"
-          3. Copy the video ID (the part after v= in the link)
-          4. Replace VIDEO_ID below with it, and delete the demo-box placeholder
-        Full walkthrough in TUTORIAL.md → "Part 4".
-      -->
-      <p class="sub">Real demos, not promises. Watch them work 👇</p>
-      <div class="grid grid-3">
-
-        <!-- ✏️ EDIT ME: PROJECT 1 — your AI agent project -->
+      <h2>Try the work, not a promise 🛠️</h2>
+      <p class="sub">One working prototype you can test right now. This is a self-built demo, not a client deployment or a claim of customer results.</p>
+      <div class="grid grid-2">
         <div class="card reveal">
-          <div class="icon" aria-hidden="true">🤖</div>
-          <h3>Customer Service AI Agent</h3>
-          <p>An AI agent that answers your customers' questions, takes their orders, and saves every order to a Google Sheet automatically. Built with <b>Python + OpenAI + n8n</b> — it runs on your Page 24/7, even while you sleep.</p>
-          <!-- OPTION A (placeholder until you have a video): keep this box -->
-          <div class="demo-box">
-            🎥 <b>Demo video coming here.</b><br />
-            Screen-record your project → upload to YouTube (Unlisted) →<br />
-            paste the embed below. See <b>TUTORIAL.md Part 4</b>.<br /><br />
-            Want to see it running now?
-            <a href="https://m.me/TroyCandia" target="_blank" rel="noopener">Ask me for a live demo →</a><br />
-            Code lives on <a href="https://github.com/TechTroyAi" target="_blank" rel="noopener">my GitHub →</a>
+          <div class="icon" aria-hidden="true">🧋</div>
+          <h3>Scripted Shop FAQ Bot</h3>
+          <p>A browser-only chatbot with 1,040 scripted questions across 52 topics. Try <b>“delivery fee”</b>, <b>“cancel my order”</b>, and <b>“chatbot pricing”</b> to see different questions get specific replies.</p>
+          <ul>
+            <li>English, Tagalog, and Bisaya question examples</li>
+            <li>Exact questions first; whole-word phrases next</li>
+            <li>Clear fallback instead of an invented answer</li>
+          </ul>
+          <div class="btn-row">
+            <a class="btn btn-green" href="#demo">Try the working demo ↑</a>
+            <a class="btn btn-ghost" href="https://github.com/TechTroyAi/Automation" target="_blank" rel="noopener">Inspect the source ↗</a>
           </div>
-          <!-- OPTION B (once you have a video): delete the demo-box above, uncomment
-               this block, and replace VIDEO_ID with your YouTube ID:
-          <div class="video-wrap">
-            <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen
-              title="AI agent demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
-          </div>
-          -->
+          <p style="margin-top:16px;">Built with vanilla JavaScript. No live Facebook, AI API, Google Sheets, payment, or staff connection.</p>
         </div>
-
-        <!-- ✏️ EDIT ME: PROJECT 2 — an automation or 2nd project -->
         <div class="card reveal">
-          <div class="icon" aria-hidden="true">⚡</div>
-          <h3>Auto-Reply + Order Tracker Workflow</h3>
-          <p>An n8n/Make workflow: new FB message → AI draft reply → order details auto-saved to Google Sheets → daily summary sent to the owner. Zero manual copying.</p>
-          <div class="demo-box">
-            🎥 <b>Demo video coming here.</b><br />
-            Same steps as Project 1 — record the workflow running,<br />
-            upload it Unlisted, then embed it.<br /><br />
-            Workflow template available on request →
-          </div>
+          <div class="icon" aria-hidden="true">🤝</div>
+          <div class="kicker">Pilot invitation · not a testimonial</div>
+          <h3>Let's build the first client stories</h3>
+          <p>I'm looking for my first <b>1–2 pilot clients</b> for a small free or discounted build, subject to fit and availability. We agree the scope, price, and timeline before starting.</p>
+          <ul>
+            <li>One focused problem, such as repetitive shop FAQs</li>
+            <li>Honest feedback after you try the build—no positive review required</li>
+            <li>Separate permission before sharing a redacted demo or your words</li>
+          </ul>
+          <p>No client testimonials are published yet. Any future review will reflect real experience and disclose a free or discounted pilot.</p>
+          <div class="btn-row"><a class="btn btn-ghost" href="https://m.me/TroyCandia" target="_blank" rel="noopener">Ask about a pilot build ↗</a></div>
         </div>
-
-        <!-- ✏️ EDIT ME: PROJECT 3 — video editing samples -->
-        <div class="card reveal">
-          <div class="icon" aria-hidden="true">🎬</div>
-          <h3>Sample Video Edits</h3>
-          <p>Before/after reels and TikToks: captions, hooks, transitions, trending audio. Fast turnaround for sellers who post daily.</p>
-          <div class="demo-box">
-            🎥 <b>My edits, before/after:</b><br /><br />
-            <a href="https://facebook.com/TroyCandia" target="_blank" rel="noopener">See them on my FB Page →</a><br />
-            Want a sample for your niche?
-            <a href="https://m.me/TroyCandia" target="_blank" rel="noopener">Message me →</a>
-          </div>
-        </div>
-
       </div>
+      <!-- Add another proof card only when a real recording or direct sample exists.
+           Recording, consent, and outreach checklist: LAUNCH-CHECKLIST.md. -->
     </div>
   </section>
 
@@ -698,7 +661,7 @@
         <div class="step reveal">
           <div class="step-num">3</div>
           <h3>50% to start</h3>
-          <p>GCash or Maya downpayment so I can begin building right away.</p>
+          <p>Standard projects use a downpayment after scope approval. Pilot terms are agreed separately.</p>
         </div>
         <div class="step reveal">
           <div class="step-num">4</div>
@@ -711,7 +674,7 @@
           <p>You approve → pay the balance → I set everything up on your accounts and teach you how to use it.</p>
         </div>
       </div>
-      <span class="note-pill reveal">✅ Zero risk — you approve the demo before paying the balance</span>
+      <span class="note-pill reveal">✅ Review the working demo before paying the balance</span>
     </div>
   </section>
 
@@ -720,7 +683,7 @@
     <div class="container">
       <div class="kicker">Pricing</div>
       <h2>Simple packages, GCash-friendly 🇵🇭</h2>
-      <p class="sub">Fixed prices. 50% to start, 50% when you're happy with the demo. No hidden fees.</p>
+      <p class="sub">Standard builds: 50% to start, 50% after demo approval. We agree the scope and any third-party running costs upfront. Pilot terms are separate.</p>
       <div class="grid grid-3">
         <div class="card reveal">
           <div class="icon" aria-hidden="true">🌱</div>
@@ -736,7 +699,7 @@
         <div class="card card--featured reveal">
           <div class="icon" aria-hidden="true">🚀</div>
           <h3>Business — ₱3,000</h3>
-          <p>Most popular. Bot + automation working together.</p>
+          <p>Bot + automation working together.</p>
           <ul>
             <li>Everything in Starter</li>
             <li>+ 1 automation (orders → Sheets, auto-post, etc.)</li>
@@ -769,7 +732,7 @@
       <!-- TEACH: <details>/<summary> = free accordion, no JavaScript needed! -->
       <details class="reveal">
         <summary>💸 How do I pay you?</summary>
-        <p>GCash, Maya, or bank transfer (via my dad's verified account — I'm 17, so payments go through a parent, 100% legit and traceable). 50% downpayment to start, balance after you approve the demo.</p>
+        <p>GCash, Maya, or bank transfer, with payment arrangements coordinated with a parent/guardian. We confirm the scope and recipient privately before any payment. Standard projects: 50% downpayment to start, balance after you approve the demo. Pilot terms are agreed separately.</p>
       </details>
       <details class="reveal">
         <summary>⏱️ How long does it take?</summary>
@@ -780,8 +743,8 @@
         <p>Nope. I set everything up on YOUR accounts, then send you a short video showing exactly what to click. If you can use Facebook, you can use what I build. Plus free chat support after delivery.</p>
       </details>
       <details class="reveal">
-        <summary>📍 Do I need to be in Tubod / LDN?</summary>
-        <p>No! Everything is done online — chatbots, automations, and video edits all work remotely. Tubod / LDN clients just get the bonus option of meeting up. I work with anyone in the Philippines.</p>
+        <summary>🌐 Can we work together remotely?</summary>
+        <p>Yes. I work remotely with businesses across the Philippines. We can discuss the scope, review demos, and hand over the project online—no home address or in-person meeting needed.</p>
       </details>
       <details class="reveal">
         <summary>🛡️ What if it doesn't work?</summary>
@@ -800,12 +763,9 @@
         <div class="btn-row" style="margin-top:30px;">
           <a class="btn btn-green" href="https://m.me/TroyCandia" target="_blank" rel="noopener">💬 Messenger</a>
           <a class="btn btn-ghost" href="https://facebook.com/TroyCandia" target="_blank" rel="noopener">📘 FB Page</a>
-          <!-- ✏️ EDIT ME: your email + TikTok below -->
-          <a class="btn btn-ghost" href="mailto:josiahcandia@gmail.com">📧 Email</a>
         </div>
         <p class="contact-links">
-          Email me at <a href="mailto:josiahcandia@gmail.com">josiahcandia@gmail.com</a>
-          <span class="sep">·</span>
+          For project inquiries, use Messenger. Please do not send passwords, OTPs, or payment details in an initial message.<br />
           See my code on <a href="https://github.com/TechTroyAi" target="_blank" rel="noopener">GitHub</a>
         </p>
       </div>
@@ -814,7 +774,7 @@
 
   <footer>
     <div class="container foot-inner">
-      <div>© <span id="year">2026</span> Troy · Built by hand in Tubod, LDN 🇵🇭 · Powered by kape ☕</div>
+      <div>© <span id="year">2026</span> Troy · Built in the Philippines 🇵🇭 · Powered by kape ☕</div>
       <ul class="foot-links">
         <li><a href="#demo">Live Demo</a></li>
         <li><a href="#services">Services</a></li>
@@ -828,13 +788,15 @@
 
   <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
 
+  <script src="assets/chatbot-data.js"></script>
+  <script src="assets/chatbot.js"></script>
   <script>
     // ══════════════════════════════════════════════════════════════
     // TEACH: JavaScript = the "brain". This script does 5 things:
     //   1. Auto-updates the footer year
     //   2. Reveals sections with animation as you scroll (.reveal class)
     //   3. Navbar polish: scroll progress bar, shadow, mobile menu, back-to-top
-    //   4. Powers the demo chatbot (BOT_RULES below — your auto-reply "bit"!)
+    //   4. Powers the demo chatbot (see assets/chatbot.js and CHATBOT.md)
     // ══════════════════════════════════════════════════════════════
 
     // 1. Footer year — always current, zero maintenance
@@ -890,62 +852,35 @@
     }));
 
     // ══════════════════════════════════════════════════════════════
-    // 4. THE DEMO BOT 🤖 — your auto-reply "bit", in ~40 lines.
-    // HOW IT WORKS: when a visitor sends a message, we lowercase it and check
-    // if it CONTAINS any keyword from BOT_RULES. First match wins.
-    // No server, no AI API, works offline — it's a SALES DEMO, not the real
-    // product. Real client bots run on ManyChat/n8n + real AI (TUTORIAL Part 8).
-    //
-    // ✏️ EDIT ME: rewrite these replies to fit YOUR demo scenario!
-    // Example: swap the milk tea shop for a boutique, salon, or burger stall.
-    // ══════════════════════════════════════════════════════════════
-    const BOT_RULES = [
-      { keys: ["pila", "price", "menu", "cost", "how much", "tagpila", "presyo"], reply: "Here's our menu 🧋<br><br>• Classic Milk Tea — <b>₱75</b><br>• Okinawa / Wintermelon — <b>₱85</b><br>• Fruit Tea — <b>₱70</b><br>• +Pearls — <b>₱15</b><br><br>Want to order? Just say <b>order ko!</b> 😊" },
-      { keys: ["open", "hour", "oras", "bukas", "close", "sarado", "what time"], reply: "We're open <b>MON–SUN, 10 AM – 10 PM</b> 🕐<br>Yes, open mi karon! What can I get you? 😊" },
-      { keys: ["location", "asa", "address", "where", "mapa", "direksyon"], reply: "Find us here 📍<br><b>Poblacion, Tubod, Lanao del Norte</b> (near the Provincial Capitol)<br><br>Landmark: along the national highway 😉 Open 'til 10 PM!" },
-      { keys: ["deliver", "hatod", "ship", "grab", "foodpanda", "padala"], reply: "Yes, ga-deliver mi! 🛵<br>• Within Tubod / nearby LDN — <b>₱50</b> fee<br>• FREE delivery for orders <b>₱500+</b><br><br>Type <b>order ko</b> to start your order!" },
-      { keys: ["order", "palit", "buy", "kuha", "pa-order"], reply: "Yay, order time! 🧋<br>Just send:<br><b>1.</b> Your order (e.g. 2x Okinawa)<br><b>2.</b> Name + address<br><br>I'll confirm your total + GCash number after! 💛" },
-      { keys: ["gcash", "bayad", "pay", "payment"], reply: "We accept <b>GCash, Maya &amp; Cash</b> 💰<br>GCash number is sent automatically with your order confirmation. Easy ra kaayo!" },
-      { keys: ["salamat", "thank"], reply: "Walay sapayan! 💛 Anything else — menu, location, or ready to order?" },
-      { keys: ["hi", "hello", "hey", "kumusta", "maayong"], reply: "Hellooo! 👋 Welcome to <b>MilkTea Tubod</b> 🧋<br>Ask me about <b>prices</b>, <b>hours</b>, <b>location</b> — or say <b>order ko!</b>" },
-      { keys: ["tawo", "human", "staff", "owner", "admin"], reply: "Noted! A human will jump in soon 🙋<br>(This is how the bot hands over to the shop owner when needed — tricky customers never get lost!)" },
-    ];
-    const BOT_DEFAULT = "Hmm, I'm just a demo bot so I only know a few things 😅<br>Try asking about <b>prices</b>, <b>hours</b>, <b>location</b>, <b>delivery</b> — or say <b>order ko!</b> 🧋";
-
+    // 4. THE DEMO BOT — exact scripted inputs, then whole-word phrases.
+    // All bubbles are plain text. Never interpret visitor input as HTML.
     const chatBody = document.getElementById('chatBody');
     const chatForm = document.getElementById('chatForm');
     const chatText = document.getElementById('chatText');
+    const bot = window.ScriptedChatbot && window.CHATBOT_TOPICS
+      ? window.ScriptedChatbot.createBot(window.CHATBOT_TOPICS) : null;
 
-    // TEACH: short keywords ("hi", "asa") must match WHOLE words only,
-    // otherwise "hi" would match inside "this" 😅. Longer keywords can match anywhere.
-    function matches(msg, key) {
-      if (key.length <= 3) return new RegExp("\\b" + key + "\\b").test(msg);
-      return msg.includes(key);
-    }
-
-    function addMsg(html, who) {
+    function addMsg(text, who) {
       const div = document.createElement('div');
       div.className = 'msg ' + who;
-      div.innerHTML = html;
+      div.textContent = text;
       chatBody.appendChild(div);
-      chatBody.scrollTop = chatBody.scrollHeight; // auto-scroll to newest message
+      chatBody.scrollTop = chatBody.scrollHeight;
       return div;
     }
 
     function botAnswer(text) {
-      const msg = text.toLowerCase();
-      for (const rule of BOT_RULES) {
-        if (rule.keys.some(k => matches(msg, k))) return rule.reply; // first match wins
-      }
-      return BOT_DEFAULT;
+      return bot ? bot.answer(text) : 'The demo scripts could not load. Please refresh or use the Contact section to ask about a project.';
     }
 
     function sendChat(text) {
-      text = text.trim();
+      text = text.trim().slice(0, 200);
       if (!text) return;
       addMsg(text, 'user');
       // animated "typing…" bubble so it feels like a real person is replying
-      const typing = addMsg('<i></i><i></i><i></i>', 'bot typing');
+      const typing = addMsg('', 'bot typing');
+      typing.setAttribute('aria-label', 'Preparing scripted reply');
+      for (let i = 0; i < 3; i++) typing.appendChild(document.createElement('i'));
       setTimeout(() => {
         typing.remove();
         addMsg(botAnswer(text), 'bot');

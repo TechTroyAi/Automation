@@ -26,6 +26,16 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Set up Node for dependency-free tests
+        uses: actions/setup-node@v4
+        with:
+          node-version: 22
+
+      - name: Verify scripted replies and site regressions
+        run: |
+          node scripts/build-chatbot.js --check
+          node --test tests/*.test.js
+
       - name: Verify site files
         run: |
           set -e
@@ -42,6 +52,7 @@ jobs:
           mkdir -p _site
           cp index.html 404.html _site/
           cp favicon.png og.jpg _site/
+          cp -R assets _site/assets
           # Skip Jekyll so GitHub Pages serves files as-is
           touch _site/.nojekyll
 

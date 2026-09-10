@@ -9,7 +9,8 @@
 
 A website is just **a file your browser reads and displays**. That's literally it.
 
-Your portfolio = **one file** called `index.html`. Inside it are 3 languages doing 3 jobs:
+Your portfolio starts at **`index.html`**, with two local chatbot scripts in
+`assets/`. Together they use three languages:
 
 | Language | Job | Analogy |
 |---|---|---|
@@ -17,15 +18,16 @@ Your portfolio = **one file** called `index.html`. Inside it are 3 languages doi
 | **CSS** | Design — *how* it looks (colors, sizes, spacing) | The clothes 👕 |
 | **JavaScript (JS)** | Behavior — *what happens* (animations, year auto-update) | The brain 🧠 |
 
-Normally these are 3 separate files. I combined them into ONE file so you can:
-- Open it anywhere (even with no internet — try turning on airplane mode and opening it)
+The layout and styles stay together; chatbot data and matching have their own
+files so the growing question library stays maintainable. You can:
+- Open it offline (keep `assets/` beside `index.html`)
 - Host it free in 5 minutes (Part 5)
-- Learn by scrolling through one file instead of three
+- Learn the page layout in `index.html` and chatbot behavior in `CHATBOT.md`
 
 **Where each lives in `index.html`:**
 - HTML → everywhere (the `<h1>`, `<p>`, `<div>` tags)
 - CSS → inside the `<style>...</style>` block in `<head>`
-- JS → inside the `<script>...</script>` block at the very bottom
+- JS → local `assets/` scripts plus the UI `<script>` at the bottom
 
 Open `index.html` right now and find those 3 areas. I'll wait. 👀
 
@@ -118,7 +120,7 @@ Here's the checklist in order:
 
 ### 1. Your name & brand (2 mins)
 - `<title>` in `<head>` → your name
-- The `.logo` in `<nav>` → your brand (e.g. `troy.builds`, `tubodbotguy`)
+- The `.logo` in `<nav>` → your brand (e.g. `troy.builds`, `yourbusinessbot`)
 - Hero headline + intro paragraph → your real story
 
 ### 2. Your contact links (5 mins) — MOST IMPORTANT ⚠️
@@ -128,8 +130,8 @@ Here's the checklist in order:
 | Link | Where it appears | Current value |
 |---|---|---|
 | Messenger | Hero button + Contact card | `https://m.me/TroyCandia` |
-| FB Page | Contact card + Sample Video Edits card | `https://facebook.com/TroyCandia` |
-| Email | Contact card button + text line | `mailto:josiahcandia@gmail.com` |
+| Facebook | Contact card | `https://facebook.com/TroyCandia` |
+| Email | Not published | Add only a working, guardian-approved business inbox |
 | GitHub | Project 1 card + Contact line + footer | `https://github.com/TechTroyAi` |
 
 > **No TikTok link on purpose.** You don't have one yet, so the site sends people to
@@ -137,7 +139,7 @@ Here's the checklist in order:
 > `<a href="https://tiktok.com/@yourhandle">@yourhandle</a>`
 
 **Forking this for your own portfolio?** Search `index.html` for `TroyCandia`,
-`TechTroyAi`, and `josiahcandia` — replace those three with your own links
+and `TechTroyAi` — replace these with your own approved business links
 (Messenger → `https://m.me/YOUR_FB_PAGE`, email → `mailto:youremail@...`,
 GitHub → `https://github.com/YOUR_USERNAME`).
 
@@ -146,17 +148,17 @@ GitHub → `https://github.com/YOUR_USERNAME`).
 > → add your portfolio link in its About section. This is your "business front."
 
 ### 3. Your real projects (10 mins)
-In the `#work` section, rewrite the 3 project cards:
-- **Project 1:** ✅ *done* — "Customer Service AI Agent" (answers questions, takes
-  orders, saves them to Google Sheets · Python + OpenAI + n8n). Update the wording
-  the moment your build changes, and only say what you can actually demo.
-- **Project 2:** your best automation (or describe one you WILL build this week)
-- **Project 3:** your editing samples → link your FB Page where they're posted
+The `#work` section shows the working browser chatbot and a clearly labeled pilot
+invitation, not three unverified projects. Add a new proof card only when you have
+an actual recording or directly viewable sample. Do not describe planned builds
+as completed work or use a generic social profile as evidence of a specific edit.
 
-Honesty rule: only claim what you can demo. One real demo > five fake claims.
+Follow [LAUNCH-CHECKLIST.md](LAUNCH-CHECKLIST.md) for recordings, guardian contact
+review, pilot scope, testimonial consent, and outreach. One real demo beats five
+unverified claims.
 
 ### 4. Your prices (2 mins)
-The defaults (₱1,500 / ₱3,000 / ₱1,000-per-5-vids) are beginner-friendly LDN prices.
+The defaults (₱1,500 / ₱3,000 / ₱1,000-per-5-vids) are starting service prices to review against your scope and costs.
 Keep them until you have 3+ paying clients, then raise 30–50%.
 
 ### 5. (Optional) Your photo
@@ -195,12 +197,13 @@ more than anything else on this page. Here's exactly how (free, phone-friendly):
    The part after `v=` (`AbC123xYz00`) is your **VIDEO_ID**.
 
 ### Step 3 — Embed it in your portfolio (5 mins)
-1. Open `index.html`, find Project 1's `demo-box` placeholder
-2. Delete the `<div class="demo-box">...</div>` block
-3. Uncomment the `video-wrap` block below it (remove `<!--` and `-->`)
-4. Replace `VIDEO_ID` with your real ID. Done — your demo now plays INSIDE your portfolio.
+1. Follow the privacy/recording checks in [LAUNCH-CHECKLIST.md](LAUNCH-CHECKLIST.md).
+2. Add the `.video-wrap` example from that checklist to the relevant proof card.
+3. Replace its example video ID with your actual, viewable recording ID.
+4. Test the embed signed out and on mobile before publishing.
 
-Repeat for Project 2. Two embedded demos = you look more legit than 90% of beginners.
+Until a real recording exists, keep the working chatbot link. Never publish an
+empty embed, a “coming soon” box, or a claim you cannot demonstrate.
 
 ---
 
@@ -246,7 +249,7 @@ Your portfolio is the *ammunition*. Now you need *targets*. Full scripts are in
 
 1. **Today:** portfolio live + FB Page created + join 3 FB groups
    (`Online Jobs PH`, `LDN Buy and Sell`, `AI Automation Philippines`)
-2. **Day 2–3:** message 10 local Tubod / LDN shops (food stalls, boutiques, resellers).
+2. **Day 2–3:** message 10 local PH shops (food stalls, boutiques, resellers).
    Script + Bisaya version in `outreach-scripts.md`. Attach your portfolio link.
 3. **Day 4–5:** post your service in the FB groups (template included).
 4. **First reply:** quote fixed price, ask 50% GCash downpayment, build, send demo
@@ -284,41 +287,36 @@ Here's why: clients don't understand "AI automation" — but when they TAP a but
 and a bot replies instantly, they GET it in 10 seconds. Always put the demo link
 first in your outreach messages.
 
-### How it works (the 30-second version)
+### How it works
 
-1. Visitor types a message (or taps a quick-reply pill) → `sendChat()` runs
-2. Their message appears as a gold bubble, plus a fake "typing..." bubble
-3. `botAnswer()` lowercases their text and loops through `BOT_RULES`,
-   checking if the message contains any keyword → **first match wins**
-4. The matching reply appears as a bot bubble. No match → `BOT_DEFAULT` fallback.
+The demo has **1,040 authored scripted inputs across 52 topics**. It normalizes
+case, punctuation, and spacing; checks exact questions first; then matches
+whole-word phrases. More specific phrases beat generic price/order words.
+Equal-strength topics ask for clarification; unknown text gets an honest fallback.
+It is not a live AI and does not place orders, accept payments, or notify staff.
+Typed messages are rendered as text, never HTML, and stay only in page memory.
 
-No server. No AI API. No internet needed. It's keyword matching — glorified
-Ctrl+F 😄 — but visitors can't tell, because the replies are well-written.
+### Customize the replies
 
-### How to customize it (do this!)
+Read [CHATBOT.md](CHATBOT.md), then edit `scripts/chatbot-topics.txt`. Each topic
+has an ID/label, keywords, a plain-text reply, and semicolon-separated questions.
+After editing, run `node scripts/build-chatbot.js` and `node --test tests/*.test.js`.
+Commit the source plus generated `assets/chatbot-data.js` together.
 
-**Change the replies** — search `BOT_RULES` in `index.html`. Each rule is:
-```js
-{ keys: ["pila", "price", "menu", ...], reply: "Here's our menu 🧋..." }
-```
-- `keys` = words that trigger this reply (lowercase, no need for exact sentences)
-- `reply` = what the bot says. HTML allowed (`<b>`, `<br>`) for bold + line breaks.
+Change the fictional shop's header, greeting, quick replies, and source responses
+as a set. Use only verified business facts for a real client. No invented stock,
+allergen guarantees, live delivery estimates, or personal home addresses.
 
-**Change the demo shop** — right now it's "MilkTea Tubod" because every LDN owner
-understands a milk tea shop. But you can reskin it: boutique? salon? burger stall?
-Just rewrite: the chat header name, the greeting bubbles, the 4 quick-reply buttons
-(`#quickRow`), and the `BOT_RULES` replies. 15 minutes, totally different demo.
-
-**🎯 Exercise 3:** add ONE new rule — e.g. keys `["discount", "sale", "promo"]`
-with a reply about a promo. Save, refresh, type "naay discount?" and watch it work.
-You just "programmed" a chatbot. 🧠
+**Exercise:** add a specific question to an existing topic, regenerate, and test
+that its exact input returns the intended response. Update visible counts if the
+library grows; the test suite catches stale counts.
 
 ### Demo bot vs. REAL client bots (important!)
 
 | | Portfolio demo bot | Real client bot |
 |---|---|---|
 | Runs on | This page (JavaScript) | Client's FB Page (ManyChat / n8n) |
-| Brain | Keyword matching | Real AI (understands any phrasing) |
+| Brain | Scripted question/phrase matching | Rules and/or AI, with testing and fallbacks |
 | Cost to run | Free forever | Free–cheap (ManyChat free tier / n8n) |
 | Purpose | SELL the service | DELIVER the service |
 
@@ -339,11 +337,11 @@ a paying reason. 💰
 | Add a new section | Copy a `<section>...</section>` block, change content + `id` |
 | Add a nav link | Add `<li><a href="#new-id">Label</a></li>` in `<nav>` |
 | Add demo video | Part 4 ↑ (YouTube Unlisted + `video-wrap`) |
-| Change chatbot replies | Edit `BOT_RULES` in `<script>` (Part 8 ↑) |
+| Change chatbot replies | Edit `scripts/chatbot-topics.txt`, then regenerate (Part 8 ↑) |
 | Preview changes | Save file → refresh browser (Ctrl+R / pull-to-refresh) |
 | Put it online | Part 5 ↑ (GitHub Pages or Netlify) |
 | Something broke? | Undo (Ctrl+Z), save, refresh. HTML never "breaks permanently" — worst case, re-download this file from git |
 
 ---
 
-*Built for Troy · Tubod, LDN 🇵🇭 · Questions? Re-read the section above — the answer is almost always there. You've got this, bro.* 💪
+*Built for Troy · the Philippines 🇵🇭 · Questions? Re-read the section above — the answer is almost always there. You've got this, bro.* 💪
