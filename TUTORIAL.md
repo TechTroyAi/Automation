@@ -122,13 +122,24 @@ Here's the checklist in order:
 - Hero headline + intro paragraph → your real story
 
 ### 2. Your contact links (5 mins) — MOST IMPORTANT ⚠️
-Replace every `YOUR_FB_PAGE`, `YOUR_HANDLE`, `YOUR_USERNAME`, `youremail@gmail.com`:
-- `https://m.me/YOUR_FB_PAGE` → your FB Page's Messenger link
-  (find it: open your FB Page → the username in the URL is your page name)
-- `https://facebook.com/YOUR_PAGE` → your FB Page link
-- `https://tiktok.com/@YOUR_HANDLE` → your TikTok
-- `https://github.com/YOUR_USERNAME` → your GitHub profile
-- `mailto:...` → your real email
+**Your live links are already wired in** — here's exactly where each one lives in
+`index.html`, so you can change any of them in seconds:
+
+| Link | Where it appears | Current value |
+|---|---|---|
+| Messenger | Hero button + Contact card | `https://m.me/TroyCandia` |
+| FB Page | Contact card + Sample Video Edits card | `https://facebook.com/TroyCandia` |
+| Email | Contact card button + text line | `mailto:josiahcandia@gmail.com` |
+| GitHub | Project 1 card + Contact line + footer | `https://github.com/TechTroyAi` |
+
+> **No TikTok link on purpose.** You don't have one yet, so the site sends people to
+> your FB Page + Messenger instead. When you make one, add it in the Contact section:
+> `<a href="https://tiktok.com/@yourhandle">@yourhandle</a>`
+
+**Forking this for your own portfolio?** Search `index.html` for `TroyCandia`,
+`TechTroyAi`, and `josiahcandia` — replace those three with your own links
+(Messenger → `https://m.me/YOUR_FB_PAGE`, email → `mailto:youremail@...`,
+GitHub → `https://github.com/YOUR_USERNAME`).
 
 > **Don't have a FB Page yet?** Make one today (free, 10 mins):
 > Facebook app → Menu → Pages → Create → name it "[Your Name] — AI Automation & Edits"
@@ -136,9 +147,11 @@ Replace every `YOUR_FB_PAGE`, `YOUR_HANDLE`, `YOUR_USERNAME`, `youremail@gmail.c
 
 ### 3. Your real projects (10 mins)
 In the `#work` section, rewrite the 3 project cards:
-- **Project 1:** your actual AI agent — what does it do? What tools did you use?
+- **Project 1:** ✅ *done* — "Customer Service AI Agent" (answers questions, takes
+  orders, saves them to Google Sheets · Python + OpenAI + n8n). Update the wording
+  the moment your build changes, and only say what you can actually demo.
 - **Project 2:** your best automation (or describe one you WILL build this week)
-- **Project 3:** your editing samples → link TikTok/FB where they're posted
+- **Project 3:** your editing samples → link your FB Page where they're posted
 
 Honesty rule: only claim what you can demo. One real demo > five fake claims.
 

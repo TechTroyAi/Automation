@@ -18,9 +18,13 @@
 
 - 🤖 **Live chatbot demo** — visitors chat with a simulated shop auto-reply bot (keyword engine in vanilla JS, works offline)
 - 💬 **Service catalog** — FB chatbots, n8n/Make automations, custom AI tools, video editing
-- 💰 **Transparent pricing** — GCash-friendly packages in PHP (₱)
+- 💰 **Transparent pricing** — GCash-friendly packages in PHP (₱), with a highlighted "most popular" tier
+- ✅ **Process section** — the 5-step client journey, so buyers know exactly what happens next
 - ❓ **FAQ accordion** — handles objections before the first message (pure HTML, zero JS)
-- 📱 **Fully responsive** — mobile-first, because clients browse on phones
+- 📱 **Fully responsive** — mobile-first, with a real hamburger menu (not just hidden links)
+- ♿ **Accessible** — skip link, visible keyboard focus rings, `prefers-reduced-motion` support
+- 🔍 **SEO + share ready** — canonical URL, Open Graph/Twitter cards, `Person`/`Offer` structured data
+- ✨ **Polished details** — scroll progress bar, reveal-on-scroll, back-to-top, themed 404 page
 - ⚡ **Zero dependencies** — one HTML file, no build step, no frameworks, loads instantly
 
 ## 📁 Project Structure
@@ -86,7 +90,9 @@ Every editable spot in `index.html` is marked with `✏️ EDIT ME`. The essenti
 | Change | Where |
 |---|---|
 | Name, headline, bio | Hero section |
-| Contact links (Messenger, FB, email, TikTok, GitHub) | Hero buttons + Contact section |
+| Brand name (`troy.builds`) | Navbar `.logo` + 404 page |
+| Contact links (Messenger, FB, email, GitHub) | Hero buttons + Contact section |
+| AI agent card copy | `#work` → Project 1 |
 | Projects & demo videos | `#work` section (YouTube embed supported) |
 | Prices & packages | `#pricing` section |
 | Theme colors | `:root` block in `<style>` (currently black + gold `🖤💛`) |
@@ -108,6 +114,7 @@ Every editable spot in `index.html` is marked with `✏️ EDIT ME`. The essenti
 
 - 💬 Messenger: [m.me/TroyCandia](https://m.me/TroyCandia)
 - 📘 Facebook: [facebook.com/TroyCandia](https://facebook.com/TroyCandia)
+- 📧 Email: [josiahcandia@gmail.com](mailto:josiahcandia@gmail.com)
 - 💻 GitHub: [@TechTroyAi](https://github.com/TechTroyAi)
 
 Open to freelance projects — chatbots, automations, and video edits for PH businesses. GCash accepted. 🙏

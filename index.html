@@ -1,248 +1,486 @@
 <!DOCTYPE html>
 <!-- ═══════════════════════════════════════════════════════════════════
-  YOUR PORTFOLIO — STARTER KIT (Black & Gold Edition 🖤💛)
+  TROY CANDIA — PORTFOLIO (Black & Gold Edition 🖤💛)
   ─────────────────────────────────────────────────────────────────────
-  TEACH: This whole website is ONE file. That's on purpose so you can:
+  This whole website is ONE file. That's on purpose so you can:
     1. Double-click it on your phone/PC and it just works (no internet needed)
     2. Host it free on GitHub Pages / Netlify in 5 minutes
     3. Learn by reading top → bottom: HTML = structure, CSS = design, JS = brain
 
   HOW TO CUSTOMIZE (search for "✏️ EDIT ME"):
     - Your name, photo, contact links → Hero + Contact sections
-    - Your real projects/videos → Projects section
-    - Your prices → Pricing section
+    - Your real projects/videos → #work section
+    - Your prices → #pricing section
     - Colors → look for ":root" in the <style> block
     - Demo chatbot replies → search "BOT_RULES" in the <script> block
 
-  Full step-by-step tutorial is in TUTORIAL.md in this repo. Read it after! 📖
+  Full step-by-step tutorial is in TUTORIAL.md in this repo. 📖
 ════════════════════════════════════════════════════════════════════ -->
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <!-- TEACH: <title> + meta description = what people see on Google/FB shares -->
-  <!-- ✏️ EDIT ME: put your name here -->
-  <title>Troy — AI Automation & Video Editing | Tubod, LDN</title>
-  <meta name="description" content="I build AI chatbots, business automations, and edit videos for local PH businesses. Based in Tubod, Lanao del Norte. GCash accepted." />
-  <link rel="canonical" href="https://techtroyai.github.io/Automation/" />
-  <meta name="theme-color" content="#0a0a0b" />
+  <meta name="theme-color" content="#08080a" />
   <meta name="color-scheme" content="dark" />
+  <meta name="robots" content="index, follow" />
+
+  <!-- ✏️ EDIT ME: your name + one-line pitch (this shows on Google & FB shares) -->
+  <title>Troy Candia — AI Chatbots &amp; Automations | Tubod, LDN</title>
+  <meta name="description" content="I build AI chatbots, business automations, and edit scroll-stopping videos for local PH businesses. Based in Tubod, Lanao del Norte. Fixed prices, GCash accepted." />
+  <link rel="canonical" href="https://techtroyai.github.io/Automation/" />
+
   <link rel="icon" type="image/png" href="favicon.png" />
   <link rel="apple-touch-icon" href="favicon.png" />
+
+  <!-- Social share card (FB / Messenger / Twitter) -->
   <meta property="og:type" content="website" />
+  <meta property="og:site_name" content="troy.builds" />
+  <meta property="og:locale" content="en_PH" />
   <meta property="og:url" content="https://techtroyai.github.io/Automation/" />
-  <meta property="og:title" content="Troy — AI Automation & Video Editing | Tubod, LDN" />
-  <meta property="og:description" content="I build AI chatbots, business automations, and edit videos for local PH businesses. Based in Tubod, Lanao del Norte. GCash accepted." />
+  <meta property="og:title" content="Troy Candia — AI Chatbots &amp; Automations | Tubod, LDN" />
+  <meta property="og:description" content="AI chatbots, business automations, and video edits for PH businesses. Fixed prices, GCash accepted. 🇵🇭" />
   <meta property="og:image" content="https://techtroyai.github.io/Automation/og.jpg" />
   <meta name="twitter:card" content="summary_large_image" />
-  <meta name="twitter:title" content="Troy — AI Automation & Video Editing | Tubod, LDN" />
-  <meta name="twitter:description" content="I build AI chatbots, business automations, and edit videos for local PH businesses. Based in Tubod, Lanao del Norte. GCash accepted." />
+  <meta name="twitter:title" content="Troy Candia — AI Chatbots &amp; Automations" />
+  <meta name="twitter:description" content="AI chatbots, business automations, and video edits for PH businesses. Fixed prices, GCash accepted. 🇵🇭" />
   <meta name="twitter:image" content="https://techtroyai.github.io/Automation/og.jpg" />
+
+  <!-- Structured data: helps Google show the right info about you -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Person",
+    "name": "Troy Candia",
+    "jobTitle": "AI Automation Builder & Video Editor",
+    "url": "https://techtroyai.github.io/Automation/",
+    "image": "https://techtroyai.github.io/Automation/og.jpg",
+    "sameAs": [
+      "https://github.com/TechTroyAi",
+      "https://facebook.com/TroyCandia"
+    ],
+    "address": {
+      "@type": "PostalAddress",
+      "addressLocality": "Tubod",
+      "addressRegion": "Lanao del Norte",
+      "addressCountry": "PH"
+    },
+    "knowsAbout": ["AI chatbots", "workflow automation", "n8n", "Make.com", "video editing"],
+    "makesOffer": [
+      { "@type": "Offer", "name": "Facebook Page Auto-Reply Chatbot", "priceCurrency": "PHP", "price": "1500" },
+      { "@type": "Offer", "name": "Business Automation (n8n / Make)", "priceCurrency": "PHP", "price": "2000" },
+      { "@type": "Offer", "name": "Video Editing (Reels / TikTok)", "priceCurrency": "PHP", "price": "300" }
+    ]
+  }
+  </script>
 
   <style>
     /* ══════════════════════════════════════════════════════════════
-       TEACH: CSS = the "clothes" of your website. This <style> block
-       holds ALL the design so the file stays standalone (1 file = easy host).
-       ──
-       CSS in 10 seconds:
-         selector { property: value; }
-         Example:  h1 { color: red; }  →  all h1 text becomes red
+       TEACH: CSS = the "clothes" of your website.
+         selector { property: value; }   →   h1 { color: red; }
     ══════════════════════════════════════════════════════════════ */
 
-    /* ── 🎨 THEME: minimalistic BLACK + GOLD. Change these to re-skin ── */
-    /* ✏️ EDIT ME: try your own colors! (google "color picker" to get codes) */
+    /* ── 🎨 THEME: minimal BLACK + GOLD. Change these to re-skin everything ── */
+    /* ✏️ EDIT ME: try your own colors! (google "color picker" for hex codes) */
     :root {
-      --bg: #0a0a0b;          /* page background (near black) */
-      --card: #141417;        /* card background */
-      --accent: #d4af37;      /* main gold (buttons, highlights) */
-      --accent2: #f1d97b;     /* light champagne gold (gradients) */
-      --text: #f5f2e9;        /* main text (warm white) */
-      --muted: #a1a1aa;       /* gray text */
-      --border: #26262b;      /* thin lines */
-      --radius: 16px;
+      --bg: #08080a;            /* page background (near black) */
+      --bg-soft: #0d0d10;       /* alternating section background */
+      --card: #131316;          /* card background */
+      --card-2: #17171b;        /* nested surfaces (inputs, chat) */
+      --accent: #d4af37;        /* main gold (buttons, highlights) */
+      --accent2: #f1d97b;       /* light champagne gold (gradients) */
+      --ink: #0a0a0b;           /* text on gold surfaces */
+      --text: #f6f3ea;          /* main text (warm white) */
+      --muted: #9c9ca8;         /* gray text */
+      --border: #232328;        /* thin lines */
+      --border-strong: #31313a; /* hovered lines */
+      --radius: 18px;
+      --radius-sm: 12px;
+      --max: 1080px;
+      --ease: cubic-bezier(0.22, 0.61, 0.36, 1);
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; } /* smooth scrolling when clicking nav links */
+    html { scroll-behavior: smooth; }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
       background: var(--bg);
       color: var(--text);
-      line-height: 1.6;
+      line-height: 1.65;
+      -webkit-font-smoothing: antialiased;
+      text-rendering: optimizeLegibility;
+      overflow-x: hidden;
     }
 
     /* TEACH: .container centers content + limits width so it looks good on PC,
-       while padding keeps it readable on phones */
-    .container { max-width: 1080px; margin: 0 auto; padding: 0 20px; }
-    section { padding: 72px 0; }
+       while the padding keeps it readable on phones */
+    .container { max-width: var(--max); margin: 0 auto; padding: 0 20px; }
+    section { padding: 84px 0; scroll-margin-top: 76px; } /* offset for the sticky nav */
+    .section-alt { background: var(--bg-soft); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
     a { color: inherit; }
-    ::selection { background: var(--accent); color: #0a0a0b; } /* gold text highlight */
+    img { max-width: 100%; display: block; }
+    ::selection { background: var(--accent); color: var(--ink); }
+
+    /* Keyboard users get a visible gold ring — accessibility, 3 lines */
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; border-radius: 6px; }
+
+    /* Skip link: press Tab on page load to jump straight to the content */
+    .skip {
+      position: absolute; left: -9999px; top: 10px; z-index: 300;
+      background: var(--accent); color: var(--ink); font-weight: 700;
+      padding: 10px 18px; border-radius: 10px; text-decoration: none;
+    }
+    .skip:focus { left: 20px; }
+
+    /* ── SCROLL PROGRESS BAR ── */
+    .progress {
+      position: fixed; top: 0; left: 0; height: 2px; width: 0; z-index: 200;
+      background: linear-gradient(90deg, var(--accent), var(--accent2));
+      transition: width 0.1s linear;
+    }
 
     /* ── NAVBAR ── */
     nav {
       position: sticky; top: 0; z-index: 100;
-      background: rgba(10, 10, 11, 0.9);
-      backdrop-filter: blur(10px); /* frosted glass effect */
+      background: rgba(8, 8, 10, 0.82);
+      backdrop-filter: blur(14px); /* frosted glass effect */
       border-bottom: 1px solid var(--border);
+      transition: background 0.25s var(--ease), border-color 0.25s var(--ease);
     }
-    .nav-inner { display: flex; align-items: center; justify-content: space-between; padding: 14px 20px; max-width: 1080px; margin: 0 auto; }
-    .logo { font-weight: 800; font-size: 1.2rem; text-decoration: none; }
+    nav.scrolled { background: rgba(8, 8, 10, 0.94); border-bottom-color: var(--border-strong); }
+    .nav-inner {
+      display: flex; align-items: center; justify-content: space-between; gap: 16px;
+      padding: 14px 20px; max-width: var(--max); margin: 0 auto;
+    }
+    .logo { font-weight: 800; font-size: 1.15rem; text-decoration: none; letter-spacing: -0.02em; }
     .logo span { color: var(--accent); }
-    .nav-links { display: flex; gap: 22px; list-style: none; }
-    .nav-links a { text-decoration: none; color: var(--muted); font-weight: 500; font-size: 0.95rem; }
+    .nav-links { display: flex; gap: 22px; list-style: none; align-items: center; }
+    .nav-links a {
+      text-decoration: none; color: var(--muted); font-weight: 500; font-size: 0.94rem;
+      transition: color 0.15s var(--ease);
+    }
     .nav-links a:hover { color: var(--text); }
     .nav-cta {
-      background: var(--accent); color: #0a0a0b !important; font-weight: 700 !important;
-      padding: 8px 18px; border-radius: 999px;
+      background: var(--accent); color: var(--ink) !important; font-weight: 700 !important;
+      padding: 9px 18px; border-radius: 999px;
     }
+    .nav-cta:hover { background: var(--accent2); }
+
+    /* Mobile menu button (hidden on desktop) */
+    .nav-toggle {
+      display: none; align-items: center; justify-content: center; gap: 5px;
+      width: 42px; height: 38px; background: var(--card); color: var(--text);
+      border: 1px solid var(--border); border-radius: 10px; cursor: pointer;
+    }
+    .nav-toggle i { display: block; width: 16px; height: 2px; background: currentColor; border-radius: 2px; transition: transform 0.2s var(--ease), opacity 0.2s; }
+    .nav-toggle[aria-expanded="true"] i:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+    .nav-toggle[aria-expanded="true"] i:nth-child(2) { opacity: 0; }
+    .nav-toggle[aria-expanded="true"] i:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
     /* TEACH: @media = "responsive design" — different rules for small screens */
-    @media (max-width: 640px) { .nav-links li:not(:last-child) { display: none; } }
+    @media (max-width: 780px) {
+      .nav-toggle { display: flex; flex-direction: column; }
+      .nav-links {
+        position: absolute; top: 100%; left: 0; right: 0;
+        flex-direction: column; align-items: stretch; gap: 0;
+        background: rgba(8, 8, 10, 0.98);
+        backdrop-filter: blur(14px);
+        border-bottom: 1px solid var(--border-strong);
+        padding: 6px 20px 20px;
+        display: none;
+      }
+      .nav-links.open { display: flex; }
+      .nav-links li { border-top: 1px solid var(--border); }
+      .nav-links li:first-child { border-top: 0; }
+      .nav-links a { display: block; padding: 15px 2px; font-size: 1rem; }
+      .nav-cta { display: block; text-align: center; margin-top: 14px; padding: 13px 18px; }
+    }
 
     /* ── HERO ── */
-    .hero { padding: 90px 0 60px; text-align: center; }
-    .badge {
-      display: inline-block; font-size: 0.85rem; font-weight: 600;
-      border: 1px solid var(--border); background: var(--card);
-      padding: 6px 16px; border-radius: 999px; color: var(--muted); margin-bottom: 20px;
+    .hero { position: relative; padding: 96px 0 68px; text-align: center; scroll-margin-top: 76px; }
+    .hero::before {
+      content: ""; position: absolute; inset: -120px 0 auto 0; height: 560px; pointer-events: none;
+      background: radial-gradient(620px 320px at 50% 0%, rgba(212, 175, 55, 0.15), transparent 70%);
     }
-    .badge .dot { color: var(--accent); } /* gold dot = "available" */
-    .hero h1 { font-size: clamp(2rem, 6vw, 3.4rem); line-height: 1.15; font-weight: 800; }
-    /* TEACH: gradient text trick = background clipped to text */
+    .hero > * { position: relative; }
+    .badge {
+      display: inline-flex; align-items: center; gap: 8px; font-size: 0.84rem; font-weight: 600;
+      border: 1px solid var(--border); background: var(--card);
+      padding: 7px 16px; border-radius: 999px; color: var(--muted); margin-bottom: 22px;
+    }
+    .badge .dot { color: var(--accent); animation: pulse 2.4s ease-in-out infinite; }
+    @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.3; } }
+    .hero h1 {
+      font-size: clamp(2.05rem, 6vw, 3.5rem); line-height: 1.1;
+      font-weight: 800; letter-spacing: -0.03em; margin: 0 auto; max-width: 15ch;
+    }
+    /* TEACH: gradient text trick = background clipped to the text shape */
     .gradient {
       background: linear-gradient(90deg, var(--accent), var(--accent2));
       -webkit-background-clip: text; background-clip: text; color: transparent;
     }
-    .hero p { color: var(--muted); max-width: 620px; margin: 18px auto 28px; font-size: 1.05rem; }
+    .hero p { color: var(--muted); max-width: 600px; margin: 20px auto 30px; font-size: 1.06rem; }
+    .hero p b { color: var(--text); }
+
     .btn-row { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; }
     .btn {
-      display: inline-block; padding: 13px 28px; border-radius: 12px;
-      font-weight: 700; text-decoration: none; font-size: 1rem;
-      transition: transform 0.15s ease, box-shadow 0.15s ease;
+      display: inline-flex; align-items: center; justify-content: center; gap: 8px;
+      padding: 14px 28px; border-radius: 12px; font-weight: 700;
+      text-decoration: none; font-size: 1rem; border: 1px solid transparent;
+      transition: transform 0.15s var(--ease), box-shadow 0.2s var(--ease), border-color 0.2s var(--ease);
     }
     .btn:hover { transform: translateY(-2px); }
-    .btn-green { background: var(--accent); color: #0a0a0b; }
-    .btn-ghost { border: 1px solid var(--border); background: var(--card); color: var(--text); }
+    .btn-green {
+      background: linear-gradient(180deg, var(--accent2), var(--accent));
+      color: var(--ink); box-shadow: 0 14px 34px -18px rgba(212, 175, 55, 0.85);
+    }
+    .btn-green:hover { box-shadow: 0 18px 40px -16px rgba(212, 175, 55, 0.95); }
+    .btn-ghost { border-color: var(--border-strong); background: var(--card); color: var(--text); }
+    .btn-ghost:hover { border-color: var(--accent); }
 
     /* stat strip: quick trust signals */
-    .stats { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 36px; }
-    .stat { background: var(--card); border: 1px solid var(--border); border-radius: var(--radius); padding: 14px 26px; min-width: 140px; }
-    .stat b { display: block; font-size: 1.4rem; color: var(--accent); }
-    .stat small { color: var(--muted); }
+    .stats { display: flex; gap: 12px; justify-content: center; flex-wrap: wrap; margin-top: 42px; }
+    .stat {
+      background: var(--card); border: 1px solid var(--border);
+      border-radius: var(--radius); padding: 14px 26px; min-width: 148px;
+      transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+    .stat:hover { border-color: var(--border-strong); transform: translateY(-2px); }
+    .stat b { display: block; font-size: 1.35rem; color: var(--accent); letter-spacing: -0.01em; }
+    .stat small { color: var(--muted); font-size: 0.82rem; }
 
     /* ── SECTION HEADINGS ── */
-    .kicker { color: var(--accent); font-weight: 700; text-transform: uppercase; letter-spacing: 2px; font-size: 0.8rem; }
-    h2 { font-size: clamp(1.5rem, 4vw, 2.1rem); margin: 8px 0 10px; }
-    .sub { color: var(--muted); max-width: 640px; margin-bottom: 32px; }
+    .kicker {
+      color: var(--accent); font-weight: 700; text-transform: uppercase;
+      letter-spacing: 2.2px; font-size: 0.76rem;
+    }
+    h2 { font-size: clamp(1.55rem, 4vw, 2.15rem); margin: 10px 0 12px; letter-spacing: -0.025em; line-height: 1.2; }
+    .sub { color: var(--muted); max-width: 620px; margin-bottom: 36px; }
+    .sub b { color: var(--text); }
 
     /* ── CARDS (services, projects, pricing) ── */
     .grid { display: grid; gap: 18px; }
-    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
-    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); }
+    .grid-2 { grid-template-columns: repeat(auto-fit, minmax(285px, 1fr)); }
+    .grid-3 { grid-template-columns: repeat(auto-fit, minmax(262px, 1fr)); }
     .card {
       background: var(--card); border: 1px solid var(--border);
       border-radius: var(--radius); padding: 26px;
-      transition: transform 0.15s ease, border-color 0.15s ease;
+      transition: transform 0.2s var(--ease), border-color 0.2s var(--ease), box-shadow 0.25s var(--ease);
     }
-    .card:hover { transform: translateY(-3px); border-color: var(--accent); }
-    .card .icon { font-size: 2rem; }
-    .card h3 { margin: 12px 0 8px; font-size: 1.15rem; }
+    .card:hover {
+      transform: translateY(-4px); border-color: var(--border-strong);
+      box-shadow: 0 26px 50px -34px rgba(0, 0, 0, 1), 0 0 0 1px rgba(212, 175, 55, 0.12);
+    }
+    .card .icon {
+      font-size: 1.55rem; width: 48px; height: 48px; border-radius: 14px;
+      display: flex; align-items: center; justify-content: center;
+      background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.18);
+    }
+    .card h3 { margin: 16px 0 8px; font-size: 1.13rem; letter-spacing: -0.01em; }
     .card p { color: var(--muted); font-size: 0.95rem; }
+    .card ul { margin: 14px 0 0; list-style: none; color: var(--muted); font-size: 0.92rem; }
+    .card li { margin-bottom: 8px; padding-left: 24px; position: relative; }
+    .card li::before { content: "✓"; position: absolute; left: 0; color: var(--accent); font-weight: 700; }
     .price-tag {
-      display: inline-block; margin-top: 14px; font-weight: 700; color: var(--accent);
-      background: rgba(212, 175, 55, 0.12); padding: 5px 14px; border-radius: 999px; font-size: 0.9rem;
+      display: inline-block; margin-top: 16px; font-weight: 700; color: var(--accent);
+      background: rgba(212, 175, 55, 0.1); border: 1px solid rgba(212, 175, 55, 0.2);
+      padding: 6px 14px; border-radius: 999px; font-size: 0.88rem;
     }
-    .card ul { margin: 12px 0 0 18px; color: var(--muted); font-size: 0.93rem; }
-    .card li { margin-bottom: 6px; }
+
+    /* Featured pricing card gets a gold outline + ribbon */
+    .card--featured { position: relative; border-color: rgba(212, 175, 55, 0.5); }
+    .card--featured::before {
+      content: "⭐ Most popular"; position: absolute; top: -13px; left: 24px;
+      background: linear-gradient(180deg, var(--accent2), var(--accent)); color: var(--ink);
+      font-size: 0.72rem; font-weight: 800; letter-spacing: 0.4px;
+      padding: 5px 13px; border-radius: 999px; white-space: nowrap;
+    }
 
     /* project demo box: where your screen-recording goes */
     .demo-box {
-      margin-top: 14px; border: 1px dashed var(--border); border-radius: 12px;
-      padding: 22px; text-align: center; color: var(--muted); font-size: 0.9rem;
-      background: rgba(212, 175, 55, 0.05);
+      margin-top: 18px; border: 1px dashed var(--border-strong); border-radius: var(--radius-sm);
+      padding: 18px; text-align: center; color: var(--muted); font-size: 0.88rem;
+      background: rgba(212, 175, 55, 0.04); line-height: 1.7;
     }
-    .demo-box a { color: var(--accent2); font-weight: 600; }
+    .demo-box b { color: var(--text); }
+    .demo-box a { color: var(--accent2); font-weight: 600; text-decoration: none; border-bottom: 1px solid rgba(241, 217, 123, 0.35); }
+    .demo-box a:hover { border-bottom-color: var(--accent2); }
 
     /* ── VIDEO EMBED (responsive 16:9) ── */
-    /* TEACH: this wrapper keeps any YouTube/FB video at correct size on all screens */
-    .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: 12px; margin-top: 14px; border: 1px solid var(--border); }
+    /* TEACH: this wrapper keeps any YouTube/FB video at the right size on all screens */
+    .video-wrap { position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden; border-radius: var(--radius-sm); margin-top: 14px; border: 1px solid var(--border); }
     .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
     /* ── LIVE DEMO CHAT (phone-style auto-reply preview) ── */
     /* TEACH: this is just styled boxes — .phone is the frame, .msg.bot/.msg.user
        are the chat bubbles. The "intelligence" lives in the <script> at the bottom
-       (search BOT_RULES). HTML = layout, CSS = look, JS = brain. Same pattern again! */
+       (search BOT_RULES). HTML = layout, CSS = look, JS = brain. */
     .phone {
       max-width: 430px; margin: 0 auto; background: #101013;
-      border: 1px solid var(--border); border-radius: 22px; overflow: hidden;
-      box-shadow: 0 0 60px rgba(212, 175, 55, 0.08); /* subtle gold glow */
+      border: 1px solid var(--border-strong); border-radius: 24px; overflow: hidden;
+      box-shadow: 0 40px 80px -50px rgba(212, 175, 55, 0.55), 0 30px 60px -40px #000;
     }
-    .chat-head { display: flex; gap: 12px; align-items: center; padding: 16px 18px; border-bottom: 1px solid var(--border); background: #161619; }
+    .chat-head { display: flex; gap: 12px; align-items: center; padding: 16px 18px; border-bottom: 1px solid var(--border); background: #16161a; }
     .avatar {
       width: 44px; height: 44px; border-radius: 50%; flex-shrink: 0;
-      background: rgba(212, 175, 55, 0.12);
-      display: flex; align-items: center; justify-content: center; font-size: 1.4rem;
+      background: rgba(212, 175, 55, 0.12); border: 1px solid rgba(212, 175, 55, 0.25);
+      display: flex; align-items: center; justify-content: center; font-size: 1.35rem;
     }
+    .chat-head b { font-size: 0.98rem; }
     .chat-head small { display: block; color: var(--muted); font-size: 0.8rem; }
     .chat-head .online { color: var(--accent); }
-    .chat-body { height: 300px; overflow-y: auto; padding: 18px 14px; display: flex; flex-direction: column; gap: 10px; }
-    .msg { max-width: 82%; padding: 10px 14px; border-radius: 16px; font-size: 0.92rem; line-height: 1.5; }
-    .msg.bot { background: #1d1d22; border: 1px solid var(--border); align-self: flex-start; border-bottom-left-radius: 4px; }
-    .msg.user { background: var(--accent); color: #0a0a0b; font-weight: 500; align-self: flex-end; border-bottom-right-radius: 4px; }
-    .msg.typing { letter-spacing: 3px; color: var(--muted); }
+    .chat-body { height: 310px; overflow-y: auto; padding: 18px 14px; display: flex; flex-direction: column; gap: 10px; }
+    .chat-body::-webkit-scrollbar { width: 6px; }
+    .chat-body::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 999px; }
+    .msg { max-width: 84%; padding: 10px 14px; border-radius: 16px; font-size: 0.91rem; line-height: 1.55; animation: pop 0.2s var(--ease); }
+    @keyframes pop { from { opacity: 0; transform: translateY(7px); } }
+    .msg.bot { background: var(--card-2); border: 1px solid var(--border); align-self: flex-start; border-bottom-left-radius: 5px; }
+    .msg.user { background: linear-gradient(180deg, var(--accent2), var(--accent)); color: var(--ink); font-weight: 500; align-self: flex-end; border-bottom-right-radius: 5px; }
+    .msg.typing { display: flex; gap: 4px; align-items: center; padding: 13px 15px; }
+    .msg.typing i { width: 6px; height: 6px; border-radius: 50%; background: var(--muted); display: block; animation: blink 1.3s infinite; }
+    .msg.typing i:nth-child(2) { animation-delay: 0.18s; }
+    .msg.typing i:nth-child(3) { animation-delay: 0.36s; }
+    @keyframes blink { 0%, 60%, 100% { opacity: 0.25; transform: translateY(0); } 30% { opacity: 1; transform: translateY(-2px); } }
     .quick { display: flex; flex-wrap: wrap; gap: 8px; padding: 0 14px 12px; }
     .quick button {
-      background: transparent; border: 1px solid var(--accent); color: var(--accent);
-      font-size: 0.82rem; font-weight: 600; padding: 7px 14px; border-radius: 999px; cursor: pointer;
+      background: transparent; border: 1px solid rgba(212, 175, 55, 0.45); color: var(--accent);
+      font-size: 0.81rem; font-weight: 600; padding: 7px 14px; border-radius: 999px; cursor: pointer;
+      transition: background 0.15s var(--ease), border-color 0.15s var(--ease);
+      font-family: inherit;
     }
-    .quick button:hover { background: rgba(212, 175, 55, 0.12); }
+    .quick button:hover { background: rgba(212, 175, 55, 0.12); border-color: var(--accent); }
     .chat-input { display: flex; gap: 8px; padding: 0 14px 12px; }
     .chat-input input {
-      flex: 1; background: #1d1d22; border: 1px solid var(--border); border-radius: 999px;
-      padding: 11px 16px; color: var(--text); font-size: 0.9rem; outline: none;
+      flex: 1; min-width: 0; background: var(--card-2); border: 1px solid var(--border); border-radius: 999px;
+      padding: 12px 16px; color: var(--text); font-size: 0.9rem; outline: none;
+      transition: border-color 0.15s var(--ease);
+      font-family: inherit;
     }
+    .chat-input input::placeholder { color: #6b6b78; }
     .chat-input input:focus { border-color: var(--accent); }
     .chat-input button {
       width: 44px; height: 44px; border-radius: 50%; border: none; flex-shrink: 0;
-      background: var(--accent); color: #0a0a0b; font-size: 1.1rem; cursor: pointer;
+      background: linear-gradient(180deg, var(--accent2), var(--accent)); color: var(--ink);
+      font-size: 1.05rem; cursor: pointer; transition: filter 0.15s var(--ease);
     }
-    .chat-foot { text-align: center; font-size: 0.8rem; color: var(--muted); padding: 0 14px 16px; }
-    .chat-foot a { color: var(--accent); font-weight: 700; }
+    .chat-input button:hover { filter: brightness(1.08); }
+    .chat-foot { text-align: center; font-size: 0.79rem; color: var(--muted); padding: 0 14px 18px; }
+    .chat-foot a { color: var(--accent); font-weight: 700; text-decoration: none; }
+    .chat-foot a:hover { text-decoration: underline; }
 
     /* ── PROCESS STEPS ── */
-    .step { display: flex; gap: 16px; align-items: flex-start; }
+    .steps { display: grid; gap: 16px; grid-template-columns: repeat(auto-fit, minmax(210px, 1fr)); }
+    .step {
+      position: relative; padding: 24px 22px; background: var(--card);
+      border: 1px solid var(--border); border-radius: var(--radius);
+      transition: border-color 0.2s var(--ease), transform 0.2s var(--ease);
+    }
+    .step:hover { border-color: var(--border-strong); transform: translateY(-3px); }
     .step-num {
-      flex-shrink: 0; width: 40px; height: 40px; border-radius: 50%;
-      background: var(--accent); color: #0a0a0b; font-weight: 800;
+      width: 36px; height: 36px; border-radius: 50%; margin-bottom: 14px;
+      background: linear-gradient(180deg, var(--accent2), var(--accent)); color: var(--ink);
+      font-weight: 800; font-size: 0.95rem;
       display: flex; align-items: center; justify-content: center;
+    }
+    .step h3 { font-size: 1rem; margin-bottom: 6px; }
+    .step p { color: var(--muted); font-size: 0.9rem; }
+    .note-pill {
+      display: block; width: fit-content; margin: 26px auto 0; text-align: center;
+      background: rgba(212, 175, 55, 0.09); border: 1px solid rgba(212, 175, 55, 0.25);
+      color: var(--text); font-size: 0.9rem; font-weight: 600;
+      padding: 11px 20px; border-radius: 999px;
     }
 
     /* ── FAQ ── */
-    details { background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 16px 20px; margin-bottom: 12px; }
-    details summary { font-weight: 700; cursor: pointer; }
-    details p { color: var(--muted); margin-top: 8px; font-size: 0.95rem; }
+    details {
+      background: var(--card); border: 1px solid var(--border); border-radius: var(--radius-sm);
+      padding: 0 20px; margin-bottom: 12px;
+      transition: border-color 0.2s var(--ease);
+    }
+    details:hover { border-color: var(--border-strong); }
+    details[open] { border-color: rgba(212, 175, 55, 0.4); }
+    details summary {
+      font-weight: 700; cursor: pointer; padding: 17px 0; list-style: none;
+      display: flex; align-items: center; justify-content: space-between; gap: 14px;
+    }
+    details summary::-webkit-details-marker { display: none; }
+    details summary::after {
+      content: "+"; color: var(--accent); font-weight: 700; font-size: 1.35rem;
+      line-height: 1; transition: transform 0.2s var(--ease); flex-shrink: 0;
+    }
+    details[open] summary::after { transform: rotate(45deg); }
+    details p { color: var(--muted); margin: 0 0 18px; font-size: 0.94rem; max-width: 76ch; }
 
     /* ── CONTACT ── */
-    .contact-card { text-align: center; background: linear-gradient(135deg, rgba(212, 175, 55, 0.10), rgba(212, 175, 55, 0.03)); border: 1px solid var(--border); border-radius: 20px; padding: 44px 24px; }
-    .contact-card h2 { margin-bottom: 8px; }
+    .contact-card {
+      position: relative; text-align: center; overflow: hidden;
+      background: linear-gradient(135deg, rgba(212, 175, 55, 0.11), rgba(212, 175, 55, 0.02));
+      border: 1px solid rgba(212, 175, 55, 0.3); border-radius: 22px; padding: 52px 26px;
+    }
+    .contact-card::before {
+      content: ""; position: absolute; inset: -60% 30% auto 30%; height: 260px; pointer-events: none;
+      background: radial-gradient(300px 160px at 50% 100%, rgba(212, 175, 55, 0.22), transparent 70%);
+    }
+    .contact-card > * { position: relative; }
+    .contact-card h2 { margin-bottom: 10px; }
+    .contact-links { margin-top: 24px; color: var(--muted); font-size: 0.9rem; }
+    .contact-links a { color: var(--accent2); font-weight: 600; text-decoration: none; }
+    .contact-links a:hover { text-decoration: underline; }
+    .sep { opacity: 0.45; margin: 0 8px; }
 
-    footer { border-top: 1px solid var(--border); padding: 26px 0; text-align: center; color: var(--muted); font-size: 0.9rem; }
+    /* ── FOOTER ── */
+    footer { border-top: 1px solid var(--border); padding: 34px 0; color: var(--muted); font-size: 0.88rem; }
+    .foot-inner { display: flex; flex-wrap: wrap; gap: 14px; align-items: center; justify-content: space-between; }
+    .foot-links { display: flex; flex-wrap: wrap; gap: 18px; list-style: none; }
+    .foot-links a { text-decoration: none; }
+    .foot-links a:hover { color: var(--accent); }
 
-    /* TEACH: reveal-on-scroll animation — JS adds .visible when you scroll to it */
-    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.5s ease, transform 0.5s ease; }
+    /* Back-to-top button */
+    .to-top {
+      position: fixed; right: 20px; bottom: 20px; z-index: 90;
+      width: 46px; height: 46px; border-radius: 50%; cursor: pointer;
+      background: var(--card); border: 1px solid var(--border-strong); color: var(--accent);
+      font-size: 1.05rem; display: flex; align-items: center; justify-content: center;
+      opacity: 0; visibility: hidden; transform: translateY(10px);
+      transition: opacity 0.25s var(--ease), transform 0.25s var(--ease), visibility 0.25s;
+    }
+    .to-top.show { opacity: 1; visibility: visible; transform: none; }
+    .to-top:hover { border-color: var(--accent); }
+
+    /* TEACH: reveal-on-scroll — JS adds .visible when the element scrolls into view */
+    .reveal { opacity: 0; transform: translateY(18px); transition: opacity 0.55s var(--ease), transform 0.55s var(--ease); }
     .reveal.visible { opacity: 1; transform: none; }
+    .grid > .reveal:nth-child(2) { transition-delay: 0.07s; }
+    .grid > .reveal:nth-child(3) { transition-delay: 0.14s; }
+    .grid > .reveal:nth-child(4) { transition-delay: 0.21s; }
+
+    /* Respect people who get motion sickness / turned animations off */
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { animation-duration: 0.001ms !important; animation-iteration-count: 1 !important; transition-duration: 0.001ms !important; }
+      .reveal { opacity: 1; transform: none; }
+    }
+
+    @media print { nav, .to-top, .progress, .phone { display: none; } body { background: #fff; color: #111; } }
   </style>
 </head>
 
 <body>
+  <a class="skip" href="#top">Skip to content</a>
+  <div class="progress" id="progress" aria-hidden="true"></div>
 
   <!-- ═══════════ NAVBAR ═══════════ -->
   <!-- TEACH: <nav> = the top menu. Each link jumps to a section via its id (#services, etc.) -->
-  <nav>
+  <nav id="nav">
     <div class="nav-inner">
       <!-- ✏️ EDIT ME: your name / brand -->
       <a class="logo" href="#top">troy<span>.builds</span></a>
-      <ul class="nav-links">
+
+      <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navLinks" aria-label="Menu">
+        <i></i><i></i><i></i>
+      </button>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="#demo">Live Demo</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#work">My Work</a></li>
@@ -257,20 +495,20 @@
   <header class="hero container" id="top">
     <div class="badge"><span class="dot">●</span> Available for new projects</div>
     <!-- ✏️ EDIT ME: your headline — say WHAT you do + WHO it's for -->
-    <h1>I build <span class="gradient">AI chatbots & automations</span> for PH businesses 🤖</h1>
+    <h1>I build <span class="gradient">AI chatbots &amp; automations</span> for PH businesses 🤖</h1>
     <p>
       Hi, I'm <b>Troy</b> — a 17-year-old builder from Tubod, LDN.
-      I help shops & online sellers save hours every week with auto-reply chatbots,
+      I help shops &amp; online sellers save hours every week with auto-reply chatbots,
       workflow automations, and scroll-stopping video edits. GCash accepted. 🇵🇭
     </p>
     <div class="btn-row">
-      <a class="btn btn-green" href="https://m.me/TroyCandia" target="_blank">💬 Message Me on Facebook</a>
+      <a class="btn btn-green" href="https://m.me/TroyCandia" target="_blank" rel="noopener">💬 Message me on Facebook</a>
       <a class="btn btn-ghost" href="#demo">Try my bot live ↓</a>
     </div>
     <div class="stats">
-      <div class="stat"><b>🤖 AI</b><small>Chatbots & agents</small></div>
+      <div class="stat"><b>🤖 AI</b><small>Chatbots &amp; agents</small></div>
       <div class="stat"><b>⚡ Auto</b><small>n8n / Make workflows</small></div>
-      <div class="stat"><b>🎬 Edits</b><small>Reels & TikTok</small></div>
+      <div class="stat"><b>🎬 Edits</b><small>Reels &amp; TikTok</small></div>
       <div class="stat"><b>📍 LDN</b><small>Tubod, Lanao del Norte</small></div>
     </div>
   </header>
@@ -279,8 +517,8 @@
   <!-- TEACH: This is a "fake client" demo — a mini chatbot running 100% in JavaScript
        (no server, no internet needed). Visitors tap buttons or type, and the bot replies
        using KEYWORD MATCHING (see BOT_RULES in the <script> below). Its job: PROVE your
-       service works within 10 seconds of landing on your page. Best sales tool you have. -->
-  <section id="demo" style="background: rgba(212, 175, 55, 0.03);">
+       service works within 10 seconds of landing on your page. -->
+  <section id="demo" class="section-alt">
     <div class="container">
       <div class="kicker">Live demo — try it 👇</div>
       <h2>This is what I build for shops</h2>
@@ -288,26 +526,26 @@
 
       <div class="phone reveal">
         <div class="chat-head">
-          <div class="avatar">🧋</div>
+          <div class="avatar" aria-hidden="true">🧋</div>
           <div>
             <b>MilkTea Tubod</b>
             <small><span class="online">●</span> Online — replies instantly</small>
           </div>
         </div>
-        <div class="chat-body" id="chatBody">
+        <div class="chat-body" id="chatBody" aria-live="polite" aria-label="Chat demo">
           <div class="msg bot">Hi! Welcome to <b>MilkTea Tubod</b> 🧋 We're open 'til 10 PM today!</div>
           <div class="msg bot">Ask me anything — prices, location, or want to order? 👇</div>
         </div>
         <!-- ✏️ EDIT ME: quick-reply buttons — change these to fit your demo shop -->
         <div class="quick" id="quickRow">
-          <button>Tagpila? 💰</button>
-          <button>Open mo? 🕐</button>
-          <button>Location? 📍</button>
-          <button>Order ko! 🧋</button>
+          <button type="button">Tagpila? 💰</button>
+          <button type="button">Open mo? 🕐</button>
+          <button type="button">Location? 📍</button>
+          <button type="button">Order ko! 🧋</button>
         </div>
         <form class="chat-input" id="chatForm">
-          <input id="chatText" type="text" placeholder="Type a message..." autocomplete="off" maxlength="200" />
-          <button type="submit" aria-label="Send">➤</button>
+          <input id="chatText" type="text" placeholder="Type a message..." autocomplete="off" maxlength="200" aria-label="Your message" />
+          <button type="submit" aria-label="Send message">➤</button>
         </form>
         <div class="chat-foot">✨ Demo bot by Troy — <a href="#contact">I can build this for YOUR page</a></div>
       </div>
@@ -322,7 +560,7 @@
       <p class="sub">Simple offers, fixed prices, no tech jargon. Pick one and message me — I'll handle the rest.</p>
       <div class="grid grid-2">
         <div class="card reveal">
-          <div class="icon">💬</div>
+          <div class="icon" aria-hidden="true">💬</div>
           <h3>Facebook Page Auto-Reply Chatbot</h3>
           <p>Never lose a customer because you were busy. I set up an AI that replies instantly, answers FAQs (price, location, hours), and collects orders while you sleep.</p>
           <ul>
@@ -333,18 +571,18 @@
           <span class="price-tag">from ₱1,500 one-time</span>
         </div>
         <div class="card reveal">
-          <div class="icon">⚡</div>
+          <div class="icon" aria-hidden="true">⚡</div>
           <h3>Business Automations (n8n / Make)</h3>
           <p>Connect your apps so work happens by itself: new order → auto-invoice → auto-post → auto-record in Google Sheets. I build it, you just watch it run.</p>
           <ul>
             <li>Auto-post to FB / TikTok</li>
             <li>Lead capture + follow-up</li>
-            <li>Invoice & record keeping</li>
+            <li>Invoice &amp; record keeping</li>
           </ul>
           <span class="price-tag">from ₱2,000 per workflow</span>
         </div>
         <div class="card reveal">
-          <div class="icon">🛠️</div>
+          <div class="icon" aria-hidden="true">🛠️</div>
           <h3>Custom AI Tools</h3>
           <p>Need something specific? Product description writer, resume screener, content idea generator — small AI-powered tools built around YOUR workflow.</p>
           <ul>
@@ -355,7 +593,7 @@
           <span class="price-tag">from ₱2,500 per tool</span>
         </div>
         <div class="card reveal">
-          <div class="icon">🎬</div>
+          <div class="icon" aria-hidden="true">🎬</div>
           <h3>Video Editing (Reels / TikTok / Ads)</h3>
           <p>Fast, punchy edits with AI captions, trending sounds, and clean cuts — perfect for shops, food stalls, and online sellers promoting on social.</p>
           <ul>
@@ -370,7 +608,7 @@
   </section>
 
   <!-- ═══════════ WORK / DEMOS ═══════════ -->
-  <section id="work" style="background: rgba(212, 175, 55, 0.03);">
+  <section id="work" class="section-alt">
     <div class="container">
       <div class="kicker">Proof of work</div>
       <h2>Things I've built 🛠️</h2>
@@ -385,22 +623,24 @@
         Full walkthrough in TUTORIAL.md → "Part 4".
       -->
       <p class="sub">Real demos, not promises. Watch them work 👇</p>
-      <div class="grid grid-2">
+      <div class="grid grid-3">
 
         <!-- ✏️ EDIT ME: PROJECT 1 — your AI agent project -->
         <div class="card reveal">
-          <div class="icon">🤖</div>
-          <h3>My AI Agent Project</h3>
-          <p>An AI assistant that can [describe what yours does — e.g. "answer customer questions, take orders, and save them to a sheet"]. Built with [your tools — e.g. Python / n8n / OpenAI].</p>
+          <div class="icon" aria-hidden="true">🤖</div>
+          <h3>Customer Service AI Agent</h3>
+          <p>An AI agent that answers your customers' questions, takes their orders, and saves every order to a Google Sheet automatically. Built with <b>Python + OpenAI + n8n</b> — it runs on your Page 24/7, even while you sleep.</p>
           <!-- OPTION A (placeholder until you have a video): keep this box -->
           <div class="demo-box">
             🎥 <b>Demo video coming here.</b><br />
             Screen-record your project → upload to YouTube (Unlisted) →<br />
-            paste the embed below. See <b>TUTORIAL.md Part 4</b> for steps.<br /><br />
-            Meanwhile, see the code on <a href="https://github.com/YOUR_USERNAME" target="_blank">my GitHub →</a>
+            paste the embed below. See <b>TUTORIAL.md Part 4</b>.<br /><br />
+            Want to see it running now?
+            <a href="https://m.me/TroyCandia" target="_blank" rel="noopener">Ask me for a live demo →</a><br />
+            Code lives on <a href="https://github.com/TechTroyAi" target="_blank" rel="noopener">my GitHub →</a>
           </div>
-          <!-- OPTION B (once you have a video): delete the demo-box above and
-               uncomment this block, replacing VIDEO_ID with your YouTube ID:
+          <!-- OPTION B (once you have a video): delete the demo-box above, uncomment
+               this block, and replace VIDEO_ID with your YouTube ID:
           <div class="video-wrap">
             <iframe src="https://www.youtube.com/embed/VIDEO_ID" allowfullscreen
               title="AI agent demo" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"></iframe>
@@ -410,51 +650,80 @@
 
         <!-- ✏️ EDIT ME: PROJECT 2 — an automation or 2nd project -->
         <div class="card reveal">
-          <div class="icon">⚡</div>
+          <div class="icon" aria-hidden="true">⚡</div>
           <h3>Auto-Reply + Order Tracker Workflow</h3>
           <p>An n8n/Make workflow: new FB message → AI draft reply → order details auto-saved to Google Sheets → daily summary sent to the owner. Zero manual copying.</p>
           <div class="demo-box">
             🎥 <b>Demo video coming here.</b><br />
             Same steps as Project 1 — record the workflow running,<br />
-            upload Unlisted, embed it.<br /><br />
+            upload it Unlisted, then embed it.<br /><br />
             Workflow template available on request →
           </div>
         </div>
 
-        <!-- ✏️ EDIT ME (optional): PROJECT 3 — video editing sample -->
+        <!-- ✏️ EDIT ME: PROJECT 3 — video editing samples -->
         <div class="card reveal">
-          <div class="icon">🎬</div>
+          <div class="icon" aria-hidden="true">🎬</div>
           <h3>Sample Video Edits</h3>
           <p>Before/after reels and TikToks: captions, hooks, transitions, trending audio. Fast turnaround for sellers who post daily.</p>
           <div class="demo-box">
-            🎥 <b>Post your edits on TikTok/FB</b>, then link them here:<br /><br />
-            <a href="https://tiktok.com/@YOUR_HANDLE" target="_blank">My TikTok →</a>
-            &nbsp;·&nbsp;
-            <a href="https://facebook.com/TroyCandia" target="_blank">My FB Page →</a>
+            🎥 <b>My edits, before/after:</b><br /><br />
+            <a href="https://facebook.com/TroyCandia" target="_blank" rel="noopener">See them on my FB Page →</a><br />
+            Want a sample for your niche?
+            <a href="https://m.me/TroyCandia" target="_blank" rel="noopener">Message me →</a>
           </div>
-        </div>
-
-        <!-- HOW CLIENTS READ THIS: process card -->
-        <div class="card reveal">
-          <div class="icon">📋</div>
-          <h3>How working with me goes</h3>
-          <p style="margin-top:10px;">① You message me what you need<br />② I reply with a fixed price + timeline (usually within a day)<br />③ 50% downpayment via GCash to start<br />④ I build + send you a demo video<br />⑤ You approve → pay balance → I hand everything over + teach you to use it</p>
-          <span class="price-tag">✅ No payment = no risk: you approve the demo first</span>
         </div>
 
       </div>
     </div>
   </section>
 
+  <!-- ═══════════ PROCESS ═══════════ -->
+  <section id="process">
+    <div class="container">
+      <div class="kicker">How it works</div>
+      <h2>Working with me, step by step</h2>
+      <p class="sub">No confusing contracts, no surprise fees. You always know what happens next.</p>
+      <div class="steps">
+        <div class="step reveal">
+          <div class="step-num">1</div>
+          <h3>You message me</h3>
+          <p>Tell me your business and what eats your time. A screenshot or voice note is fine.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">2</div>
+          <h3>I quote you</h3>
+          <p>Fixed price + timeline, usually within a day. No hidden add-ons later.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">3</div>
+          <h3>50% to start</h3>
+          <p>GCash or Maya downpayment so I can begin building right away.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">4</div>
+          <h3>I build &amp; demo</h3>
+          <p>You get a working demo video before paying anything more.</p>
+        </div>
+        <div class="step reveal">
+          <div class="step-num">5</div>
+          <h3>Handover</h3>
+          <p>You approve → pay the balance → I set everything up on your accounts and teach you how to use it.</p>
+        </div>
+      </div>
+      <span class="note-pill reveal">✅ Zero risk — you approve the demo before paying the balance</span>
+    </div>
+  </section>
+
   <!-- ═══════════ PRICING ═══════════ -->
-  <section id="pricing">
+  <section id="pricing" class="section-alt">
     <div class="container">
       <div class="kicker">Pricing</div>
       <h2>Simple packages, GCash-friendly 🇵🇭</h2>
       <p class="sub">Fixed prices. 50% to start, 50% when you're happy with the demo. No hidden fees.</p>
       <div class="grid grid-3">
         <div class="card reveal">
-          <div class="icon">🌱</div>
+          <div class="icon" aria-hidden="true">🌱</div>
           <h3>Starter — ₱1,500</h3>
           <p>Perfect for trying automation for the first time.</p>
           <ul>
@@ -464,9 +733,9 @@
             <li>3 days of chat support</li>
           </ul>
         </div>
-        <div class="card reveal" style="border-color: var(--accent);">
-          <div class="icon">🚀</div>
-          <h3>Business — ₱3,000 ⭐</h3>
+        <div class="card card--featured reveal">
+          <div class="icon" aria-hidden="true">🚀</div>
+          <h3>Business — ₱3,000</h3>
           <p>Most popular. Bot + automation working together.</p>
           <ul>
             <li>Everything in Starter</li>
@@ -476,7 +745,7 @@
           </ul>
         </div>
         <div class="card reveal">
-          <div class="icon">🎬</div>
+          <div class="icon" aria-hidden="true">🎬</div>
           <h3>Content — ₱1,000 / 5 vids</h3>
           <p>For sellers who post every day.</p>
           <ul>
@@ -487,16 +756,16 @@
           </ul>
         </div>
       </div>
-      <p class="sub" style="margin-top:20px;">Need something custom? <a href="#contact" style="color:var(--accent2);font-weight:600;">Message me</a> — I'll quote you a fixed price within a day.</p>
+      <p class="sub" style="margin:26px 0 0;">Need something custom? <a href="#contact" style="color:var(--accent2);font-weight:600;">Message me</a> — I'll quote you a fixed price within a day.</p>
     </div>
   </section>
 
   <!-- ═══════════ FAQ ═══════════ -->
-  <section id="faq" style="background: rgba(212, 175, 55, 0.03);">
+  <section id="faq">
     <div class="container">
       <div class="kicker">FAQ</div>
       <h2>Questions people ask me</h2>
-      <p class="sub"></p>
+      <p class="sub">Still unsure about something? Ask me anything — free quote, no pressure.</p>
       <!-- TEACH: <details>/<summary> = free accordion, no JavaScript needed! -->
       <details class="reveal">
         <summary>💸 How do I pay you?</summary>
@@ -522,57 +791,108 @@
   </section>
 
   <!-- ═══════════ CONTACT ═══════════ -->
-  <section id="contact">
+  <section id="contact" class="section-alt">
     <div class="container">
       <div class="contact-card reveal">
         <div class="kicker">Let's work together</div>
         <h2>Message me — I reply fast ⚡</h2>
-        <p class="sub" style="margin-left:auto;margin-right:auto;">Tell me what business you have and what eats your time. I'll reply with a fixed price + timeline, free quote, no pressure.</p>
-        <div class="btn-row">
-          <a class="btn btn-green" href="https://m.me/TroyCandia" target="_blank">💬 Messenger</a>
-          <a class="btn btn-ghost" href="https://facebook.com/TroyCandia" target="_blank">📘 FB Page</a>
+        <p class="sub" style="margin-left:auto;margin-right:auto;margin-bottom:0;">Tell me what business you have and what eats your time. I'll reply with a fixed price + timeline. Free quote, no pressure.</p>
+        <div class="btn-row" style="margin-top:30px;">
+          <a class="btn btn-green" href="https://m.me/TroyCandia" target="_blank" rel="noopener">💬 Messenger</a>
+          <a class="btn btn-ghost" href="https://facebook.com/TroyCandia" target="_blank" rel="noopener">📘 FB Page</a>
           <!-- ✏️ EDIT ME: your email + TikTok below -->
-          <a class="btn btn-ghost" href="mailto:youremail@gmail.com">📧 Email</a>
+          <a class="btn btn-ghost" href="mailto:josiahcandia@gmail.com">📧 Email</a>
         </div>
-        <p style="margin-top:22px;color:var(--muted);font-size:0.9rem;">
-          Prefer TikTok? <a href="https://tiktok.com/@YOUR_HANDLE" target="_blank" style="color:var(--accent2);font-weight:600;">@YOUR_HANDLE</a>
-          &nbsp;·&nbsp; Code? <a href="https://github.com/YOUR_USERNAME" target="_blank" style="color:var(--accent2);font-weight:600;">GitHub</a>
+        <p class="contact-links">
+          Email me at <a href="mailto:josiahcandia@gmail.com">josiahcandia@gmail.com</a>
+          <span class="sep">·</span>
+          See my code on <a href="https://github.com/TechTroyAi" target="_blank" rel="noopener">GitHub</a>
         </p>
       </div>
     </div>
   </section>
 
   <footer>
-    <div class="container">
-      <!-- The year below auto-updates via the tiny script at the bottom 👇 -->
-      © <span id="year">2026</span> Troy · Built by hand in Tubod, LDN 🇵🇭 · Powered by kape ☕
+    <div class="container foot-inner">
+      <div>© <span id="year">2026</span> Troy · Built by hand in Tubod, LDN 🇵🇭 · Powered by kape ☕</div>
+      <ul class="foot-links">
+        <li><a href="#demo">Live Demo</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#process">Process</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#faq">FAQ</a></li>
+        <li><a href="https://github.com/TechTroyAi" target="_blank" rel="noopener">GitHub</a></li>
+      </ul>
     </div>
   </footer>
 
+  <button class="to-top" id="toTop" aria-label="Back to top">↑</button>
+
   <script>
     // ══════════════════════════════════════════════════════════════
-    // TEACH: JavaScript = the "brain". This script does 3 things:
-    //   1. Auto-updates the footer year (so you never edit it again)
-    //   2. Reveals sections with animation as you scroll (the .reveal class)
-    //   3. Powers the demo chatbot (BOT_RULES below — your auto-reply "bit"!)
+    // TEACH: JavaScript = the "brain". This script does 5 things:
+    //   1. Auto-updates the footer year
+    //   2. Reveals sections with animation as you scroll (.reveal class)
+    //   3. Navbar polish: scroll progress bar, shadow, mobile menu, back-to-top
+    //   4. Powers the demo chatbot (BOT_RULES below — your auto-reply "bit"!)
     // ══════════════════════════════════════════════════════════════
 
     // 1. Footer year — always current, zero maintenance
     document.getElementById('year').textContent = new Date().getFullYear();
 
     // 2. Reveal-on-scroll: watch every .reveal element, add .visible when seen
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) entry.target.classList.add('visible');
-      });
-    }, { threshold: 0.1 }); // trigger when 10% of the card is visible
+    const reduceMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+    const reveals = document.querySelectorAll('.reveal');
 
-    document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
+    if (reduceMotion || !('IntersectionObserver' in window)) {
+      reveals.forEach(el => el.classList.add('visible')); // no animation, always readable
+    } else {
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('visible');
+            observer.unobserve(entry.target); // stop watching once it's shown
+          }
+        });
+      }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
+
+      reveals.forEach(el => observer.observe(el));
+    }
+
+    // 3. Navbar polish ─────────────────────────────────────────────
+    const nav = document.getElementById('nav');
+    const progress = document.getElementById('progress');
+    const toTop = document.getElementById('toTop');
+
+    function onScroll() {
+      const max = document.documentElement.scrollHeight - window.innerHeight;
+      const y = window.scrollY;
+      progress.style.width = (max > 0 ? (y / max) * 100 : 0) + '%';
+      nav.classList.toggle('scrolled', y > 8);
+      toTop.classList.toggle('show', y > 600);
+    }
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+
+    toTop.addEventListener('click', () => window.scrollTo({ top: 0, behavior: reduceMotion ? 'auto' : 'smooth' }));
+
+    // Mobile menu (hamburger) — opens/closes the nav list on small screens
+    const navToggle = document.getElementById('navToggle');
+    const navLinks = document.getElementById('navLinks');
+
+    navToggle.addEventListener('click', () => {
+      const open = navLinks.classList.toggle('open');
+      navToggle.setAttribute('aria-expanded', String(open));
+    });
+    navLinks.querySelectorAll('a').forEach(link => link.addEventListener('click', () => {
+      navLinks.classList.remove('open');
+      navToggle.setAttribute('aria-expanded', 'false');
+    }));
 
     // ══════════════════════════════════════════════════════════════
-    // 3. THE DEMO BOT 🤖 — your auto-reply "bit", in ~40 lines.
+    // 4. THE DEMO BOT 🤖 — your auto-reply "bit", in ~40 lines.
     // HOW IT WORKS: when a visitor sends a message, we lowercase it and check
-    // if it CONTAINS any keyword from BOT_RULES. First match wins, bot replies.
+    // if it CONTAINS any keyword from BOT_RULES. First match wins.
     // No server, no AI API, works offline — it's a SALES DEMO, not the real
     // product. Real client bots run on ManyChat/n8n + real AI (TUTORIAL Part 8).
     //
@@ -585,7 +905,7 @@
       { keys: ["location", "asa", "address", "where", "mapa", "direksyon"], reply: "Find us here 📍<br><b>Poblacion, Tubod, Lanao del Norte</b> (near the Provincial Capitol)<br><br>Landmark: along the national highway 😉 Open 'til 10 PM!" },
       { keys: ["deliver", "hatod", "ship", "grab", "foodpanda", "padala"], reply: "Yes, ga-deliver mi! 🛵<br>• Within Tubod / nearby LDN — <b>₱50</b> fee<br>• FREE delivery for orders <b>₱500+</b><br><br>Type <b>order ko</b> to start your order!" },
       { keys: ["order", "palit", "buy", "kuha", "pa-order"], reply: "Yay, order time! 🧋<br>Just send:<br><b>1.</b> Your order (e.g. 2x Okinawa)<br><b>2.</b> Name + address<br><br>I'll confirm your total + GCash number after! 💛" },
-      { keys: ["gcash", "bayad", "pay", "payment"], reply: "We accept <b>GCash, Maya & Cash</b> 💰<br>GCash number is sent automatically with your order confirmation. Easy ra kaayo!" },
+      { keys: ["gcash", "bayad", "pay", "payment"], reply: "We accept <b>GCash, Maya &amp; Cash</b> 💰<br>GCash number is sent automatically with your order confirmation. Easy ra kaayo!" },
       { keys: ["salamat", "thank"], reply: "Walay sapayan! 💛 Anything else — menu, location, or ready to order?" },
       { keys: ["hi", "hello", "hey", "kumusta", "maayong"], reply: "Hellooo! 👋 Welcome to <b>MilkTea Tubod</b> 🧋<br>Ask me about <b>prices</b>, <b>hours</b>, <b>location</b> — or say <b>order ko!</b>" },
       { keys: ["tawo", "human", "staff", "owner", "admin"], reply: "Noted! A human will jump in soon 🙋<br>(This is how the bot hands over to the shop owner when needed — tricky customers never get lost!)" },
@@ -624,11 +944,12 @@
       text = text.trim();
       if (!text) return;
       addMsg(text, 'user');
-      const typing = addMsg('•••', 'bot typing'); // "typing..." bubble for realism
+      // animated "typing…" bubble so it feels like a real person is replying
+      const typing = addMsg('<i></i><i></i><i></i>', 'bot typing');
       setTimeout(() => {
         typing.remove();
         addMsg(botAnswer(text), 'bot');
-      }, 700); // 0.7 second "thinking" pause
+      }, 700);
     }
 
     // Send button / Enter key
