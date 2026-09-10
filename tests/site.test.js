@@ -29,9 +29,11 @@ test('local script assets exist and Pages copies them to the project site', () =
   assert.match(read('.github/workflows/pages.yml'), /node --test tests\/\*\.test\.js/);
 });
 
-test('honest proof and reduced personal details in the published page', () => {
+test('honest proof and owner-published contact details in the published page', () => {
   assert.doesNotMatch(html, /Demo video coming here|VIDEO_ID|Real demos, not promises|Most popular|Zero risk/);
-  assert.doesNotMatch(html, /mailto:|josiahcandia|17-year-old|Tubod|Lanao del Norte|Troy Candia/);
+  assert.doesNotMatch(html, /17-year-old|Tubod|Lanao del Norte|Troy Candia/);
+  assert.match(html, /mailto:josiahcandia@gmail\.com/);
+  assert.match(html, /https:\/\/www\.facebook\.com\/share\/1B2Db5JcdP\//);
   assert.match(html, /not a client deployment/);
   assert.match(html, /No client testimonials are published yet/);
   assert.match(html, /first <b>1–2 pilot clients/);
