@@ -7,15 +7,16 @@ Chatbots, automations, and video editing for PH businesses.
 ![Troy.Builds portfolio homepage](docs/screenshots/portfolio.png)
 
 <details>
-<summary>Preview the chatbot & price calculator</summary>
+<summary>Preview the milk tea chatbot</summary>
 
-![Chatbot and calculator showing a ₱230 sample quote](docs/screenshots/chatbot-calculator.png)
+![Milk tea chat replying with a ₱230 sample quote](docs/screenshots/chatbot-calculator.png)
 
 </details>
 
 - **1,040 scripted questions** in English, Tagalog, and Bisaya.
-- **Price calculator** for drinks, add-ons, pickup, and delivery.
+- **Chat pricing** — type an order and get a sample total with add-ons and delivery.
 - **No build step** — plain HTML, CSS, and JavaScript.
+- **Responsive** — one clean layout for desktop and Android/mobile web.
 
 *Fictional shop demo. No real orders or payments.*
 

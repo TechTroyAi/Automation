@@ -19,11 +19,12 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <!-- viewport-fit=cover keeps the layout aligned on notched / edge-to-edge Android screens -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
   <meta name="theme-color" content="#08080a" />
   <meta name="color-scheme" content="dark" />
   <meta name="robots" content="index, follow" />
-  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; } .chat-input, .quick, #quoteForm { display: none; }</style></noscript>
+  <noscript><style>.reveal { opacity: 1 !important; transform: none !important; } .chat-input, .quick { display: none; }</style></noscript>
 
   <!-- ✏️ EDIT ME: your name + one-line pitch (this shows on Google & FB shares) -->
   <title>Troy.Builds — AI Chatbots &amp; Automations for PH Businesses</title>
@@ -99,7 +100,12 @@
     }
 
     * { margin: 0; padding: 0; box-sizing: border-box; }
-    html { scroll-behavior: smooth; }
+    html {
+      scroll-behavior: smooth;
+      scroll-padding-top: 76px;      /* anchor links land below the sticky nav */
+      text-size-adjust: 100%;        /* stop Android font boosting from resizing text */
+      -webkit-text-size-adjust: 100%;
+    }
 
     body {
       font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -108,8 +114,14 @@
       line-height: 1.65;
       -webkit-font-smoothing: antialiased;
       text-rendering: optimizeLegibility;
+      overflow-wrap: break-word;     /* long words never push the page sideways */
       overflow-x: hidden;
+      -webkit-tap-highlight-color: transparent; /* clean taps on Android Chrome */
+      min-height: 100svh;
     }
+    /* `clip` avoids a scroll container, which keeps the sticky nav smooth on mobile */
+    @supports (overflow-x: clip) { body { overflow-x: clip; } }
+    a, button, input { touch-action: manipulation; } /* no double-tap zoom delay */
 
     /* TEACH: .container centers content + limits width so it looks good on PC,
        while the padding keeps it readable on phones */
@@ -301,24 +313,10 @@
     .video-wrap iframe { position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: 0; }
 
     .sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
-    .demo-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px; align-items: start; max-width: 960px; margin: 0 auto; }
+    /* The chat preview is the only card in this section now, so it just centers itself */
+    .demo-layout { max-width: var(--max); margin: 0 auto; }
     .demo-layout .phone { width: 100%; }
-    .quote-panel { min-width: 0; }
-    .quote-panel fieldset { min-width: 0; }
-    #quoteControls { border: 0; padding: 0; margin: 0; }
-    .quote-line { border: 1px solid var(--border); border-radius: 12px; margin: 18px 0; padding: 12px; }
-    .quote-line legend { padding: 0 6px; color: var(--accent); }
-    .quote-panel label { display: grid; gap: 6px; margin-bottom: 10px; font-size: 0.85rem; }
-    .quote-panel input, .quote-panel select { width: 100%; min-width: 0; padding: 10px; border-radius: 8px; border: 1px solid var(--border-strong); background: var(--card-2); color: var(--text); font: inherit; }
-    .quote-panel button { font: inherit; cursor: pointer; }
-    .quote-panel button:disabled { opacity: 0.5; cursor: not-allowed; }
-    .quote-counts { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
-    .quote-remove { background: transparent; border: 0; color: var(--accent); padding: 6px 0; }
-    .quote-actions { display: flex; flex-wrap: wrap; gap: 10px; margin: 16px 0; }
-    .quote-result { display: block; white-space: pre-line; overflow-wrap: anywhere; background: var(--card-2); border-radius: 10px; padding: 14px; margin: 16px 0; font-size: 0.9rem; }
-    .quote-panel [hidden] { display: none; }
     .msg.bot { white-space: pre-line; }
-    @media (max-width: 780px) { .demo-layout { grid-template-columns: minmax(0, 1fr); } }
 
     /* ── LIVE DEMO CHAT (phone-style auto-reply preview) ── */
     /* TEACH: this is just styled boxes — .phone is the frame, .msg.bot/.msg.user
@@ -338,7 +336,8 @@
     .chat-head b { font-size: 0.98rem; }
     .chat-head small { display: block; color: var(--muted); font-size: 0.8rem; }
     .chat-head .online { color: var(--accent); }
-    .chat-body { height: 310px; overflow-y: auto; padding: 18px 14px; display: flex; flex-direction: column; gap: 10px; }
+    /* clamp() keeps the log readable on short Android screens without a fixed pixel height */
+    .chat-body { height: clamp(240px, 38svh, 310px); overflow-y: auto; overscroll-behavior: contain; padding: 18px 14px; display: flex; flex-direction: column; gap: 10px; }
     .chat-body::-webkit-scrollbar { width: 6px; }
     .chat-body::-webkit-scrollbar-thumb { background: var(--border-strong); border-radius: 999px; }
     .msg { max-width: 84%; padding: 10px 14px; border-radius: 16px; font-size: 0.91rem; line-height: 1.55; animation: pop 0.2s var(--ease); }
@@ -464,6 +463,50 @@
     .grid > .reveal:nth-child(3) { transition-delay: 0.14s; }
     .grid > .reveal:nth-child(4) { transition-delay: 0.21s; }
 
+    /* ── ANDROID / SMALL-SCREEN WEB POLISH ── */
+    /* TEACH: @media only applies inside the braces when the screen matches.
+       These rules make phones and tablets look intentional, not "zoomed-out desktop". */
+    @media (max-width: 640px) {
+      .container, .nav-inner {
+        padding-left: max(16px, env(safe-area-inset-left));
+        padding-right: max(16px, env(safe-area-inset-right));
+      }
+      section { padding: 64px 0; }
+      .hero { padding: 68px 0 52px; }
+      .hero h1 { max-width: 100%; }
+      .hero p { font-size: 1rem; }
+      .card { padding: 22px 18px; }
+      .contact-card { padding: 38px 18px; border-radius: 18px; }
+      .btn-row .btn { flex: 1 1 100%; }   /* full-width tap targets on phones */
+      .stat { flex: 1 1 44%; min-width: 0; padding: 12px 14px; }
+      .stat b { font-size: 1.2rem; }
+      details { padding: 0 16px; }
+      .phone { border-radius: 20px; }
+      .chat-head { padding: 14px; }
+      .chat-body { padding: 16px 12px; }
+      .quick { padding: 0 12px 10px; gap: 6px; }
+      .quick button { font-size: 0.78rem; padding: 7px 11px; }
+      .chat-input { padding: 0 12px 10px; }
+      .chat-foot { padding: 0 12px 16px; font-size: 0.76rem; }
+      .to-top {
+        right: max(14px, env(safe-area-inset-right));
+        bottom: max(14px, env(safe-area-inset-bottom));
+      }
+    }
+
+    /* Very narrow phones and Android split-screen */
+    @media (max-width: 360px) {
+      .msg { max-width: 92%; }
+      .quick button { font-size: 0.74rem; padding: 6px 9px; }
+    }
+
+    /* Landscape phones: keep the hero and sections from eating the whole viewport */
+    @media (max-height: 480px) and (orientation: landscape) {
+      .hero { padding: 52px 0 40px; }
+      section { padding: 56px 0; }
+      .chat-body { height: clamp(200px, 52svh, 310px); }
+    }
+
     /* Respect people who get motion sickness / turned animations off */
     @media (prefers-reduced-motion: reduce) {
       html { scroll-behavior: auto; }
@@ -532,7 +575,7 @@
     <div class="container">
       <div class="kicker">Live demo — try it 👇</div>
       <h2>This is what I build for shops</h2>
-      <p class="sub">Try a <b>fictional milk tea shop</b>: menu, delivery fees, cancellations, and more. Includes <b>1,040 scripted questions across 52 topics</b> in English, Tagalog, and Bisaya, plus FAQs about my services. Exact questions get their assigned answer; unclear matches ask you to clarify. Try the calculator for a real calculation using sample prices. This is a rule-based prototype, not live AI.</p>
+      <p class="sub">Try a <b>fictional milk tea shop</b>: menu, delivery fees, cancellations, and more. Includes <b>1,040 scripted questions across 52 topics</b> in English, Tagalog, and Bisaya, plus FAQs about my services. Exact questions get their assigned answer; unclear matches ask you to clarify. Type an order such as <b>“2 Classic with extra pearls, delivery”</b> and the bot totals it from sample prices. This is a rule-based prototype, not live AI.</p>
 
       <div class="demo-layout">
       <div class="phone reveal">
@@ -563,31 +606,6 @@
         </form>
         <div class="chat-foot" id="demoPrivacy">Demo only—no real orders, payments, or staff handoffs. Use made-up details, never personal or payment information. Messages stay in page memory; refresh to clear.<br />✨ Built by Troy — <a href="#contact">Ask about a bot for your page</a></div>
         <noscript><p class="chat-foot">JavaScript is needed for this interactive demo. You can still read Services and Pricing or use Contact below.</p></noscript>
-      </div>
-      <div class="card quote-panel reveal" id="calculator">
-        <div class="kicker">Try the math</div>
-        <h3>Build a sample quote 🧮</h3>
-        <p>Extra pearls: ₱15 per cup (one extra serving). Delivery: ₱50, or free when drinks + add-ons reach ₱500. Pickup is free. No real order or payment is placed.</p>
-        <form id="quoteForm" aria-describedby="quoteHelp">
-          <fieldset id="quoteControls">
-            <legend class="sr-only">Sample quote options</legend>
-            <div id="quoteItems"></div>
-            <button type="button" class="btn btn-ghost" id="quoteAdd">+ Add drink line</button>
-            <label style="margin-top:16px;">Fulfillment
-              <select id="quoteFulfillment"><option value="pickup">Pickup — free</option><option value="delivery">Delivery — ₱50, free at ₱500+</option></select>
-            </label>
-            <p id="quoteHelp">Up to 10 lines and 50 cups. Extra-pearl cups cannot exceed the cups on that line. Each calculation replaces the previous quote.</p>
-            <div class="quote-actions">
-              <button type="submit" class="btn btn-green" id="quoteCalculate">Calculate total</button>
-              <button type="button" class="btn btn-ghost" id="quoteClear">Reset quote</button>
-            </div>
-            <output id="quoteResult" class="quote-result" aria-live="polite">Loading calculator…</output>
-            <button type="button" class="btn btn-ghost" id="quotePayment" disabled>Show sample payment</button>
-            <p id="quotePaymentText" class="quote-result" aria-live="polite" hidden></p>
-          </fieldset>
-        </form>
-        <p style="margin-top:16px;">Or type <b>“2 Classic with extra pearls, delivery”</b> in chat. Chat quotes are independent of this form. Use digits and include pickup or delivery; unsupported wording asks you to clarify.</p>
-        <noscript><p>Enable JavaScript to calculate a sample total. Menu prices remain visible above.</p></noscript>
       </div>
       </div>
     </div>
@@ -663,7 +681,7 @@
             <li>English, Tagalog, and Bisaya question examples</li>
             <li>Exact questions first; whole-word phrases next</li>
             <li>Clear fallback instead of an invented answer</li>
-            <li>Working quantity, add-on, and delivery price calculator</li>
+            <li>Typed orders get a real total, including add-ons and delivery</li>
           </ul>
           <div class="btn-row">
             <a class="btn btn-green" href="#demo">Try the working demo ↑</a>
@@ -841,7 +859,6 @@
   <script src="assets/chatbot-data.js"></script>
   <script src="assets/chatbot.js"></script>
   <script src="assets/order-calculator.js"></script>
-  <script src="assets/order-ui.js"></script>
   <script>
     // ══════════════════════════════════════════════════════════════
     // TEACH: JavaScript = the "brain". This script does 5 things:

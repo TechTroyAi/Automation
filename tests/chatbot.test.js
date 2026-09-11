@@ -82,7 +82,7 @@ test('rejects normalized duplicates and duplicate topic IDs at authoring time', 
 
 test('order invitation is natural, exact, and does not repeat the demo notice', () => {
   assert.equal(bot.match('Can I order?').method, 'exact');
-  assert.equal(bot.answer('Can I order?'), 'Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit Tea. For a total, try “2 Classic with extra pearls, delivery”, or build a quote using the calculator.');
+  assert.equal(bot.answer('Can I order?'), 'Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit Tea. For a total, type a complete order with pickup or delivery, like “2 Classic with extra pearls, delivery”.');
   for (const input of ['menu', 'classic', 'okinawa', 'wintermelon', 'fruit tea', 'ice', 'hours', 'order', 'thanks']) {
     assert.doesNotMatch(bot.answer(input), /this demo|fictional|sample|scripted|no real order|do not enter/i, input);
   }

@@ -11,7 +11,6 @@
   const DELIVERY = 5000;
   const FREE_DELIVERY = 50000;
   const LIMITS = Object.freeze({ lines: 10, perLine: 20, drinks: 50 });
-  const PAYMENT = Object.freeze({ recipient: 'TechTroyAi — DEMO ONLY', reference: 'GCASH-TEST-000' });
   const money = cents => `₱${(cents / 100).toLocaleString('en-PH', { minimumFractionDigits: 2, maximumFractionDigits: 2 })}`;
 
   function calculate(items, fulfillment) {
@@ -41,11 +40,9 @@
     return lines.join('\n');
   }
 
-  function paymentPreview(quote) {
-    return `SAMPLE PAYMENT — DO NOT SEND MONEY\nRecipient: ${PAYMENT.recipient}\nPlaceholder ID: ${PAYMENT.reference}\nSample amount: ${money(quote.total)}\nThis is not a GCash account, phone number, QR code, or payment link. No payment or order will be processed.`;
-  }
-
-  const GUIDE = 'For a total, try “2 Classic with extra pearls, delivery” or “1 Okinawa and 2 Fruit Tea, pickup”. Use digits and say pickup or delivery. Add “with extra pearls” to a drink line, or “extra pearls on each” for all drinks. For anything else, use the quote form below.';
+  // No payment fields, account numbers, links, or QR data live in this module: the demo
+  // never renders a payable destination. "Show sample payment" was removed from the page.
+  const GUIDE = 'For a sample total, try “2 Classic with extra pearls, delivery” or “1 Okinawa and 2 Fruit Tea, pickup”. Use digits and say pickup or delivery. Add “with extra pearls” to a drink line, or “extra pearls on each” for all drinks.';
   const aliases = { classic: 'classic', okinawa: 'okinawa', wintermelon: 'wintermelon', 'winter melon': 'wintermelon', 'fruit tea': 'fruit' };
   // Deliberately small grammar: never silently ignore unknown products, quantities, or modifiers.
   // null means an ordinary FAQ. A recognized but invalid quote returns an error without a total.
@@ -84,9 +81,9 @@
     const result = parse(text);
     if (!result) return null;
     if (result.error) return result.error;
-    return `Here’s your sample quote! 🧋\n${summary(result.quote)}\nThis quote is separate from the form. For a sample payment summary, use the calculator’s “Show sample payment” button.`;
+    return `Here’s your sample quote! 🧋\n${summary(result.quote)}\nThis is a scripted estimate from sample prices, not a placed order or a real payment.`;
   }
-  const api = { MENU, PEARLS, DELIVERY, FREE_DELIVERY, LIMITS, PAYMENT, money, calculate, summary, paymentPreview, parse, answer };
+  const api = { MENU, PEARLS, DELIVERY, FREE_DELIVERY, LIMITS, money, calculate, summary, parse, answer };
   if (typeof module === 'object' && module.exports) module.exports = api;
   else root.ShopCalculator = api;
 })(typeof globalThis !== 'undefined' ? globalThis : this);

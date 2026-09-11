@@ -95,13 +95,16 @@ test('unknown products, modifiers and partial orders never produce a misleading 
   }
 });
 
-test('payment preview is visibly fictional, matches the quote, and has no payable destination', () => {
-  const preview = c.paymentPreview(c.calculate([item('classic', 2, 2)], 'delivery'));
-  assert.match(preview, /DO NOT SEND MONEY/);
-  assert.match(preview, /TechTroyAi — DEMO ONLY/);
-  assert.match(preview, /GCASH-TEST-000/);
-  assert.match(preview, /Sample amount: ₱230\.00/);
-  assert.doesNotMatch(preview, /(?:\+?63|09)\d{9,10}|https?:\/\//);
+test('no payment destination can be produced by the chat calculator', () => {
+  // The page has no checkout UI, so the module exposes no payment preview at all.
+  assert.equal(c.paymentPreview, undefined);
+  assert.equal(c.PAYMENT, undefined);
+  const answer = c.answer('2 classic with pearls, delivery');
+  for (const text of [c.summary(c.calculate([item('classic', 2, 2)], 'delivery')), answer]) {
+    assert.doesNotMatch(text, /(?:\+?63|09)\d{9,10}|https?:\/\/|gcash|maya|show sample payment/i, text);
+  }
+  assert.match(answer, /TOTAL: ₱230\.00/);
+  assert.match(answer, /not a placed order or a real payment/);
 });
 
 test('calculator runs offline in the browser global environment', () => {

@@ -13,8 +13,8 @@ Shop replies now speak in character, rather than repeating “this is a demo” 
 every bubble. For example, **“Can I order?”** has this exact scripted reply:
 
 > Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit
-> Tea. For a total, try “2 Classic with extra pearls, delivery”, or build a quote
-> using the calculator.
+> Tea. For a total, type a complete order with pickup or delivery, like “2 Classic
+> with extra pearls, delivery”.
 
 The persistent notice below the input labels the roleplay, states that no real
 orders/payments/staff handoffs occur, and asks visitors to use made-up details.
@@ -22,29 +22,31 @@ The input references it with `aria-describedby`. `help` and `privacy` still expl
 the actual limits when asked. Allergy, payment-security, and unavailable-data
 answers keep relevant cautions without a repetitive demo disclaimer.
 
-**This is not a checkout implementation.** The calculator now totals sample drinks
-and add-ons, but it does not reserve stock, save a real order, or process payment.
+**This is not a checkout implementation.** The chat totals sample drinks and
+add-ons, but it does not reserve stock, save a real order, or process payment.
 Cancellation, status, refunds, and human assistance still direct visitors to the
 appropriate contact instead of claiming a real-world action succeeded.
 
-## Price calculator
+## Sample price calculator (chat only)
 
-`assets/order-calculator.js` is a pure module shared by chat and the form. Prices
-are integer **centavos**: Classic 7500, Okinawa/Wintermelon 8500, Fruit Tea 7000;
-an extra pearl serving is 1500. Edit `MENU`, `PEARLS`, `DELIVERY`, and
+The demo section shows **only the milk tea chat**. There is no quote form, no
+“Try the math” card, and no sample-payment preview: typed orders are totalled by
+the bot itself, so one interface covers both FAQ answers and pricing.
+
+`assets/order-calculator.js` is a pure module used by the chat script. Prices are
+integer **centavos**: Classic 7500, Okinawa/Wintermelon 8500, Fruit Tea 7000; an
+extra pearl serving is 1500. Edit `MENU`, `PEARLS`, `DELIVERY`, and
 `FREE_DELIVERY` there, and update the corresponding FAQ replies and visible copy
 when changing prices. Regenerate `assets/chatbot-data.js` after FAQ edits.
 
-- Form: add/remove up to **10 lines**, with **1–20 cups per line**, **50 cups total**.
-- Enter how many cups on each line have extra pearls (0 through that line's cup
-  count, one extra serving per cup). No double toppings, discounts, or taxes are
-  included in this sample pricing model.
+- Limits per typed order: up to **10 lines**, **1–20 cups per line**, **50 cups total**.
+- `with extra pearls` applies one extra serving to every cup on its drink line;
+  `extra pearls on each` applies to all drinks. No double toppings, discounts, or
+  taxes are included in this sample pricing model.
 - Pickup is ₱0. Delivery is ₱50 unless **drinks + add-ons before delivery ≥ ₱500**.
-- Every calculation replaces the form's prior quote. Editing any field or removing
-  a line invalidates its total and payment preview until recalculated. Reset and
-  refresh clear the quote. No local/session storage or server is involved.
-- Chat quotes are independent, stateless estimates; they do **not** add items to
-  the form or remember a previous order. Use the form for mixed topping counts.
+- Every quote is computed fresh and remembered nowhere: no form state, no
+  local/session storage, and no server. Refresh clears the whole chat.
+- Chat quotes are stateless estimates; they do **not** place, hold, or modify an order.
 
 Supported chat examples (digits required; always specify pickup or delivery):
 
@@ -64,14 +66,13 @@ fulfillment, decimals, negatives, excessive quantities, or unsupported modifiers
 (such as `less ice`) produce guidance, never a guessed partial total. Sugar/ice
 FAQs remain available, but those choices are not stored in a quote.
 
-### Sample payment, not a payment account
+### No payment destination exists anywhere in the demo
 
-“Show sample payment” appears after a valid form calculation and displays the
-current amount, **TechTroyAi — DEMO ONLY**, and **GCASH-TEST-000**. This is an
-obviously non-payable placeholder: no invented phone number, account, payment
-link, QR code, transfer request, or paid/confirmed state. Do not substitute a
-random plausible number; it could belong to someone. A real checkout requires
-a separately scoped, authorized payment integration and server-side verification.
+The demo deliberately ships **no** recipient name, account number, phone number,
+QR code, payment link, or paid/confirmed state — not even an obviously fake test
+one. A real checkout requires a separately scoped, authorized payment integration
+with server-side verification. Keep it that way: never substitute a plausible
+number, because it could belong to someone.
 
 ## Where are the actual scripted lines?
 
@@ -104,7 +105,7 @@ Node 22 is used only for authoring/testing; visitors do not need it.
 
 1. Normalize Unicode width, case, apostrophes, punctuation, emoji, and whitespace.
 2. **Exact normalized input:** return its assigned topic immediately.
-3. **Sample quote syntax (UI):** for non-exact FAQ inputs, try the calculator.
+3. **Sample quote syntax (chat):** for non-exact FAQ inputs, try the calculator.
    A complete quote returns a total; a recognized but invalid quote returns
    guidance. Other text falls through to the FAQ matcher.
 4. **Whole-word phrase match:** match authored inputs and keyword phrases inside
@@ -168,11 +169,12 @@ npx playwright install chromium
 node tests/browser-smoke.cjs
 ```
 
-This checks desktop/mobile layout, all quick replies, form submission, exact and
-fallback responses, safe HTML display, missing scripts, local-file/offline usage,
-and project-path asset loading. Calculator tests cover mixed drinks, free delivery,
-invalid inputs, stale-payment clearing, reset/removal, and the fictional payment
-preview. Do not commit `node_modules` or browser downloads.
+This checks desktop, mobile, and **Android Chrome emulation** (Pixel-class
+viewport, tap-sized controls, no horizontal overflow), all quick replies, chat
+quotes, exact and fallback responses, safe HTML display, missing scripts,
+local-file/offline usage, and project-path asset loading. Calculator tests cover
+mixed drinks, free delivery, invalid inputs, and that no payment destination can
+be produced. Do not commit `node_modules` or browser downloads.
 
 On a Linux sandbox where the browser CDN is blocked, the same smoke test also
 supports an npm-packaged browser (used for this PR's local browser verification):
