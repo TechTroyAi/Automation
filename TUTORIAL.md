@@ -129,18 +129,17 @@ Here's the checklist in order:
 
 | Link | Where it appears | Current value |
 |---|---|---|
-| Messenger | Hero button + Contact card | `https://m.me/TroyCandia` |
-| Facebook | Contact card | `https://facebook.com/TroyCandia` |
-| Email | Not published | Add only a working, guardian-approved business inbox |
+| Facebook | Hero button + Project 1 card + Contact card | `https://www.facebook.com/share/1B2Db5JcdP/` |
+| Email | Contact card + footer | `mailto:josiahcandia@gmail.com` |
 | GitHub | Project 1 card + Contact line + footer | `https://github.com/TechTroyAi` |
 
 > **No TikTok link on purpose.** You don't have one yet, so the site sends people to
-> your FB Page + Messenger instead. When you make one, add it in the Contact section:
+> your Facebook link + email instead. When you make one, add it in the Contact section:
 > `<a href="https://tiktok.com/@yourhandle">@yourhandle</a>`
 
-**Forking this for your own portfolio?** Search `index.html` for `TroyCandia`,
-and `TechTroyAi` — replace these with your own approved business links
-(Messenger → `https://m.me/YOUR_FB_PAGE`, email → `mailto:youremail@...`,
+**Forking this for your own portfolio?** Search `index.html` for the Facebook
+share link and `TechTroyAi` — replace these with your own approved business links
+(Facebook → `https://facebook.com/YOUR_PAGE`, email → `mailto:youremail@...`,
 GitHub → `https://github.com/YOUR_USERNAME`).
 
 > **Don't have a FB Page yet?** Make one today (free, 10 mins):
