@@ -23,7 +23,7 @@ test('browser scripts load in dependency order with no CommonJS environment', ()
 
 test('local script assets exist and Pages copies them to the project site', () => {
   const sources = [...html.matchAll(/<script src="([^"]+)"/g)].map(match => match[1]);
-  assert.deepEqual(sources, ['assets/chatbot-data.js', 'assets/chatbot.js', 'assets/order-calculator.js', 'assets/order-ui.js']);
+  assert.deepEqual(sources, ['assets/chatbot-data.js', 'assets/chatbot.js', 'assets/order-calculator.js']);
   for (const src of sources) assert.ok(fs.existsSync(path.join(root, src)));
   assert.match(read('.github/workflows/pages.yml'), /cp -R assets _site\/assets/);
   assert.match(read('.github/workflows/pages.yml'), /node --test tests\/\*\.test\.js/);
@@ -64,6 +64,25 @@ test('UI uses textContent, limits input, and documents failure/privacy behavior'
   assert.match(html, /Messages stay in page memory/);
   assert.match(html, /id="demoPrivacy">Demo only—no real orders, payments, or staff handoffs/);
   assert.match(html, /Use made-up details, never personal or payment information/);
-  assert.doesNotMatch(ui + read('assets/chatbot.js') + read('assets/order-calculator.js') + read('assets/order-ui.js'), /fetch\(|XMLHttpRequest|localStorage|sessionStorage|sendBeacon/);
+  assert.doesNotMatch(ui + read('assets/chatbot.js') + read('assets/order-calculator.js'), /fetch\(|XMLHttpRequest|localStorage|sessionStorage|sendBeacon/);
   new vm.Script(ui.replace('<script>', '').split('</script>')[0]);
+});
+
+test('programming help is offered in Services and the FAQ, with an honest price promise', () => {
+  const services = html.slice(html.indexOf('<section id="services"'), html.indexOf('<section id="work"'));
+  assert.match(services, /<h3>Programming Help<\/h3>/);
+  assert.match(services, /Stuck on code\?/);
+  assert.match(services, /fixed quote before we start/);
+  assert.match(html, /<summary>💻 Can you help with programming\?<\/summary>/);
+  assert.doesNotMatch(html, /guaranteed (?:grade|A\+)|do your (?:homework|assignment) for you|take your exam/i);
+});
+
+test('the demo section shows only the milk tea chat — no quote form or payment preview', () => {
+  const demo = html.slice(html.indexOf('<section id="demo"'), html.indexOf('<section id="services"'));
+  assert.doesNotMatch(demo, /quoteForm|quoteCalculate|quotePayment|Show sample payment|Try the math/i);
+  assert.match(demo, /id="chatBody"/);
+  assert.match(demo, /id="quickRow"/);
+  assert.doesNotMatch(html, /assets\/order-ui\.js/);
+  assert.equal(fs.existsSync(path.join(root, 'assets/order-ui.js')), false);
+  assert.doesNotMatch(read('assets/order-calculator.js'), /paymentPreview|GCASH-TEST/);
 });

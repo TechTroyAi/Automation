@@ -82,7 +82,7 @@ test('ordinary FAQs do not get intercepted by the calculator', () => {
 
 test('unknown products, modifiers and partial orders never produce a misleading total', () => {
   for (const text of ['2 classic and 1 taro, delivery', '-2 classic, pickup', '2.5 classic, pickup',
-    '0 classic, pickup', '21 classic, pickup', '2 classic', '2 classic, no delivery',
+    '0 classic, pickup', '21 classic, pickup', '2 classic, no delivery',
     '2 classic, pickup and delivery', '2 classic, free delivery', '2 classic without pearls, delivery',
     '2 classic with pearls and 1 fruit tea with extra pearls on each, pickup',
     '2 classic with extra pearls on one, delivery', '2 classic less ice, pickup',
@@ -95,13 +95,42 @@ test('unknown products, modifiers and partial orders never produce a misleading 
   }
 });
 
-test('payment preview is visibly fictional, matches the quote, and has no payable destination', () => {
-  const preview = c.paymentPreview(c.calculate([item('classic', 2, 2)], 'delivery'));
-  assert.match(preview, /DO NOT SEND MONEY/);
-  assert.match(preview, /TechTroyAi — DEMO ONLY/);
-  assert.match(preview, /GCASH-TEST-000/);
-  assert.match(preview, /Sample amount: ₱230\.00/);
-  assert.doesNotMatch(preview, /(?:\+?63|09)\d{9,10}|https?:\/\//);
+test('friendly chat phrasing totals too: filler words, “at” as and, and a pickup/delivery follow-up', () => {
+  // Tagalog “at” means “and”, and chat filler (“bro”, “sakin”, “nalang”, “thx”) is ignored.
+  for (const text of ['3 Wintermelon bro at 5 Fruit Tea sakin thx', 'no 3 wintermelon and 5 Fruit Tea', 'bro 1 fruit tea nalang', '2 classic']) {
+    const result = c.parse(text);
+    assert.equal(result.needsFulfillment, true, text);
+    assert.equal(result.error, undefined, text);
+    assert.match(c.askFulfillment(result.items), /Pickup or delivery/);
+  }
+  const items = c.parse('3 wintermelon at 5 fruit tea').items;
+  assert.deepEqual(items.map(item => [item.product, item.quantity]), [['wintermelon', 3], ['fruit', 5]]);
+  // The bot asks for one word, then finishes the same order (₱605 clears free delivery).
+  assert.equal(c.fulfillmentOf('delivery'), 'delivery');
+  assert.equal(c.fulfillmentOf('hatod'), 'delivery');
+  assert.equal(c.fulfillmentOf('pick up'), 'pickup');
+  assert.equal(c.fulfillmentOf('delivery fee?'), null);
+  assert.match(c.quote(items, c.fulfillmentOf('delivery')), /TOTAL: ₱605\.00/);
+  assert.match(c.quote(items, 'pickup'), /Pickup: ₱0\.00/);
+});
+
+test('impossible amounts get a limit message instead of a total', () => {
+  const result = c.parse('bro 1000000 fruit tea saa kinn');
+  assert.ok(result.error);
+  assert.match(result.error, /20 per line and 50 per order/);
+  assert.doesNotMatch(c.answer('bro 1000000 fruit tea saa kinn'), /TOTAL: ₱/);
+});
+
+test('no payment destination can be produced by the chat calculator', () => {
+  // The page has no checkout UI, so the module exposes no payment preview at all.
+  assert.equal(c.paymentPreview, undefined);
+  assert.equal(c.PAYMENT, undefined);
+  const answer = c.answer('2 classic with pearls, delivery');
+  for (const text of [c.summary(c.calculate([item('classic', 2, 2)], 'delivery')), answer]) {
+    assert.doesNotMatch(text, /(?:\+?63|09)\d{9,10}|https?:\/\/|gcash|maya|show sample payment/i, text);
+  }
+  assert.match(answer, /TOTAL: ₱230\.00/);
+  assert.match(answer, /not a placed order or a real payment/);
 });
 
 test('calculator runs offline in the browser global environment', () => {
