@@ -1,8 +1,8 @@
-# Scripted chatbot: 1,040 questions, 52 topics
+# Scripted chatbot: 1,120 questions, 56 topics
 
 This is a **rule-based, fictional shop demo**, not a live AI, real shop, or connected
 client deployment. It also answers questions about Troy's portfolio services.
-There are **1,040 individually authored input phrases** (20 per topic), not 1,040
+There are **1,120 individually authored input phrases** (20 per topic), not 1,120
 different answers. Related questions intentionally share one approved answer.
 English, Tagalog, and Bisaya examples are included. Have a fluent speaker review
 phrasing and have the business owner approve facts before using it for a client.
@@ -12,9 +12,8 @@ phrasing and have the business owner approve facts before using it for a client.
 Shop replies now speak in character, rather than repeating “this is a demo” in
 every bubble. For example, **“Can I order?”** has this exact scripted reply:
 
-> Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit
-> Tea. For a total, type a complete order with pickup or delivery, like “2 Classic
-> with extra pearls, delivery”.
+> Of course! 🧋 Pick Classic, Okinawa, Wintermelon, or Fruit Tea. For a total, type
+> it like “2 Classic with extra pearls, delivery”.
 
 The persistent notice below the input labels the roleplay, states that no real
 orders/payments/staff handoffs occur, and asks visitors to use made-up details.
@@ -48,7 +47,7 @@ when changing prices. Regenerate `assets/chatbot-data.js` after FAQ edits.
   local/session storage, and no server. Refresh clears the whole chat.
 - Chat quotes are stateless estimates; they do **not** place, hold, or modify an order.
 
-Supported chat examples (digits required; always specify pickup or delivery):
+Supported chat examples (digits required; pickup or delivery can follow in the next message):
 
 | Input | Total |
 |---|---|
@@ -56,6 +55,7 @@ Supported chat examples (digits required; always specify pickup or delivery):
 | `2 Classic with extra pearls, delivery` | ₱230.00 |
 | `1 Okinawa and 2 Fruit Tea, pickup` | ₱225.00 |
 | `5 Okinawa and 1 Classic, delivery` | ₱500.00 (free delivery) |
+| `bro 3 wintermelon at 5 fruit tea` → `delivery` | ₱605.00 (free delivery) |
 
 Separate items with commas, `and`, `plus`, or `+`. `with extra pearls` applies to
 every cup on its own line; a final `extra pearls on each` applies to all drinks.
@@ -76,7 +76,7 @@ number, because it could belong to someone.
 
 ## Where are the actual scripted lines?
 
-[`scripts/chatbot-topics.txt`](scripts/chatbot-topics.txt) contains **all 1,040 inputs**,
+[`scripts/chatbot-topics.txt`](scripts/chatbot-topics.txt) contains **all 1,120 inputs**,
 keywords, and responses in an editable format. Each topic is four lines:
 
 1. Unique `id | Human-readable topic name`
@@ -106,12 +106,14 @@ Node 22 is used only for authoring/testing; visitors do not need it.
 1. Normalize Unicode width, case, apostrophes, punctuation, emoji, and whitespace.
 2. **Exact normalized input:** return its assigned topic immediately.
 3. **Sample quote syntax (chat):** for non-exact FAQ inputs, try the calculator.
-   A complete quote returns a total; a recognized but invalid quote returns
-   guidance. Other text falls through to the FAQ matcher.
+   Chat filler (`bro`, `po`, `sakin`, `nalang`, `thx`) is ignored, and Tagalog
+   `at` (“and”) separates drink lines. A complete order returns a total; an order
+   without pickup/delivery asks for it and finishes the same order when the
+   visitor answers. Unknown products/modifiers return guidance, never a guess.
 4. **Whole-word phrase match:** match authored inputs and keyword phrases inside
    the message. Longer phrases win over their generic components. Broad words
    like `price`, `order`, and `delivery` have reduced weight; greetings, thanks,
-   and help have the lowest weight.
+   short acknowledgements, and help have the lowest weight.
 5. Equal-strength topics → ask the visitor to choose one, not an arbitrary reply.
 6. No match → explain the limit and suggest known questions.
 
@@ -131,16 +133,18 @@ adding huge ambiguous keyword lists.
 | `Classic milk tea price` | Classic-specific sample price |
 | `Where is my rider?` | Delivery tracking limitation, not shop address |
 | `Do you need my OTP?` | Privacy warning |
+| `who made you?` | Bot credit — self-built demo, not a client build |
+| `3 wintermelon at 5 fruit tea` | Asks pickup or delivery, then totals ₱605.00 |
 | `Hours and location` | Clarification |
 | `This is a spaceship` | Fallback, not `hi` or `ship` |
 
 ## Topic coverage
 
-- **Shop:** menu; Classic, Okinawa, Wintermelon, fruit tea; pearls; sugar; ice;
+- **Shop:** menu; Classic, Okinawa, Wintermelon, fruit tea; fruit-tea flavors; pearls; sugar; ice;
   sizes; allergens; nutrition; hours; location; delivery fee, time, and coverage;
   pickup/dine-in; sample order flow; order status; cancellation; order changes;
   payments; refunds; promotions; bulk orders; human contact; privacy; greetings;
-  thanks/goodbye; bot help.
+  thanks/goodbye; bot name and creator; short acknowledgements; bot help.
 - **Portfolio:** services; chatbot, automation, and editing prices; turnaround;
   service payment terms; pilot builds; proof/testimonials; contact; onboarding;
   platforms; integrations; custom AI tools; languages; ongoing costs;

@@ -6,11 +6,11 @@
       .replace(/[’'`]/g, '')
       .replace(/[^\p{L}\p{N}]+/gu, ' ').trim().replace(/\s+/g, ' ');
   }
-  const DEFAULT = 'Sorry, I’m not sure what you mean yet. Could you rephrase that? You can ask about the menu, delivery fee, canceling an order, or Troy’s chatbot pricing.';
+  const DEFAULT = 'Sorry, I’m not sure what you mean yet. Could you rephrase that? Try the menu, delivery fee, or type an order for a total.';
   function createBot(topics) {
     const exact = new Map();
     const ids = new Set();
-    const lowPriority = new Set(['greeting', 'thanks', 'help']);
+    const lowPriority = new Set(['greeting', 'thanks', 'small_talk', 'help']);
     // Broad buying/price words must not steal a cancellation, fee, or product question.
     const generic = new Set(['price', 'prices', 'pila', 'tagpila', 'presyo', 'cost', 'how much',
       'order', 'buy', 'palit', 'pa order', 'order ko', 'delivery', 'deliver', 'shipping', 'ship']);

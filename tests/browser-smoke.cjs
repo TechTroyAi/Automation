@@ -61,7 +61,13 @@ const root = path.resolve(__dirname, '..');
     assert.match(await send('Hi how much is delivery?'), /Delivery is ₱50/);
     assert.match(await send('hours and location'), /Which one would you like to start with/);
     assert.match(await send('this is a spaceship'), /Could you rephrase that/);
-    assert.match(await send('Can I order?'), /Of course! 🧋 What would you like/);
+    assert.match(await send('Can I order?'), /Of course! 🧋 Pick Classic/);
+    // Messages from a real chat session: identity, flavors, short acknowledgements.
+    assert.match(await send('whats your name?'), /Milk Tea Demo bot/);
+    assert.match(await send('who made you??'), /Troy built me as a portfolio demo/);
+    assert.match(await send('what are the flavors'), /Which fruits are available/);
+    assert.match(await send('ok'), /Got it! 🧋/);
+    assert.match(await send('ok po, magkano ang delivery fee?'), /Delivery is ₱50/);
     assert.doesNotMatch(await page.locator('#chatBody .bot').last().innerText(), /This demo|Do not enter/);
     assert.match(await page.locator('#demoPrivacy').innerText(), /no real orders, payments, or staff handoffs/);
     assert.match(await page.locator('#demoPrivacy').innerText(), /never personal or payment information/);
@@ -71,6 +77,15 @@ const root = path.resolve(__dirname, '..');
     assert.match(await send('1 Okinawa and 2 Fruit Tea, pickup'), /TOTAL: ₱225.00/);
     assert.match(await send('5 Okinawa and 1 Classic, delivery'), /Delivery: ₱0.00/);
     assert.match(await page.locator('#chatBody .bot').last().innerText(), /TOTAL: ₱500.00/);
+    // Friendly phrasing: filler words + Tagalog "at", then a one-word pickup/delivery follow-up.
+    assert.match(await send('3 Wintermelon bro at 5 Fruit Tea sakin thx'), /Pickup or delivery/);
+    assert.doesNotMatch(await page.locator('#chatBody .bot').last().innerText(), /TOTAL: ₱/);
+    assert.match(await send('delivery'), /TOTAL: ₱605.00/);
+    assert.match(await send('bro 1000000 fruit tea saa kinn'), /20 per line and 50 per order/);
+    assert.doesNotMatch(await page.locator('#chatBody .bot').last().innerText(), /TOTAL: ₱/);
+    // A pending order is dropped when the next message is an unrelated question.
+    await send('bro 1 fruit tea nalang');
+    assert.match(await send('delivery fee?'), /Delivery is ₱50/);
     // The demo section shows the milk tea chat only: the sample-quote form is gone.
     assert.equal(await page.locator('#demo .card').count(), 0);
     assert.equal(await page.locator('#quoteForm, #quoteResult, #quotePayment, #calculator').count(), 0);

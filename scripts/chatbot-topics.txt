@@ -7,32 +7,32 @@ menu please; show me the menu; can I see your menu; what drinks do you sell; wha
 
 classic | Classic milk tea
 classic; classic milk tea
-Our Classic Milk Tea is ₱75! 🧋 You can add extra pearls for ₱15. How do you like your sugar and ice?
+Our Classic Milk Tea is ₱75 🧋 Extra pearls are ₱15. How do you like your sugar and ice?
 how much is classic milk tea; classic milk tea price; classic price; do you have classic milk tea; tell me about classic milk tea; can I get classic milk tea; magkano ang classic; may classic milk tea ba; classic milk tea magkano po; gusto ko ng classic; presyo ng classic milk tea; available ba ang classic; tagpila ang classic; naa moy classic; pila ang classic milk tea; classic milk tea tagpila; unsay presyo sa classic; classic please; classic milk tea; classic
 
 okinawa | Okinawa milk tea
 okinawa
-Okinawa Milk Tea is ₱85! 🧋 Would you like to see the sugar and ice options?
+Okinawa Milk Tea is ₱85 🧋 Want the sugar and ice options?
 how much is okinawa; okinawa price; do you sell okinawa; is okinawa available; tell me about okinawa; can I get okinawa; okinawa milk tea price; magkano ang okinawa; may okinawa ba kayo; available po ang okinawa; gusto ko ng okinawa; presyo ng okinawa; tagpila ang okinawa; naa moy okinawa; pila inyong okinawa; okinawa tagpila; unsay presyo sa okinawa; okinawa please; okinawa milk tea; okinawa
 
 wintermelon | Wintermelon milk tea
 wintermelon; winter melon
-Wintermelon Milk Tea is ₱85! 🧋 You can choose your sugar and ice levels, or add extra pearls for ₱15.
+Wintermelon Milk Tea is ₱85 🧋 Choose your sugar and ice, or add extra pearls for ₱15.
 how much is wintermelon; wintermelon price; do you have wintermelon; is wintermelon available; tell me about wintermelon; winter melon price; can I get wintermelon; magkano ang wintermelon; may wintermelon ba kayo; available ba ang wintermelon; gusto ko ng wintermelon; presyo ng wintermelon; tagpila ang wintermelon; naa moy wintermelon; pila inyong wintermelon; wintermelon tagpila; unsay presyo sa wintermelon; wintermelon please; wintermelon milk tea; wintermelon
 
 fruit | Fruit tea
 fruit tea; fruit teas
-Fruit Tea is ₱70! 🍹 Please check with the shop for the current fruit flavors and ingredients.
+Fruit Tea is ₱70 🍹 The available fruits change — please check with the shop.
 how much is fruit tea; fruit tea price; do you sell fruit tea; what fruit teas do you have; is fruit tea available; can I get fruit tea; tell me about fruit tea; magkano ang fruit tea; may fruit tea ba kayo; anong fruit tea meron; gusto ko ng fruit tea; presyo ng fruit tea; tagpila ang fruit tea; naa moy fruit tea; pila inyong fruit tea; unsay fruit tea ninyo; fruit tea tagpila; fruit tea please; fruit teas; fruit tea
 
 pearls | Extra pearls
 pearls; pearl; boba; toppings; add ons
-Extra pearls are ₱15! 🧋 For other toppings, please check availability with the shop.
+Extra pearls are ₱15 🧋 For other toppings, check availability with the shop.
 how much are extra pearls; can I add pearls; extra pearls price; do you have boba; what toppings are available; can I get extra boba; add pearls please; magkano ang pearls; may pearls ba; dagdag pearls po; anong toppings meron; pwede extra pearls; tagpila ang pearls; naa moy pearls; dugang pearls palihog; pila ang extra pearls; unsay toppings ninyo; toppings; boba; pearls
 
 sugar | Sugar options
 sugar; sweetness; sweet; tam is; tamis
-You can choose 0%, 25%, 50%, 75%, or 100% added sugar. How sweet do you like it? 🧋 Just a heads-up: bases and toppings may already contain sugar, so 0% added sugar isn’t a sugar-free guarantee.
+Choose 0%, 25%, 50%, 75%, or 100% sugar. 🧋 Note: bases and toppings may already contain sugar, so 0% added isn’t a sugar-free guarantee.
 can I choose the sugar level; what sugar levels do you have; less sugar please; no added sugar please; can I get fifty percent sugar; is it very sweet; can you make it less sweet; may sugar options ba; pwede less sugar; ayoko ng sobrang tamis; walang dagdag na sugar; gaano katamis; pwede bawasan ang tamis; pwede less sugar sa drink; gamay ra nga sugar; ayaw kaayo tam isa; unsay sugar levels; sugar level; sweetness; sugar
 
 ice | Ice options
@@ -42,102 +42,102 @@ can I choose the ice level; less ice please; no ice please; extra ice please; wh
 
 sizes | Cup sizes
 size; sizes; cup size; large; medium; small
-I don’t have the cup sizes or upgrade prices listed yet. Please check with the shop so you get the right size and price.
+I don’t have cup sizes or upgrade prices listed. Please check with the shop.
 what sizes do you have; do you have large cups; how big is the cup; is there a small size; can I get a medium; how many ounces; what is the cup size; may large ba kayo; anong sizes meron; ilang ounces ang cup; may small ba; pwede medium; gaano kalaki ang cup; unsay sizes ninyo; naa moy large; pila ka ounces; unsa kadako ang cup; cup sizes; sizes; size
 
 allergens | Allergens and ingredients
 allergy; allergies; allergen; allergens; dairy; lactose; nuts; ingredients; vegan
-Thanks for checking. Please confirm ingredients and cross-contact risks with the shop before ordering. I can’t guarantee that a drink is allergen-free, dairy-free, vegan, or safe for your allergy.
+Please confirm ingredients and cross-contact risks with the shop. I can’t guarantee a drink is allergen-free or safe for your allergy.
 what are the ingredients; does it contain dairy; I have a milk allergy; are there nuts in this; is this lactose free; do you have vegan drinks; is this safe for allergies; may gatas ba ito; may nuts ba ito; allergic ako sa milk; ano ang ingredients; lactose free ba; vegan ba ang drinks; naa ni gatas; naa ni nuts; allergic ko sa milk; unsay ingredients ani; allergens; dairy; ingredients
 
 nutrition | Nutrition information
 calories; nutrition; caffeine; pregnant; pregnancy; diabetic; diabetes
-I don’t have verified calorie or caffeine details to share. Please ask the shop for ingredient information. For pregnancy, diabetes, or other medical concerns, check with a qualified health professional before choosing a drink.
+I don’t have verified calorie or caffeine details. Please ask the shop, and check medical questions with a health professional.
 how many calories; how much caffeine is there; is this caffeine free; do you have nutrition facts; is this suitable for diabetics; can I drink this while pregnant; is this healthy; ilang calories ito; may caffeine ba; pwede ba sa buntis; pwede ba sa diabetic; may nutrition facts ba; healthy ba ito; pila ka calories; naa ni caffeine; pwede ni sa buntis; pwede ni sa diabetic; nutrition; calories; caffeine
 
 hours | Shop hours
 hours; hour; open; close; closing; oras; bukas; sarado; what time
-Our regular hours are Monday–Sunday, 10 AM–10 PM. 🕐 Please check the shop’s latest announcement for holiday changes.
+Our regular hours are Monday–Sunday, 10 AM–10 PM. 🕐
 what are your opening hours; what time do you open; what time do you close; are you open now; are you open today; do you open on sundays; are you open on holidays; open mo; bukas ba kayo; anong oras kayo nagbubukas; anong oras kayo nagsasara; bukas ba kayo ngayon; hanggang anong oras; unsang orasa mo mag open; unsang orasa mo mag close; abli mo karon; open mo ugma; shop hours; hours; open
 
 location | Shop location
 location; address; directions; map; mapa; asa; where
-I don’t have a verified address or map pin to share yet. Please check the shop’s official page for directions and landmarks.
+I don’t have a verified address or map pin yet. Please check the shop’s official page for directions.
 where is your shop; what is your address; send me your location; do you have a map pin; how do I get there; what is the landmark; are you near me; saan kayo located; ano ang address ninyo; paki send ng location; saan ang shop; may landmark ba; may google maps ba; asa inyong shop; asa mo dapit; unsay inyong address; asa ang location; location; address; directions
 
 delivery_fee | Delivery fee
  delivery fee; delivery cost; delivery charge; shipping fee; shipping cost; bayad sa delivery; bayad sa hatod; free delivery
-Delivery is ₱50 within our service area, or FREE for orders of ₱500 or more! 🛵 Please check with the shop that your area is covered.
+Delivery is ₱50, or FREE at ₱500+. 🛵 Ask the shop if your area is covered.
 how much is delivery; what is the delivery fee; is delivery free; how much is shipping; what is the delivery charge; is there a minimum for free delivery; delivery fee please; magkano delivery; magkano ang delivery fee; libre ba delivery; magkano ang shipping; may free delivery ba; bayad sa delivery; pila ang delivery; tagpila ang delivery fee; pila bayad sa hatod; libre ba ang delivery; delivery fee; shipping fee; free delivery
 
 delivery_time | Delivery time
  delivery time; delivery eta; delivery take; arrive; arrival; rider; late delivery
-Delivery timing depends on preparation and rider availability. I don’t have a live arrival estimate or rider location to show; please check directly with the shop for an update.
+Delivery timing depends on preparation and riders. I can’t show a live estimate — please check with the shop.
 how long does delivery take; when will my drink arrive; what is the delivery time; where is my rider; is my delivery late; can you deliver in thirty minutes; what is the delivery eta; gaano katagal delivery; kailan darating order ko; nasaan ang rider; ilang minutes ang delivery; late na ang delivery; may delivery estimate ba; dugay pa ang delivery; kanus a maabot akong order; asa na ang rider; pila ka minutes ang delivery; delivery time; delivery eta; late delivery
 
 delivery | Delivery availability
  delivery; deliver; shipping; ship; hatod; padala; foodpanda; grab
-Delivery depends on your area and rider availability. 🛵 Please check with the shop for coverage and delivery-app options. Ask me “delivery fee” if you’d like to see the rate.
+Delivery depends on your area and rider availability. 🛵 Ask the shop for coverage, or type “delivery fee”.
 do you deliver; is delivery available; what areas do you deliver to; can you deliver to my house; do you use foodpanda; are you on grab; do you ship outside the city; may delivery ba kayo; nagdedeliver ba kayo; saan kayo nagdedeliver; pwede padeliver; nasa foodpanda ba kayo; may grab ba kayo; ga deliver mo; naa moy delivery; pwede pa hatod; asa mo ga deliver; delivery; shipping; hatod
 
 pickup | Pickup and dine-in
 pickup; pick up; dine in; takeaway; takeout; take out; curbside
-For pickup, takeaway, or dine-in, please check the shop’s available options and collection times. They’ll need to confirm any pickup slot or table reservation.
+For pickup or dine-in, please check the shop’s options and collection times. They’ll need to confirm any slot.
 can I pick up my order; do you offer pickup; can I order for takeaway; can we dine in; do you have seating; is curbside pickup available; can I collect it later; pwede pickup; may dine in ba; pwede takeout; may upuan ba kayo; saan kukunin ang order; pwede kunin mamaya; pwede pick up; naa moy dine in; pwede take out; asa kuhaon ang order; pickup; dine in; takeaway
 
 order | Ordering drinks
 order; buy; palit; pa order; order ko
-Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit Tea. For a total, type a complete order with pickup or delivery, like “2 Classic with extra pearls, delivery”.
-how do I order; I want to order; can I place an order; can I buy a drink; start an order; order ko; order ko please; paano umorder; gusto ko umorder; pwede mag order; bili ako milk tea; paano bumili; pa order po; unsaon pag order; gusto ko mopalit; pwede mo order; palit ko; order; can I order; pa order
+Of course! 🧋 Pick Classic, Okinawa, Wintermelon, or Fruit Tea. For a total, type it like “2 Classic with extra pearls, delivery”.
+how do I order; I want to order; can I place an order; can I buy a drink; can i buyy; order ko; order ko please; paano umorder; gusto ko umorder; pwede mag order; bili ako milk tea; paano bumili; pa order po; unsaon pag order; gusto ko mopalit; pwede mo order; palit ko; order; can I order; pa order
 
 order_status | Order status
 order status; track order; track my order; order number; order confirmation; confirmed; order ready
-I don’t have an order status or confirmation to show here. Please contact the shop directly for a confirmed update on your order.
+I don’t have an order status to show. Please ask the shop for a confirmed update.
 what is my order status; can you track my order; is my order ready; did you receive my order; is my order confirmed; where is my order confirmation; what is my order number; nasaan na order ko; confirmed na ba order ko; ready na ba order ko; natanggap ba ninyo order ko; paano i track ang order; may confirmation na ba; asa na akong order; ready na akong order; na confirm na akong order; nadawat ninyo akong order; order status; track order; order confirmation
 
 cancel | Cancel an order
 cancel; cancellation; cancel order; cancel my order; ayaw nalang; huwag na
-Need to cancel? Please contact the shop as soon as possible, ideally before preparation starts. They’ll need to confirm whether cancellation is still possible.
+Need to cancel? Message the shop as soon as possible. They’ll need to confirm if it’s still possible.
 can I cancel my order; cancel order; cancel my order please; I want to cancel; how do I cancel an order; what is your cancellation policy; please stop my order; pwede cancel order; paano mag cancel; ayoko na ng order; huwag na ang order; cancel ko na po; pwede pa bang i cancel; pwede i cancel akong order; ayaw nalang akong order; dili na ko mudayon; unsaon pag cancel; cancellation; cancel; ayaw nalang
 
 change_order | Change an order
 change order; change my order; edit order; edit my order; wrong order; wrong drink; missing item; missing drink
-Need to change a drink, or received something wrong or missing? Please contact the shop with what needs fixing. They’ll need to confirm any order changes or replacement.
+Wrong or missing drink? Contact the shop — they’ll need to confirm any change or replacement.
 can I change my order; I want to edit my order; I ordered the wrong drink; can I change the flavor; can I change the quantity; I received the wrong order; a drink is missing; pwede baguhin order ko; mali ang order ko; kulang ang order; pwede palitan ang flavor; paano mag edit ng order; maling drink ang dumating; pwede usbon akong order; sayop akong order; kulang akong drinks; pwede ilisan ang flavor; change order; wrong order; missing item
 
 payment | Shop payment methods
 payment; pay; gcash; maya; cash; bayad; card; cod
-Payment options are GCash, Maya, or cash. 💰 The demo has no checkout or payment page connected. Never share your PIN or OTP.
+Payment options: GCash, Maya, or cash. 💰 No checkout is connected to this demo. Never share your PIN or OTP.
 how can I pay; what payment methods do you accept; do you accept gcash; can I pay with maya; is cash accepted; do you accept cards; can I pay cash on delivery; paano magbayad; pwede gcash; may maya ba kayo; pwede cash; tumatanggap ba ng card; anong mode of payment; unsaon pagbayad; pwede gcash ang bayad; modawat mog cash; unsay payment methods; payment; gcash; bayad
 
 refund | Refunds and failed payments
 refund; refunds; charged twice; failed payment; payment failed; payment problem; double payment
-Sorry you’re having trouble with a payment. Please contact the shop or payment provider through a verified channel to review a refund or failed charge. Don’t retry a payment until its status is clear, and never share your PIN or OTP.
+Sorry about the payment trouble. Please contact the shop or your payment provider — and never share your PIN or OTP.
 can I get a refund; how do refunds work; I was charged twice; my payment failed; I paid but got no confirmation; where is my refund; I sent the wrong amount; pwede refund; paano mag refund; doble ang bayad ko; nag fail ang payment; hindi pumasok ang bayad; kailan ang refund; pwede i refund; nadoble akong bayad; wala nisulod akong bayad; asa na akong refund; refund; charged twice; payment failed
 
 promos | Shop discounts
 promo; promos; discount; discounts; voucher; coupon; sale; student discount
-I don’t have an active promo or voucher listed right now. You can check the shop’s latest announcements for offers and their terms. Want to see the regular menu?
+No active promo or voucher is listed right now. Check the shop’s latest announcements. Want the regular menu?
 do you have any promos; is there a discount; do you offer student discounts; can I use a voucher; are there any coupons; is there a sale today; do you have a loyalty card; may promo ba kayo; may discount ba; may student discount ba; pwede voucher; may coupon ba kayo; may loyalty card ba; naa moy promo; naa moy discount; pwede student discount; naa moy voucher; promos; discount; coupon
 
 bulk | Bulk and event orders
 bulk; wholesale; party; catering; event order; reseller; minimum order
-Planning drinks for a party or event? 🧋 Bulk orders need the shop’s approval for quantity, lead time, and pricing. Please check with them before making event plans.
+Bulk orders need the shop’s approval for quantity, lead time, and pricing. 🧋 Please check with them first.
 do you accept bulk orders; can I order for a party; do you offer catering; what is the minimum order; do you have wholesale prices; can I become a reseller; how early should I order for an event; pwede bulk order; may wholesale ba; pwede pang party; may minimum order ba; pwede reseller; tumatanggap ba kayo ng catering; naa moy bulk orders; pwede pang event; pila minimum order; naa moy wholesale; bulk orders; catering; wholesale
 
 human | Human assistance
 human; staff; agent; admin; owner; tawo; real person; support
-Prefer to speak with a person? Please contact the shop directly for help with a shop order. For Troy’s chatbot services, tap Messenger in the Contact section below. You’ll need to send the message there to reach someone.
+Prefer a person? Contact the shop directly for an order. For Troy’s services, tap Messenger in Contact below. You’ll need to send the message there.
 can I talk to a human; I need a real person; connect me to staff; can I speak to the owner; I need customer support; stop the bot replies; talk to an agent; gusto ko ng kausap na tao; may admin ba; paki connect sa staff; gusto ko kausapin ang owner; may customer service ba; tao po sana; naa moy tawo; pwede makigstorya sa owner; tawga ang admin; naa moy staff; human; admin; tawo
 
 privacy | Demo privacy and security
 privacy; personal data; personal information; password; otp; pin; credit card number; data stored; data saved; delete my data
-Messages stay in this page's memory; this demo code does not send or save them to a server or browser storage. Refresh to clear the chat. Do not enter personal details, passwords, OTPs, or payment information. External Messenger/GitHub links have their own privacy policies.
+Messages stay in this page's memory; this demo does not send or save them to a server or browser storage. Never enter passwords, OTPs, or payment details.
 is this chat private; do you save my messages; where is my data stored; can you delete my data; do I need to give my address; should I send my phone number; do you need my otp; safe ba ang chat; sine save ba ang messages; kailangan ba ng personal information; pwede ba ibigay ang password; paano burahin ang data; kailangan ba ng otp; gi save ninyo akong messages; asa naka store akong data; kinahanglan akong address; safe ba akong data; privacy; personal data; otp
 
 greeting | Greeting
 hi; hello; hey; kumusta; kamusta; maayong buntag; maayong gabii
-Hi! Welcome to Milk Tea Demo! 🧋 What can I help you with today—our menu, hours, or delivery options?
+Hi! Welcome to Milk Tea Demo 🧋 Ask about the menu, hours, delivery, or type your order.
 hi; hello; hey; good morning; good afternoon; good evening; hello there; hi bot; hello po; kumusta; kamusta; magandang umaga; magandang gabi; maayong buntag; maayong hapon; maayong gabii; kumusta ka; hey there; hi there; greetings
 
 thanks | Thanks and goodbye
@@ -147,115 +147,135 @@ thanks; thank you; thank you so much; thanks for the help; that helps thanks; ap
 
 help | Bot help and limits
 help; demo; bot; chatbot demo; what can you do; real shop; real ai; scripted
-I can help with the menu, hours, delivery fees, drink options, and common order questions. For a total, type a complete order like “2 Classic with extra pearls, delivery”. 🧋 You can also ask about Troy’s chatbot services. This is a scripted roleplay, not live AI; real orders, payments, and staff contact happen outside this chat.
+I can help with the menu, hours, delivery, and orders. Type a full order like “2 Classic with extra pearls, delivery” for a total, or ask about Troy’s services. This is a scripted roleplay, not live AI.
 help; what can you do; how does this demo work; are you a real shop; is this a real ai; are these scripted replies; what can I ask; paano gamitin ang demo; totoong shop ba ito; ai ba talaga ito; ano ang pwede itanong; scripted ba ang sagot; pwede patulong; unsa imong mahimo; tinuod ni nga shop; unsaon paggamit ani; scripted ni; demo; bot help; chatbot demo
+
+bot_identity | Bot name and identity
+your name; whats your name; who are you; bot name; pangalan mo; ngalan nimo
+I’m the Milk Tea Demo bot 🧋 A scripted helper for this sample shop — not a real person or live AI.
+whats your name; what is your name; whats ur name; what should I call you; who are you; what are you; are you a real person; are you human; are you a robot; are you a bot; ano pangalan mo; ano ang pangalan mo; sino ka; anong pangalan mo po; pangalan mo; kinsa ka; kinsa mo; unsay imong ngalan; unsa imong name; ngalan nimo
+
+bot_creator | Who made this bot
+who made you; who built you; who created you; sino gumawa sayo; kinsa naghimo nimo
+Troy built me as a portfolio demo 🧋 Self-built and scripted — not a client deployment.
+who made you; who made this bot; who built you; who built this bot; who created you; who coded you; who programmed you; did troy make you; is this made by troy; sino gumawa sayo; sino gumawa nito; sino may gawa nito; gawa mo ba ito; kanino ka; kinsa naghimo nimo; kinsa nagbuhat ani; imong tag iya; who owns you; who is your developer; who developed this bot
+
+fruit_flavors | Fruit tea flavors
+fruit flavors; fruit tea flavors; flavor; flavors; anong flavor; unsa nga flavor
+Our sample menu lists Fruit Tea at ₱70 🍹 Which fruits are available depends on the shop — please ask them what’s in stock today.
+what flavors do you have; what are the flavors; what flavors are available; what fruit tea flavors are there; do you have other flavors; anong flavors meron; anong flavor available; may ibang flavor ba; anong lasa ng fruit tea; unsa nga flavor naa; unsa nga flavor ang available; naa moy lain flavor; unsay lasa sa fruit tea; fruit tea flavors; fruit flavor options; available flavors; flavor list; do you have strawberry; do you have mango; do you have lychee
+
+small_talk | Short acknowledgements
+ok; okay; sige; cge; ge; noted; sure; alright; ayos; maayo
+Got it! 🧋 Ask about the menu, delivery, or type your order for a total.
+ok; ok po; okay; okay po; ok lang; ok na; sige; sige po; cge; cge po; ge; ge lang; noted; noted po; sure; sure po; alright; ayos; ayos lang; maayo
 
 services | Portfolio services
 services; troy; automation services; what do you build; hire; portfolio
-Troy builds Facebook Page FAQ bots, n8n/Make automations, small custom AI tools, and short-form video edits for PH businesses. See Services and Pricing on this page; message via Contact for a scoped quote.
+Troy builds FB Page FAQ bots, n8n/Make automations, small AI tools, and short-form video edits. See Services below, or message me for a fixed quote.
 what services do you offer; what does troy build; can I hire you; tell me about your services; do you build bots for businesses; what do you do; can you help my business; anong services mo; gumagawa ka ba ng chatbot; pwede kitang i hire; ano ang ginagawa mo; may automation services ka ba; paano kita mahire; unsay services nimo; gahimo ka ug chatbot; pwede tika i hire; makatabang ka sa akong negosyo; services; hire; portfolio
 
 chatbot_pricing | Chatbot package prices
 chatbot pricing; chatbot price; chatbot cost; bot pricing; bot price; bot cost; starter package; business package
-Portfolio pricing: Starter FAQ bot from ₱1,500; Business package from ₱3,000 includes a bot plus one simple automation. Scope and any third-party subscriptions must be agreed before work starts. These are service prices, not drink prices.
+Starter FAQ bot from ₱1,500; Business from ₱3,000 with a bot plus one simple automation. Scope and any subscriptions are agreed before work starts.
 how much is a chatbot; what is your chatbot pricing; how much does a bot cost; what is the starter package; what is the business package; how much for a facebook bot; chatbot price list; magkano ang chatbot; magkano magpagawa ng bot; ano ang starter package; magkano ang business package; may bot pricing ba; presyo ng chatbot; tagpila ang chatbot; pila magpahimo ug bot; unsay starter package; pila ang business package; chatbot pricing; bot cost; starter package
 
 automation_pricing | Automation prices
 automation pricing; automation price; automation cost; workflow price; workflow cost
-Standalone business automation starts at ₱2,000 on this page. The final quote depends on the apps, steps, and volume; any hosting or paid-tool charges should be listed separately before you agree.
+Standalone automation starts at ₱2,000. The final quote depends on the apps, steps, and volume; hosting or paid tools are listed separately.
 how much is an automation; what does a workflow cost; how much for n8n setup; what is your automation pricing; is automation a one time fee; how much for make setup; automation price list; magkano ang automation; magkano gumawa ng workflow; presyo ng automation; magkano n8n setup; may automation package ba; magkano make setup; tagpila ang automation; pila ang workflow; pila magpa setup ug n8n; unsay presyo sa automation; automation pricing; workflow cost; automation price
 
 video_pricing | Video editing prices
 video pricing; video price; video cost; editing price; editing cost; video package; video editing pricing
-Short-form video editing starts at ₱300 per video. The listed bundle is ₱1,000 for five short videos. Confirm duration, footage, captions, revisions, and music permissions before agreeing to a quote.
+Video editing starts at ₱300 per video, or ₱1,000 for five. We agree duration, captions, revisions, and music permissions first.
 how much is video editing; what is your video editing pricing; how much per reel; how much for five videos; do you have a video package; how much for tiktok editing; what does editing cost; magkano video editing; magkano bawat reel; magkano limang videos; may video package ba; presyo ng video edit; magkano edit ng tiktok; tagpila ang video editing; pila kada reel; pila ang lima ka videos; naa kay video package; video pricing; editing cost; video package
 
 timeline | Service turnaround
 turnaround; project timeline; build time; deadline; how long to build; rush project
-Typical timelines listed here: simple chatbot 2–4 days, automation 3–7 days, video edits 24–48 hours. Scope, access, and feedback affect the schedule. Troy confirms a date before starting; rush availability is not guaranteed.
+Simple chatbot 2–4 days · automation 3–7 days · video edits 24–48 hours. Troy confirms a date before starting.
 how long does a chatbot take to build; what is your turnaround; how long does automation setup take; when can you deliver the project; can you finish by tomorrow; do you accept rush projects; how fast can you edit videos; gaano katagal gumawa ng bot; ilang araw ang automation; kailan matatapos ang project; pwede rush project; gaano kabilis ang video edit; ano ang project timeline; pila ka adlaw maghimo ug bot; dugay ba ang automation setup; kanus a mahuman ang project; pwede rush; turnaround; project timeline; build time
 
 service_payment | Service payment terms
 service payment; project payment; downpayment; down payment; deposit; balance; payment terms
-Standard project terms on this page: 50% downpayment after agreeing scope, then the balance after approval of the working demo. Payment arrangements are coordinated with a parent/guardian. Confirm the recipient privately through the verified contact; never send payment through this demo. Pilot terms may differ and must be agreed in writing.
+50% downpayment after agreeing scope, balance after you approve the demo. Payment is coordinated with a parent/guardian, and pilot terms are agreed separately.
 what are your project payment terms; do you need a deposit; how much is the downpayment; when do I pay the balance; can I pay after seeing the demo; how do I pay for your services; who handles project payments; may downpayment ba; magkano ang deposit; kailan babayaran ang balance; paano bayaran ang project; pwede makita demo bago balance; ano ang payment terms; naa bay downpayment; pila ang deposit; kanus a bayaran ang balance; unsaon pagbayad sa project; payment terms; downpayment; project payment
 
 pilot | Pilot client offer
 pilot; pilot client; free build; discounted build; first client; trial project
-Ask about one of the first two pilot builds: a small, agreed-scope free or discounted project, subject to availability and fit. In return, discuss honest feedback and separate permission to show a redacted demo. Positive reviews are not required. Confirm price, scope, and permission in writing first.
+Troy is looking for the first 1–2 pilot builds: small, agreed-scope, free or discounted. Honest feedback is welcome; a positive review is never required.
 do you offer a free build; can I be a pilot client; is there a first client discount; what is the pilot offer; can we try a small project first; do you have discounted builds; what do you need in exchange for a pilot; may free build ba; pwede maging pilot client; may discount sa first client; ano ang pilot offer; pwede trial project; libre ba ang pilot; naa kay free build; pwede ko mahimong pilot client; naa bay discounted build; unsay pilot offer; pilot; free build; pilot client
 
 proof | Demos and testimonials
 proof of work; testimonial; testimonials; reviews; case study; case studies; sample work; past clients
-The working proof on this page is the fictional, browser-only chatbot demo, with source code in this repository. No client testimonials or verified client results are published here yet. Only actual recordings and permission-based client feedback should be added.
+The proof here is the browser-only chatbot demo, with source in this repository. No client testimonials or verified client results are published yet.
 can I see your proof of work; do you have testimonials; can I read client reviews; do you have case studies; can I see past projects; have you worked with real clients; can I see sample work; may testimonials ka ba; may client reviews ba; patingin ng sample work; may case study ka ba; may previous clients ka ba; saan ang proof of work; naa kay testimonials; naa kay client reviews; pwede makita imong samples; naa kay past clients; proof of work; testimonials; case studies
 
 contact | Contact Troy
 contact; messenger; email; facebook page link; reach you; message you
-Use the Messenger button in this page's Contact section to discuss a project. Share your business type and the task you want to improve, not passwords or payment details. This demo cannot send a message to Troy for you.
+Use the Messenger button in Contact below. Share your business type and what you want to improve — never passwords or payment details.
 how can I contact you; where can I message troy; do you have messenger; what is your email; send your contact link; how do I reach you; can I send a project inquiry; paano kita makokontak; saan pwede mag message; may messenger ka ba; ano email mo; paano mag inquire; saan ang contact link; unsaon tika pag contact; asa ko maka message; naa kay messenger; unsay email nimo; contact; messenger; email
 
 onboarding | Starting a project
 onboarding; get started; start a project; requirements; project brief; need from me
-To start: share your business type, public menu or service list, common customer questions, and the task you want automated. Agree the scope, price, timeline, and acceptance checklist before paying. Grant only necessary account access through official invitations—never share passwords or OTPs.
+To start: your business type, menu or service list, common questions, and the task to automate. Agree scope, price, and timeline before paying.
 how do we get started; what do you need from me; how do I start a project; what are the requirements; should I send my menu; do you need my faq list; what goes in the project brief; paano magsimula ng project; ano ang kailangan mo; ipapadala ko ba ang menu; kailangan ba ng faq list; paano ang onboarding; ano laman ng project brief; unsaon pagsugod sa project; unsay kinahanglan nimo; ipadala nako akong menu; kinahanglan ba ug faq list; onboarding; requirements; start a project
 
 platforms | Supported platforms
 platform; platforms; instagram; whatsapp; website bot; facebook bot; messenger bot; manychat
-Facebook Page FAQ bots are a listed service. Website chat, Instagram, or WhatsApp integrations depend on platform rules, permissions, and available tools. Describe your platform so Troy can confirm feasibility rather than promise an unsupported integration.
+Facebook Page FAQ bots are a listed service. Website, Instagram, or WhatsApp bots depend on platform rules — tell Troy your platform and he’ll confirm.
 what platforms do you support; can you build a facebook bot; can it work on instagram; do you support whatsapp; can I put a bot on my website; do you use manychat; can you automate messenger replies; anong platforms ang supported; pwede sa facebook page; pwede sa instagram; pwede sa whatsapp; pwede chatbot sa website; gumagamit ka ba ng manychat; unsay supported platforms; pwede ni sa facebook; pwede ni sa instagram; pwede sa akong website; platforms; facebook bot; website bot
 
 integrations | Workflows and integrations
 integrations; integration; n8n; make; google sheets; spreadsheet; workflow; automation
-A scoped n8n/Make workflow can connect supported apps, such as a form or message source to Google Sheets and an owner summary. This portfolio demo is not connected to those apps. Actual feasibility depends on APIs, permissions, and the agreed workflow.
+A scoped n8n/Make workflow can connect supported apps, such as a form to Google Sheets plus an owner summary. Feasibility depends on APIs and permissions.
 can you connect google sheets; do you use n8n; do you use make; can you automate spreadsheets; can orders go into a sheet; can you send a daily summary; what integrations do you offer; pwede google sheets integration; gumagamit ka ba ng n8n; gumagamit ka ba ng make; pwede automatic sa spreadsheet; pwede daily summary; anong integrations meron; pwede i connect sa google sheets; kabalo ka ug n8n; pwede automatic sa sheet; naa bay daily summary; integrations; n8n; automation
 
 ai_tools | Custom AI tools
 custom ai; ai tool; ai tools; product description; resume screener; content generator; openai
-Custom AI tools are scoped around a specific task, such as drafting product descriptions or content ideas. AI output needs review, and API usage may cost extra. Sensitive data and automated decisions need additional safeguards agreed before building.
+Custom AI tools are scoped to a task, like drafting product descriptions. Output needs review, and API usage may cost extra.
 can you build a custom ai tool; do you make product description generators; can you build a content idea generator; do you work with openai; can ai draft my product listings; can you build a resume screener; can you automate content drafts; gumagawa ka ba ng ai tools; pwede product description generator; pwede content idea generator; gumagamit ka ba ng openai; pwede ai para sa listings; may custom ai service ba; gahimo ka ug ai tools; pwede ai para sa products; kabalo ka ug openai; pwede content generator; custom ai; ai tools; product description
 
 languages | Supported languages
 language; languages; bisaya; cebuano; tagalog; english; multilingual
-This demo includes scripted English, Tagalog, and Bisaya questions. A client bot can use owner-approved replies in their preferred tone; language quality and business facts should be reviewed before launch. It will not understand every possible phrasing.
+This demo includes English, Tagalog, and Bisaya inputs. Client bots use owner-approved replies; no bot understands every phrasing.
 what languages do you support; can the bot speak bisaya; do you support tagalog; can it reply in english; is the chatbot multilingual; can you use our brand tone; do you support cebuano; pwede tagalog ang bot; pwede bisaya ang replies; may english replies ba; anong languages ang supported; pwede sariling tone ng brand; multilingual ba ito; pwede bisaya ang bot; kasabot ka ug bisaya; pwede cebuano ang replies; unsay languages nimo; languages; bisaya; tagalog
 
 maintenance | Maintenance and recurring costs
 maintenance; monthly fee; monthly cost; subscription; hosting; recurring; api cost; ongoing cost
-The portfolio lists setup/build prices, not a guarantee of zero ongoing cost. Hosting, automation plans, messaging tools, and AI API usage may be separate. Agree who owns each account, pays each bill, and handles updates before launch.
+Listed prices are for the build. Hosting, automation plans, messaging tools, and AI APIs may be separate — agree who pays each before launch.
 is there a monthly fee; what are the ongoing costs; do I pay for hosting; are api costs included; who pays the subscription; do you offer maintenance; will this be free to run; may monthly fee ba; kasama ba ang hosting; sino magbabayad ng subscription; may maintenance ba; kasama ba api costs; may recurring fees ba; naa bay monthly fee; apil na ang hosting; kinsa mobayad sa subscription; naa kay maintenance; maintenance; monthly fee; hosting
 
 revisions | Revisions and support
 revision; revisions; aftercare; post launch; bug fix; bug fixes; training; handover
-Starter lists three days of chat support; Business lists seven days. A short handover guide is included, and the Content package lists one revision per video. Agree chatbot/automation revision limits and what counts as a bug fix before starting; new scope may need a separate quote.
+Starter includes 3 days of chat support; Business includes 7. Video packages list 1 revision each. Agree revision limits and what counts as a bug fix first.
 how many revisions are included; do you fix bugs after launch; what support do I get; will you teach me to use it; is training included; do I get a handover guide; can I request changes after delivery; ilang revisions ang kasama; may support pagkatapos launch; tuturuan mo ba ako; may handover guide ba; kasama ba bug fixes; pwede mag request ng revision; pila ka revisions; naa bay support human launch; tudluan ko nimo; naa bay handover guide; revisions; training; bug fixes
 
 ownership | Accounts and ownership
 ownership; own the bot; own the code; account access; passwords; source code; credentials; access permissions
-Set up client work on client-owned accounts where possible. Agree source-code delivery, licenses, exports, and access removal in the scope. Use least-privilege invitations instead of shared passwords, and revoke builder access when it is no longer needed.
+Client work is set up on client-owned accounts where possible. Agree code delivery, licenses, exports, and access removal in the scope.
 who owns the bot; do I own the source code; will it run on my account; do you need my password; what account access do you need; can I remove your access later; can I export the workflow; sino may ari ng bot; akin ba ang source code; sa account ko ba gagawin; kailangan mo ba password ko; paano tanggalin access mo; pwede i export ang workflow; kinsa tag iya sa bot; ako ba ang source code; sa akong account ni; kinahanglan nimo akong password; ownership; source code; account access
 
 service_safety | Client data safety
 client data; customer data; business data; data security; security review; sensitive data; privacy policy
-For a client build, agree what data is collected, why, retention/deletion rules, who can access it, and which third-party tools process it. Use test data in demos and redact customer details. Security or legal compliance should not be assumed from this sample bot.
+For client builds, agree what data is collected, why, retention rules, and who can access it. Demos use test data with customer details redacted.
 how do you protect client data; is customer data safe; can you use fake data for testing; do you provide a privacy policy; who can access business data; can we delete customer records; how do you handle sensitive data; paano protektahan ang client data; safe ba customer data; pwede fake data sa testing; may privacy policy ba ang project; sino may access sa business data; pwede burahin customer records; unsaon pag protect sa client data; safe ba ang customer data; pwede test data lang; kinsa maka access sa business data; client data; data security; sensitive data
 
 remote | Remote service area
 remote; service area; philippines; nationwide; meet in person; in person; where are you based
-Troy offers remote services for businesses across the Philippines. Project discussions can happen online; an exact home location or in-person meeting is not needed to get a quote.
+Troy works remotely with businesses across the Philippines. Everything — scope, demos, handover — can happen online.
 where are you based; do you work remotely; can you work with businesses nationwide; do I need to live near you; can we do everything online; do we need to meet in person; do you serve the philippines; saan ka based; pwede remote ang project; kailangan malapit ako; pwede lahat online; kailangan ba personal meeting; buong pilipinas ba ang service; asa ka based; pwede online ra tanan; kinahanglan magkita personal; pwede bisan asa sa pilipinas; remote; nationwide; service area
 
 results | Honest expectations
 guarantee; guaranteed; sales; roi; results; accuracy; mistakes; hallucination
-A bot can reduce repetitive replies, but it cannot guarantee sales, perfect answers, or business results. Test common questions and edge cases, use approved answers, and provide a clear fallback or real human contact for anything uncertain.
+A bot can cut repetitive replies, but it can’t guarantee sales or perfect answers. Test common questions and keep a clear fallback for anything uncertain.
 can you guarantee more sales; will a bot get me clients; is the bot always accurate; can ai make mistakes; what results should I expect; do you guarantee roi; can it answer every question; guaranteed ba ang sales; dadami ba clients ko; laging tama ba ang bot; pwede magkamali ang ai; ano ang expected results; may guaranteed roi ba; guaranteed ba nga modaghan sales; sakto ba pirmi ang bot; masayop ba ang ai; unsay expected results; guarantee; accuracy; results
 
 video_scope | Video editing scope
 video editing; reels; tiktok; captions; subtitles; footage; music rights; copyright; capcut
-Video editing services include short-form Reels/TikToks, hooks, captions, and transitions. Supply footage you can legally use and agree duration, aspect ratio, revisions, and music licensing. A generic social profile link is not a verified before/after sample.
+Video edits cover short-form Reels/TikToks with hooks, captions, and transitions. Supply footage you can legally use and agree revisions and music licensing.
 what does video editing include; can you add captions; do you edit tiktok videos; can you make reels; do I need to provide footage; can you add subtitles; do you use licensed music; ano kasama sa video editing; pwede lagyan ng captions; nag eedit ka ba ng tiktok; pwede gumawa ng reels; kailangan ko ba magbigay ng footage; may subtitles ba; unsay apil sa video editing; pwede butangan ug captions; mo edit ka ug reels; kinahanglan nako mohatag ug footage; video editing; captions; reels
 
 outreach | Finding clients
 outreach; marketing; traffic; find clients; get clients; facebook groups; seo; google search
-A portfolio helps people evaluate your work; it does not create traffic on its own. Share the working demo in relevant, permission-based shop outreach and groups that allow promotion. Personalize messages, follow up at most once, and track replies without promising sales.
+A portfolio helps people evaluate your work; it doesn’t create traffic by itself. Share the demo where promotion is allowed, personalize messages, and follow up once.
 how do I get my first client; will a website bring traffic; how can I do outreach; should I post in facebook groups; how do I find clients; will google find my portfolio; how should I market my services; paano makakuha ng clients; sapat ba ang website; paano mag outreach; pwede mag post sa fb groups; paano dumami traffic; makikita ba sa google ang site; unsaon pagpangita ug clients; igo na ba ang website; unsaon pag outreach; pwede sa facebook groups; outreach; marketing; traffic

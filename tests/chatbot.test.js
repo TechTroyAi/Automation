@@ -7,8 +7,8 @@ const bot = createBot(topics);
 
 test('at least 1,000 unique authored inputs; every exact question returns its assigned answer', () => {
   assert.ok(bot.questionCount >= 1000);
-  assert.equal(topics.length, 52);
-  assert.equal(bot.questionCount, 1040);
+  assert.equal(topics.length, 56);
+  assert.equal(bot.questionCount, 1120);
   for (const topic of topics) {
     assert.equal(topic.questions.length, 20);
     assert.ok(topic.keys.length);
@@ -82,10 +82,26 @@ test('rejects normalized duplicates and duplicate topic IDs at authoring time', 
 
 test('order invitation is natural, exact, and does not repeat the demo notice', () => {
   assert.equal(bot.match('Can I order?').method, 'exact');
-  assert.equal(bot.answer('Can I order?'), 'Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit Tea. For a total, type a complete order with pickup or delivery, like “2 Classic with extra pearls, delivery”.');
+  assert.equal(bot.answer('Can I order?'), 'Of course! 🧋 Pick Classic, Okinawa, Wintermelon, or Fruit Tea. For a total, type it like “2 Classic with extra pearls, delivery”.');
   for (const input of ['menu', 'classic', 'okinawa', 'wintermelon', 'fruit tea', 'ice', 'hours', 'order', 'thanks']) {
     assert.doesNotMatch(bot.answer(input), /this demo|fictional|sample|scripted|no real order|do not enter/i, input);
   }
+});
+
+test('plain chat messages from real conversations get a scripted answer, not the fallback', () => {
+  const cases = [
+    ['whats your name?', 'bot_identity'], ['who made you??', 'bot_creator'],
+    ['what are the flavors', 'fruit_flavors'], ['fruit Tea flavors bro what are in avail?', 'fruit_flavors'],
+    ['can i buyy??', 'order'], ['can i buy', 'order'], ['ok', 'small_talk'], ['ok po', 'small_talk'],
+    ['sige', 'small_talk'], ['bro, 1 fruit tea nalang', 'fruit']
+  ];
+  for (const [input, expected] of cases) assert.equal(bot.match(input).id, expected, input);
+  // Short acknowledgements must never outrank the actual question in a longer message.
+  assert.equal(bot.match('ok po, magkano ang delivery fee?').id, 'delivery_fee');
+  assert.equal(bot.match('sige, how much is classic milk tea').id, 'classic');
+  // The fallback and the clarification both stay short.
+  assert.match(bot.match('brooooooooo').reply, /Could you rephrase that/);
+  assert.match(bot.answer('hours and location'), /Which one would you like to start with/);
 });
 
 test('shop scripts never invent completed actions or request personal checkout details', () => {

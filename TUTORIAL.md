@@ -288,7 +288,7 @@ first in your outreach messages.
 
 ### How it works
 
-The demo has **1,040 authored scripted inputs across 52 topics**. It normalizes
+The demo has **1,120 authored scripted inputs across 56 topics**. It normalizes
 case, punctuation, and spacing; checks exact questions first; then matches
 whole-word phrases. More specific phrases beat generic price/order words.
 Equal-strength topics ask for clarification; unknown text gets an honest fallback.

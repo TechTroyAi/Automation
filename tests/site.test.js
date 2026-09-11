@@ -68,6 +68,15 @@ test('UI uses textContent, limits input, and documents failure/privacy behavior'
   new vm.Script(ui.replace('<script>', '').split('</script>')[0]);
 });
 
+test('programming help is offered in Services and the FAQ, with an honest price promise', () => {
+  const services = html.slice(html.indexOf('<section id="services"'), html.indexOf('<section id="work"'));
+  assert.match(services, /<h3>Programming Help<\/h3>/);
+  assert.match(services, /Stuck on code\?/);
+  assert.match(services, /fixed quote before we start/);
+  assert.match(html, /<summary>💻 Can you help with programming\?<\/summary>/);
+  assert.doesNotMatch(html, /guaranteed (?:grade|A\+)|do your (?:homework|assignment) for you|take your exam/i);
+});
+
 test('the demo section shows only the milk tea chat — no quote form or payment preview', () => {
   const demo = html.slice(html.indexOf('<section id="demo"'), html.indexOf('<section id="services"'));
   assert.doesNotMatch(demo, /quoteForm|quoteCalculate|quotePayment|Show sample payment|Try the math/i);

@@ -82,7 +82,7 @@ test('ordinary FAQs do not get intercepted by the calculator', () => {
 
 test('unknown products, modifiers and partial orders never produce a misleading total', () => {
   for (const text of ['2 classic and 1 taro, delivery', '-2 classic, pickup', '2.5 classic, pickup',
-    '0 classic, pickup', '21 classic, pickup', '2 classic', '2 classic, no delivery',
+    '0 classic, pickup', '21 classic, pickup', '2 classic, no delivery',
     '2 classic, pickup and delivery', '2 classic, free delivery', '2 classic without pearls, delivery',
     '2 classic with pearls and 1 fruit tea with extra pearls on each, pickup',
     '2 classic with extra pearls on one, delivery', '2 classic less ice, pickup',
@@ -93,6 +93,32 @@ test('unknown products, modifiers and partial orders never produce a misleading 
     assert.equal(result.quote, undefined, text);
     assert.doesNotMatch(c.answer(text), /TOTAL: ₱/, text);
   }
+});
+
+test('friendly chat phrasing totals too: filler words, “at” as and, and a pickup/delivery follow-up', () => {
+  // Tagalog “at” means “and”, and chat filler (“bro”, “sakin”, “nalang”, “thx”) is ignored.
+  for (const text of ['3 Wintermelon bro at 5 Fruit Tea sakin thx', 'no 3 wintermelon and 5 Fruit Tea', 'bro 1 fruit tea nalang', '2 classic']) {
+    const result = c.parse(text);
+    assert.equal(result.needsFulfillment, true, text);
+    assert.equal(result.error, undefined, text);
+    assert.match(c.askFulfillment(result.items), /Pickup or delivery/);
+  }
+  const items = c.parse('3 wintermelon at 5 fruit tea').items;
+  assert.deepEqual(items.map(item => [item.product, item.quantity]), [['wintermelon', 3], ['fruit', 5]]);
+  // The bot asks for one word, then finishes the same order (₱605 clears free delivery).
+  assert.equal(c.fulfillmentOf('delivery'), 'delivery');
+  assert.equal(c.fulfillmentOf('hatod'), 'delivery');
+  assert.equal(c.fulfillmentOf('pick up'), 'pickup');
+  assert.equal(c.fulfillmentOf('delivery fee?'), null);
+  assert.match(c.quote(items, c.fulfillmentOf('delivery')), /TOTAL: ₱605\.00/);
+  assert.match(c.quote(items, 'pickup'), /Pickup: ₱0\.00/);
+});
+
+test('impossible amounts get a limit message instead of a total', () => {
+  const result = c.parse('bro 1000000 fruit tea saa kinn');
+  assert.ok(result.error);
+  assert.match(result.error, /20 per line and 50 per order/);
+  assert.doesNotMatch(c.answer('bro 1000000 fruit tea saa kinn'), /TOTAL: ₱/);
 });
 
 test('no payment destination can be produced by the chat calculator', () => {

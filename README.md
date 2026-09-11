@@ -13,7 +13,7 @@ Chatbots, automations, and video editing for PH businesses.
 
 </details>
 
-- **1,040 scripted questions** in English, Tagalog, and Bisaya.
+- **1,120 scripted questions** in English, Tagalog, and Bisaya.
 - **Chat pricing** — type an order and get a sample total with add-ons and delivery.
 - **No build step** — plain HTML, CSS, and JavaScript.
 - **Responsive** — one clean layout for desktop and Android/mobile web.

@@ -46,7 +46,7 @@
       "classic",
       "classic milk tea"
     ],
-    "reply": "Our Classic Milk Tea is ₱75! 🧋 You can add extra pearls for ₱15. How do you like your sugar and ice?",
+    "reply": "Our Classic Milk Tea is ₱75 🧋 Extra pearls are ₱15. How do you like your sugar and ice?",
     "questions": [
       "how much is classic milk tea",
       "classic milk tea price",
@@ -76,7 +76,7 @@
     "keys": [
       "okinawa"
     ],
-    "reply": "Okinawa Milk Tea is ₱85! 🧋 Would you like to see the sugar and ice options?",
+    "reply": "Okinawa Milk Tea is ₱85 🧋 Want the sugar and ice options?",
     "questions": [
       "how much is okinawa",
       "okinawa price",
@@ -107,7 +107,7 @@
       "wintermelon",
       "winter melon"
     ],
-    "reply": "Wintermelon Milk Tea is ₱85! 🧋 You can choose your sugar and ice levels, or add extra pearls for ₱15.",
+    "reply": "Wintermelon Milk Tea is ₱85 🧋 Choose your sugar and ice, or add extra pearls for ₱15.",
     "questions": [
       "how much is wintermelon",
       "wintermelon price",
@@ -138,7 +138,7 @@
       "fruit tea",
       "fruit teas"
     ],
-    "reply": "Fruit Tea is ₱70! 🍹 Please check with the shop for the current fruit flavors and ingredients.",
+    "reply": "Fruit Tea is ₱70 🍹 The available fruits change — please check with the shop.",
     "questions": [
       "how much is fruit tea",
       "fruit tea price",
@@ -172,7 +172,7 @@
       "toppings",
       "add ons"
     ],
-    "reply": "Extra pearls are ₱15! 🧋 For other toppings, please check availability with the shop.",
+    "reply": "Extra pearls are ₱15 🧋 For other toppings, check availability with the shop.",
     "questions": [
       "how much are extra pearls",
       "can I add pearls",
@@ -206,7 +206,7 @@
       "tam is",
       "tamis"
     ],
-    "reply": "You can choose 0%, 25%, 50%, 75%, or 100% added sugar. How sweet do you like it? 🧋 Just a heads-up: bases and toppings may already contain sugar, so 0% added sugar isn’t a sugar-free guarantee.",
+    "reply": "Choose 0%, 25%, 50%, 75%, or 100% sugar. 🧋 Note: bases and toppings may already contain sugar, so 0% added isn’t a sugar-free guarantee.",
     "questions": [
       "can I choose the sugar level",
       "what sugar levels do you have",
@@ -273,7 +273,7 @@
       "medium",
       "small"
     ],
-    "reply": "I don’t have the cup sizes or upgrade prices listed yet. Please check with the shop so you get the right size and price.",
+    "reply": "I don’t have cup sizes or upgrade prices listed. Please check with the shop.",
     "questions": [
       "what sizes do you have",
       "do you have large cups",
@@ -311,7 +311,7 @@
       "ingredients",
       "vegan"
     ],
-    "reply": "Thanks for checking. Please confirm ingredients and cross-contact risks with the shop before ordering. I can’t guarantee that a drink is allergen-free, dairy-free, vegan, or safe for your allergy.",
+    "reply": "Please confirm ingredients and cross-contact risks with the shop. I can’t guarantee a drink is allergen-free or safe for your allergy.",
     "questions": [
       "what are the ingredients",
       "does it contain dairy",
@@ -347,7 +347,7 @@
       "diabetic",
       "diabetes"
     ],
-    "reply": "I don’t have verified calorie or caffeine details to share. Please ask the shop for ingredient information. For pregnancy, diabetes, or other medical concerns, check with a qualified health professional before choosing a drink.",
+    "reply": "I don’t have verified calorie or caffeine details. Please ask the shop, and check medical questions with a health professional.",
     "questions": [
       "how many calories",
       "how much caffeine is there",
@@ -385,7 +385,7 @@
       "sarado",
       "what time"
     ],
-    "reply": "Our regular hours are Monday–Sunday, 10 AM–10 PM. 🕐 Please check the shop’s latest announcement for holiday changes.",
+    "reply": "Our regular hours are Monday–Sunday, 10 AM–10 PM. 🕐",
     "questions": [
       "what are your opening hours",
       "what time do you open",
@@ -421,7 +421,7 @@
       "asa",
       "where"
     ],
-    "reply": "I don’t have a verified address or map pin to share yet. Please check the shop’s official page for directions and landmarks.",
+    "reply": "I don’t have a verified address or map pin yet. Please check the shop’s official page for directions.",
     "questions": [
       "where is your shop",
       "what is your address",
@@ -458,7 +458,7 @@
       "bayad sa hatod",
       "free delivery"
     ],
-    "reply": "Delivery is ₱50 within our service area, or FREE for orders of ₱500 or more! 🛵 Please check with the shop that your area is covered.",
+    "reply": "Delivery is ₱50, or FREE at ₱500+. 🛵 Ask the shop if your area is covered.",
     "questions": [
       "how much is delivery",
       "what is the delivery fee",
@@ -494,7 +494,7 @@
       "rider",
       "late delivery"
     ],
-    "reply": "Delivery timing depends on preparation and rider availability. I don’t have a live arrival estimate or rider location to show; please check directly with the shop for an update.",
+    "reply": "Delivery timing depends on preparation and riders. I can’t show a live estimate — please check with the shop.",
     "questions": [
       "how long does delivery take",
       "when will my drink arrive",
@@ -531,7 +531,7 @@
       "foodpanda",
       "grab"
     ],
-    "reply": "Delivery depends on your area and rider availability. 🛵 Please check with the shop for coverage and delivery-app options. Ask me “delivery fee” if you’d like to see the rate.",
+    "reply": "Delivery depends on your area and rider availability. 🛵 Ask the shop for coverage, or type “delivery fee”.",
     "questions": [
       "do you deliver",
       "is delivery available",
@@ -567,7 +567,7 @@
       "take out",
       "curbside"
     ],
-    "reply": "For pickup, takeaway, or dine-in, please check the shop’s available options and collection times. They’ll need to confirm any pickup slot or table reservation.",
+    "reply": "For pickup or dine-in, please check the shop’s options and collection times. They’ll need to confirm any slot.",
     "questions": [
       "can I pick up my order",
       "do you offer pickup",
@@ -601,13 +601,13 @@
       "pa order",
       "order ko"
     ],
-    "reply": "Of course! 🧋 What would you like? Choose Classic, Okinawa, Wintermelon, or Fruit Tea. For a total, type a complete order with pickup or delivery, like “2 Classic with extra pearls, delivery”.",
+    "reply": "Of course! 🧋 Pick Classic, Okinawa, Wintermelon, or Fruit Tea. For a total, type it like “2 Classic with extra pearls, delivery”.",
     "questions": [
       "how do I order",
       "I want to order",
       "can I place an order",
       "can I buy a drink",
-      "start an order",
+      "can i buyy",
       "order ko",
       "order ko please",
       "paano umorder",
@@ -637,7 +637,7 @@
       "confirmed",
       "order ready"
     ],
-    "reply": "I don’t have an order status or confirmation to show here. Please contact the shop directly for a confirmed update on your order.",
+    "reply": "I don’t have an order status to show. Please ask the shop for a confirmed update.",
     "questions": [
       "what is my order status",
       "can you track my order",
@@ -672,7 +672,7 @@
       "ayaw nalang",
       "huwag na"
     ],
-    "reply": "Need to cancel? Please contact the shop as soon as possible, ideally before preparation starts. They’ll need to confirm whether cancellation is still possible.",
+    "reply": "Need to cancel? Message the shop as soon as possible. They’ll need to confirm if it’s still possible.",
     "questions": [
       "can I cancel my order",
       "cancel order",
@@ -709,7 +709,7 @@
       "missing item",
       "missing drink"
     ],
-    "reply": "Need to change a drink, or received something wrong or missing? Please contact the shop with what needs fixing. They’ll need to confirm any order changes or replacement.",
+    "reply": "Wrong or missing drink? Contact the shop — they’ll need to confirm any change or replacement.",
     "questions": [
       "can I change my order",
       "I want to edit my order",
@@ -746,7 +746,7 @@
       "card",
       "cod"
     ],
-    "reply": "Payment options are GCash, Maya, or cash. 💰 The demo has no checkout or payment page connected. Never share your PIN or OTP.",
+    "reply": "Payment options: GCash, Maya, or cash. 💰 No checkout is connected to this demo. Never share your PIN or OTP.",
     "questions": [
       "how can I pay",
       "what payment methods do you accept",
@@ -782,7 +782,7 @@
       "payment problem",
       "double payment"
     ],
-    "reply": "Sorry you’re having trouble with a payment. Please contact the shop or payment provider through a verified channel to review a refund or failed charge. Don’t retry a payment until its status is clear, and never share your PIN or OTP.",
+    "reply": "Sorry about the payment trouble. Please contact the shop or your payment provider — and never share your PIN or OTP.",
     "questions": [
       "can I get a refund",
       "how do refunds work",
@@ -819,7 +819,7 @@
       "sale",
       "student discount"
     ],
-    "reply": "I don’t have an active promo or voucher listed right now. You can check the shop’s latest announcements for offers and their terms. Want to see the regular menu?",
+    "reply": "No active promo or voucher is listed right now. Check the shop’s latest announcements. Want the regular menu?",
     "questions": [
       "do you have any promos",
       "is there a discount",
@@ -855,7 +855,7 @@
       "reseller",
       "minimum order"
     ],
-    "reply": "Planning drinks for a party or event? 🧋 Bulk orders need the shop’s approval for quantity, lead time, and pricing. Please check with them before making event plans.",
+    "reply": "Bulk orders need the shop’s approval for quantity, lead time, and pricing. 🧋 Please check with them first.",
     "questions": [
       "do you accept bulk orders",
       "can I order for a party",
@@ -892,7 +892,7 @@
       "real person",
       "support"
     ],
-    "reply": "Prefer to speak with a person? Please contact the shop directly for help with a shop order. For Troy’s chatbot services, tap Messenger in the Contact section below. You’ll need to send the message there to reach someone.",
+    "reply": "Prefer a person? Contact the shop directly for an order. For Troy’s services, tap Messenger in Contact below. You’ll need to send the message there.",
     "questions": [
       "can I talk to a human",
       "I need a real person",
@@ -931,7 +931,7 @@
       "data saved",
       "delete my data"
     ],
-    "reply": "Messages stay in this page's memory; this demo code does not send or save them to a server or browser storage. Refresh to clear the chat. Do not enter personal details, passwords, OTPs, or payment information. External Messenger/GitHub links have their own privacy policies.",
+    "reply": "Messages stay in this page's memory; this demo does not send or save them to a server or browser storage. Never enter passwords, OTPs, or payment details.",
     "questions": [
       "is this chat private",
       "do you save my messages",
@@ -967,7 +967,7 @@
       "maayong buntag",
       "maayong gabii"
     ],
-    "reply": "Hi! Welcome to Milk Tea Demo! 🧋 What can I help you with today—our menu, hours, or delivery options?",
+    "reply": "Hi! Welcome to Milk Tea Demo 🧋 Ask about the menu, hours, delivery, or type your order.",
     "questions": [
       "hi",
       "hello",
@@ -1039,7 +1039,7 @@
       "real ai",
       "scripted"
     ],
-    "reply": "I can help with the menu, hours, delivery fees, drink options, and common order questions. For a total, type a complete order like “2 Classic with extra pearls, delivery”. 🧋 You can also ask about Troy’s chatbot services. This is a scripted roleplay, not live AI; real orders, payments, and staff contact happen outside this chat.",
+    "reply": "I can help with the menu, hours, delivery, and orders. Type a full order like “2 Classic with extra pearls, delivery” for a total, or ask about Troy’s services. This is a scripted roleplay, not live AI.",
     "questions": [
       "help",
       "what can you do",
@@ -1064,6 +1064,149 @@
     ]
   },
   {
+    "id": "bot_identity",
+    "label": "Bot name and identity",
+    "keys": [
+      "your name",
+      "whats your name",
+      "who are you",
+      "bot name",
+      "pangalan mo",
+      "ngalan nimo"
+    ],
+    "reply": "I’m the Milk Tea Demo bot 🧋 A scripted helper for this sample shop — not a real person or live AI.",
+    "questions": [
+      "whats your name",
+      "what is your name",
+      "whats ur name",
+      "what should I call you",
+      "who are you",
+      "what are you",
+      "are you a real person",
+      "are you human",
+      "are you a robot",
+      "are you a bot",
+      "ano pangalan mo",
+      "ano ang pangalan mo",
+      "sino ka",
+      "anong pangalan mo po",
+      "pangalan mo",
+      "kinsa ka",
+      "kinsa mo",
+      "unsay imong ngalan",
+      "unsa imong name",
+      "ngalan nimo"
+    ]
+  },
+  {
+    "id": "bot_creator",
+    "label": "Who made this bot",
+    "keys": [
+      "who made you",
+      "who built you",
+      "who created you",
+      "sino gumawa sayo",
+      "kinsa naghimo nimo"
+    ],
+    "reply": "Troy built me as a portfolio demo 🧋 Self-built and scripted — not a client deployment.",
+    "questions": [
+      "who made you",
+      "who made this bot",
+      "who built you",
+      "who built this bot",
+      "who created you",
+      "who coded you",
+      "who programmed you",
+      "did troy make you",
+      "is this made by troy",
+      "sino gumawa sayo",
+      "sino gumawa nito",
+      "sino may gawa nito",
+      "gawa mo ba ito",
+      "kanino ka",
+      "kinsa naghimo nimo",
+      "kinsa nagbuhat ani",
+      "imong tag iya",
+      "who owns you",
+      "who is your developer",
+      "who developed this bot"
+    ]
+  },
+  {
+    "id": "fruit_flavors",
+    "label": "Fruit tea flavors",
+    "keys": [
+      "fruit flavors",
+      "fruit tea flavors",
+      "flavor",
+      "flavors",
+      "anong flavor",
+      "unsa nga flavor"
+    ],
+    "reply": "Our sample menu lists Fruit Tea at ₱70 🍹 Which fruits are available depends on the shop — please ask them what’s in stock today.",
+    "questions": [
+      "what flavors do you have",
+      "what are the flavors",
+      "what flavors are available",
+      "what fruit tea flavors are there",
+      "do you have other flavors",
+      "anong flavors meron",
+      "anong flavor available",
+      "may ibang flavor ba",
+      "anong lasa ng fruit tea",
+      "unsa nga flavor naa",
+      "unsa nga flavor ang available",
+      "naa moy lain flavor",
+      "unsay lasa sa fruit tea",
+      "fruit tea flavors",
+      "fruit flavor options",
+      "available flavors",
+      "flavor list",
+      "do you have strawberry",
+      "do you have mango",
+      "do you have lychee"
+    ]
+  },
+  {
+    "id": "small_talk",
+    "label": "Short acknowledgements",
+    "keys": [
+      "ok",
+      "okay",
+      "sige",
+      "cge",
+      "ge",
+      "noted",
+      "sure",
+      "alright",
+      "ayos",
+      "maayo"
+    ],
+    "reply": "Got it! 🧋 Ask about the menu, delivery, or type your order for a total.",
+    "questions": [
+      "ok",
+      "ok po",
+      "okay",
+      "okay po",
+      "ok lang",
+      "ok na",
+      "sige",
+      "sige po",
+      "cge",
+      "cge po",
+      "ge",
+      "ge lang",
+      "noted",
+      "noted po",
+      "sure",
+      "sure po",
+      "alright",
+      "ayos",
+      "ayos lang",
+      "maayo"
+    ]
+  },
+  {
     "id": "services",
     "label": "Portfolio services",
     "keys": [
@@ -1074,7 +1217,7 @@
       "hire",
       "portfolio"
     ],
-    "reply": "Troy builds Facebook Page FAQ bots, n8n/Make automations, small custom AI tools, and short-form video edits for PH businesses. See Services and Pricing on this page; message via Contact for a scoped quote.",
+    "reply": "Troy builds FB Page FAQ bots, n8n/Make automations, small AI tools, and short-form video edits. See Services below, or message me for a fixed quote.",
     "questions": [
       "what services do you offer",
       "what does troy build",
@@ -1111,7 +1254,7 @@
       "starter package",
       "business package"
     ],
-    "reply": "Portfolio pricing: Starter FAQ bot from ₱1,500; Business package from ₱3,000 includes a bot plus one simple automation. Scope and any third-party subscriptions must be agreed before work starts. These are service prices, not drink prices.",
+    "reply": "Starter FAQ bot from ₱1,500; Business from ₱3,000 with a bot plus one simple automation. Scope and any subscriptions are agreed before work starts.",
     "questions": [
       "how much is a chatbot",
       "what is your chatbot pricing",
@@ -1145,7 +1288,7 @@
       "workflow price",
       "workflow cost"
     ],
-    "reply": "Standalone business automation starts at ₱2,000 on this page. The final quote depends on the apps, steps, and volume; any hosting or paid-tool charges should be listed separately before you agree.",
+    "reply": "Standalone automation starts at ₱2,000. The final quote depends on the apps, steps, and volume; hosting or paid tools are listed separately.",
     "questions": [
       "how much is an automation",
       "what does a workflow cost",
@@ -1181,7 +1324,7 @@
       "video package",
       "video editing pricing"
     ],
-    "reply": "Short-form video editing starts at ₱300 per video. The listed bundle is ₱1,000 for five short videos. Confirm duration, footage, captions, revisions, and music permissions before agreeing to a quote.",
+    "reply": "Video editing starts at ₱300 per video, or ₱1,000 for five. We agree duration, captions, revisions, and music permissions first.",
     "questions": [
       "how much is video editing",
       "what is your video editing pricing",
@@ -1216,7 +1359,7 @@
       "how long to build",
       "rush project"
     ],
-    "reply": "Typical timelines listed here: simple chatbot 2–4 days, automation 3–7 days, video edits 24–48 hours. Scope, access, and feedback affect the schedule. Troy confirms a date before starting; rush availability is not guaranteed.",
+    "reply": "Simple chatbot 2–4 days · automation 3–7 days · video edits 24–48 hours. Troy confirms a date before starting.",
     "questions": [
       "how long does a chatbot take to build",
       "what is your turnaround",
@@ -1252,7 +1395,7 @@
       "balance",
       "payment terms"
     ],
-    "reply": "Standard project terms on this page: 50% downpayment after agreeing scope, then the balance after approval of the working demo. Payment arrangements are coordinated with a parent/guardian. Confirm the recipient privately through the verified contact; never send payment through this demo. Pilot terms may differ and must be agreed in writing.",
+    "reply": "50% downpayment after agreeing scope, balance after you approve the demo. Payment is coordinated with a parent/guardian, and pilot terms are agreed separately.",
     "questions": [
       "what are your project payment terms",
       "do you need a deposit",
@@ -1287,7 +1430,7 @@
       "first client",
       "trial project"
     ],
-    "reply": "Ask about one of the first two pilot builds: a small, agreed-scope free or discounted project, subject to availability and fit. In return, discuss honest feedback and separate permission to show a redacted demo. Positive reviews are not required. Confirm price, scope, and permission in writing first.",
+    "reply": "Troy is looking for the first 1–2 pilot builds: small, agreed-scope, free or discounted. Honest feedback is welcome; a positive review is never required.",
     "questions": [
       "do you offer a free build",
       "can I be a pilot client",
@@ -1324,7 +1467,7 @@
       "sample work",
       "past clients"
     ],
-    "reply": "The working proof on this page is the fictional, browser-only chatbot demo, with source code in this repository. No client testimonials or verified client results are published here yet. Only actual recordings and permission-based client feedback should be added.",
+    "reply": "The proof here is the browser-only chatbot demo, with source in this repository. No client testimonials or verified client results are published yet.",
     "questions": [
       "can I see your proof of work",
       "do you have testimonials",
@@ -1359,7 +1502,7 @@
       "reach you",
       "message you"
     ],
-    "reply": "Use the Messenger button in this page's Contact section to discuss a project. Share your business type and the task you want to improve, not passwords or payment details. This demo cannot send a message to Troy for you.",
+    "reply": "Use the Messenger button in Contact below. Share your business type and what you want to improve — never passwords or payment details.",
     "questions": [
       "how can I contact you",
       "where can I message troy",
@@ -1394,7 +1537,7 @@
       "project brief",
       "need from me"
     ],
-    "reply": "To start: share your business type, public menu or service list, common customer questions, and the task you want automated. Agree the scope, price, timeline, and acceptance checklist before paying. Grant only necessary account access through official invitations—never share passwords or OTPs.",
+    "reply": "To start: your business type, menu or service list, common questions, and the task to automate. Agree scope, price, and timeline before paying.",
     "questions": [
       "how do we get started",
       "what do you need from me",
@@ -1431,7 +1574,7 @@
       "messenger bot",
       "manychat"
     ],
-    "reply": "Facebook Page FAQ bots are a listed service. Website chat, Instagram, or WhatsApp integrations depend on platform rules, permissions, and available tools. Describe your platform so Troy can confirm feasibility rather than promise an unsupported integration.",
+    "reply": "Facebook Page FAQ bots are a listed service. Website, Instagram, or WhatsApp bots depend on platform rules — tell Troy your platform and he’ll confirm.",
     "questions": [
       "what platforms do you support",
       "can you build a facebook bot",
@@ -1468,7 +1611,7 @@
       "workflow",
       "automation"
     ],
-    "reply": "A scoped n8n/Make workflow can connect supported apps, such as a form or message source to Google Sheets and an owner summary. This portfolio demo is not connected to those apps. Actual feasibility depends on APIs, permissions, and the agreed workflow.",
+    "reply": "A scoped n8n/Make workflow can connect supported apps, such as a form to Google Sheets plus an owner summary. Feasibility depends on APIs and permissions.",
     "questions": [
       "can you connect google sheets",
       "do you use n8n",
@@ -1504,7 +1647,7 @@
       "content generator",
       "openai"
     ],
-    "reply": "Custom AI tools are scoped around a specific task, such as drafting product descriptions or content ideas. AI output needs review, and API usage may cost extra. Sensitive data and automated decisions need additional safeguards agreed before building.",
+    "reply": "Custom AI tools are scoped to a task, like drafting product descriptions. Output needs review, and API usage may cost extra.",
     "questions": [
       "can you build a custom ai tool",
       "do you make product description generators",
@@ -1540,7 +1683,7 @@
       "english",
       "multilingual"
     ],
-    "reply": "This demo includes scripted English, Tagalog, and Bisaya questions. A client bot can use owner-approved replies in their preferred tone; language quality and business facts should be reviewed before launch. It will not understand every possible phrasing.",
+    "reply": "This demo includes English, Tagalog, and Bisaya inputs. Client bots use owner-approved replies; no bot understands every phrasing.",
     "questions": [
       "what languages do you support",
       "can the bot speak bisaya",
@@ -1577,7 +1720,7 @@
       "api cost",
       "ongoing cost"
     ],
-    "reply": "The portfolio lists setup/build prices, not a guarantee of zero ongoing cost. Hosting, automation plans, messaging tools, and AI API usage may be separate. Agree who owns each account, pays each bill, and handles updates before launch.",
+    "reply": "Listed prices are for the build. Hosting, automation plans, messaging tools, and AI APIs may be separate — agree who pays each before launch.",
     "questions": [
       "is there a monthly fee",
       "what are the ongoing costs",
@@ -1614,7 +1757,7 @@
       "training",
       "handover"
     ],
-    "reply": "Starter lists three days of chat support; Business lists seven days. A short handover guide is included, and the Content package lists one revision per video. Agree chatbot/automation revision limits and what counts as a bug fix before starting; new scope may need a separate quote.",
+    "reply": "Starter includes 3 days of chat support; Business includes 7. Video packages list 1 revision each. Agree revision limits and what counts as a bug fix first.",
     "questions": [
       "how many revisions are included",
       "do you fix bugs after launch",
@@ -1651,7 +1794,7 @@
       "credentials",
       "access permissions"
     ],
-    "reply": "Set up client work on client-owned accounts where possible. Agree source-code delivery, licenses, exports, and access removal in the scope. Use least-privilege invitations instead of shared passwords, and revoke builder access when it is no longer needed.",
+    "reply": "Client work is set up on client-owned accounts where possible. Agree code delivery, licenses, exports, and access removal in the scope.",
     "questions": [
       "who owns the bot",
       "do I own the source code",
@@ -1687,7 +1830,7 @@
       "sensitive data",
       "privacy policy"
     ],
-    "reply": "For a client build, agree what data is collected, why, retention/deletion rules, who can access it, and which third-party tools process it. Use test data in demos and redact customer details. Security or legal compliance should not be assumed from this sample bot.",
+    "reply": "For client builds, agree what data is collected, why, retention rules, and who can access it. Demos use test data with customer details redacted.",
     "questions": [
       "how do you protect client data",
       "is customer data safe",
@@ -1723,7 +1866,7 @@
       "in person",
       "where are you based"
     ],
-    "reply": "Troy offers remote services for businesses across the Philippines. Project discussions can happen online; an exact home location or in-person meeting is not needed to get a quote.",
+    "reply": "Troy works remotely with businesses across the Philippines. Everything — scope, demos, handover — can happen online.",
     "questions": [
       "where are you based",
       "do you work remotely",
@@ -1760,7 +1903,7 @@
       "mistakes",
       "hallucination"
     ],
-    "reply": "A bot can reduce repetitive replies, but it cannot guarantee sales, perfect answers, or business results. Test common questions and edge cases, use approved answers, and provide a clear fallback or real human contact for anything uncertain.",
+    "reply": "A bot can cut repetitive replies, but it can’t guarantee sales or perfect answers. Test common questions and keep a clear fallback for anything uncertain.",
     "questions": [
       "can you guarantee more sales",
       "will a bot get me clients",
@@ -1798,7 +1941,7 @@
       "copyright",
       "capcut"
     ],
-    "reply": "Video editing services include short-form Reels/TikToks, hooks, captions, and transitions. Supply footage you can legally use and agree duration, aspect ratio, revisions, and music licensing. A generic social profile link is not a verified before/after sample.",
+    "reply": "Video edits cover short-form Reels/TikToks with hooks, captions, and transitions. Supply footage you can legally use and agree revisions and music licensing.",
     "questions": [
       "what does video editing include",
       "can you add captions",
@@ -1835,7 +1978,7 @@
       "seo",
       "google search"
     ],
-    "reply": "A portfolio helps people evaluate your work; it does not create traffic on its own. Share the working demo in relevant, permission-based shop outreach and groups that allow promotion. Personalize messages, follow up at most once, and track replies without promising sales.",
+    "reply": "A portfolio helps people evaluate your work; it doesn’t create traffic by itself. Share the demo where promotion is allowed, personalize messages, and follow up once.",
     "questions": [
       "how do I get my first client",
       "will a website bring traffic",
